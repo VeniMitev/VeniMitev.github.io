@@ -126,3 +126,69 @@
     transition: transform .2s;
 }
 
+
+.a1{
+    z-index: 6;
+    position: absolute;
+    left: 350px;
+    top: 600px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid orange;
+}
+
+.a2{
+    z-index: 6;
+    position: absolute;
+    left: 325px;
+    top: 650px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid orange;
+}
+
+.a3{
+    z-index: 6;
+    position: absolute;
+    left: 300px;
+    top: 700px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid orange;
+}
+
+.a4{
+    z-index: 6;
+    position: absolute;
+    left: 350px;
+    top: 600px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid orange;
+}
+
+.a5{
+    z-index: 6;
+    position: absolute;
+    left: 350px;
+    top: 600px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid orange;
+}
+
+.a6{
+    z-index: 6;
+    position: absolute;
+    left: 350px;
+    top: 600px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid orange;
+}
