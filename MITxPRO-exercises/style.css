@@ -1,0 +1,87 @@
+.c1{
+    z-index: 5;
+    position: absolute;
+    left: 400px;
+    top: 200px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: red;
+}
+
+.c2{
+    z-index: 6;
+    position: absolute;
+    left: 350px;
+    top: 250px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: green;
+}
+
+.c3{
+    z-index: 5;
+    position: absolute;
+    left: 300px;
+    top: 300px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: orange; 
+}
+
+.c4{
+    z-index: 6;
+    position: absolute;
+    left: 350px;
+    top: 350px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: lightblue;
+}
+            
+.c5{
+    z-index: 5;
+    position: absolute;
+    left: 400px;
+    top: 400px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: red; 
+}      
+      
+.c6{
+    z-index: 4;
+    position: absolute;
+    left: 450px;
+    top: 350px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: gray;
+}
+       
+.c7{
+    z-index: 3;
+    position: absolute;
+    left: 500px;
+    top: 300px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: lightblue;
+}
+
+.c8{
+    z-index: 6;
+    position: absolute;
+    left: 450px;
+    top: 250px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: orange; 
+}
