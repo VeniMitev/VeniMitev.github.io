@@ -130,65 +130,87 @@
 .a1{
     z-index: 6;
     position: absolute;
-    left: 350px;
+    left: 400px;
     top: 600px;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    border: 2px solid orange;
+    border: 1px solid orange;
 }
 
 .a2{
     z-index: 6;
     position: absolute;
-    left: 325px;
-    top: 650px;
-    width: 200px;
-    height: 200px;
+    left: 365px;
+    top: 615px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    border: 2px solid orange;
+    border: 1px solid orange;
 }
 
 .a3{
     z-index: 6;
     position: absolute;
-    left: 300px;
-    top: 700px;
-    width: 200px;
-    height: 200px;
+    left: 350px;
+    top: 650px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    border: 2px solid orange;
+    border: 1px solid orange;
 }
 
 .a4{
     z-index: 6;
     position: absolute;
-    left: 350px;
-    top: 600px;
-    width: 200px;
-    height: 200px;
+    left: 365px;
+    top: 685px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    border: 2px solid orange;
+    border: 1px solid orange;
 }
 
 .a5{
     z-index: 6;
     position: absolute;
-    left: 350px;
-    top: 600px;
-    width: 200px;
-    height: 200px;
+    left: 400px;
+    top: 700px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    border: 2px solid orange;
+    border: 1px solid orange;
 }
 
 .a6{
     z-index: 6;
     position: absolute;
-    left: 350px;
-    top: 600px;
-    width: 200px;
-    height: 200px;
+    left: 435px;
+    top: 685px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    border: 2px solid orange;
+    border: 1px solid orange;
+}
+
+.a7{
+    z-index: 6;
+    position: absolute;
+    left: 450px;
+    top: 650px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid orange;
+}
+
+.a8{
+    z-index: 6;
+    position: absolute;
+    left: 435px;
+    top: 615px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid orange;
 }
