@@ -24,21 +24,23 @@
             img.style.left = pos + 'px';
         }
         // Use setTimeout to call Run every 200 millesecs
-        setTimeout(Run(), 200)
+        setTimeout(Run, 200);
     }
+    
 
     function checkPageBounds(direction, imgWidth) {
         //
         // Complete this to reverse direction on hitting page bounds
         // 
-        let img = document.getElementById("PacMan");
-        let imgWidth = img.width
+    
+    
         let leftEdge = 0;
         let rightEdge = 800;
         
         if(rightEdge === rightEdge - imgWidth || rightEdge > rightEdge - imgWidth){
            let direction = 1;
         }
+    
 
         return direction;
     }
