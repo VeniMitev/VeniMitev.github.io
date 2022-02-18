@@ -1,3 +1,22 @@
+# **Name:** PacMan exercise
+
+**Description:** Week 4 exercise in the MIT xPRO coding bootcamp
+
+
+**Installation:** N/A
+
+
+**Usage:** For fun 
+
+
+**Support:** contact me
+
+
+**Roadmap:** N/A 
+
+
+**License information:** 
+
 MIT License
 
 Copyright (c) 2020 John Williams
