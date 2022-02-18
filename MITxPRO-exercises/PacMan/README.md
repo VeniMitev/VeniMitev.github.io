@@ -1,4 +1,4 @@
-# **Name:** PacMan exercise
+# **Name:** PacMan Exercise
 
 **Description:** Week 4 exercise in the MIT xPRO coding bootcamp
 
