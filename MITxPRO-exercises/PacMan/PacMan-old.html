@@ -1,26 +1,21 @@
-<head>
-    <link rel="stylesheet" href="./PacMan.css">
-</head>
-<html>
 <SCRIPT>
     let pageWidth = window.innerWidth;
     var pos = 0;
     const pacArray = [
         // Going forward
-        ["pacman__mouth-1", "pacman__mouth-2"],
+        ['./images/PacMan1.png', './images/PacMan2.png'],
         // Going back
-        ["pacman__mouth-3", "pacman__mouth-4"]
+        ['./images/PacMan3.png', './images/PacMan4.png']
     ];
     var direction = 0;
     var focus = 0;
 
     function Run() {
         let img = document.getElementById("PacMan");
-        let mouth = document.getElementById("PacMan-Mouth")
-        let imgWidth = 100;
+        let imgWidth = img.width
         focus = (focus + 1) % 2;
         direction = checkPageBounds(direction, imgWidth, pos, pageWidth);
-        mouth.className = pacArray[direction][focus];
+        img.src = pacArray[direction][focus];
         if (direction) {
             pos -= 20;
             img.style.left = pos + "px";
@@ -33,22 +28,11 @@
     }
 
     function randomColorBackground(){
-        let red = Math.floor(Math.random() *255);
-        let green = Math.floor(Math.random() *255);
-        let blue = Math.floor(Math.random() *255);
-        
-        document.body.style.backgroundColor =  "rgb(" + red + ", " + green + ", " + blue + ")";
-        document.getElementById("PacMan-Mouth").style.background =  "rgb(" + red + ", " + green + ", " + blue + ")";
-    }
-  
-
-    function randomColorPacMan(){
-        let pacmanColor = document.getElementById("PacMan")
         let red = Math.floor(Math.random() *255)
         let green = Math.floor(Math.random() *255)
         let blue = Math.floor(Math.random() *255)
 
-        return document.getElementById("PacMan").style.background =  "rgb(" + red + ", " + green + ", " + blue + ")";
+        return document.body.style.backgroundColor =  "rgb(" + red + ", " + green + ", " + blue + ")";
     }
 
     function checkPageBounds(direction, imgWidth, pos, pageWidth) {
@@ -64,13 +48,9 @@
 
 <body>
     <h3><a href="/index.html">Home</a></h3>
-    <div id="PacMan" class="pacman">
-        <div class="pacman__eye"></div>
-        <div id="PacMan-Mouth" class="pacman__mouth-1"></div>
-    </div>
+    <img id="PacMan" src="./images/PacMan1.png" width='200' style="position:absolute"> </img>
     <button style="position:absolute; width: 200px; top: 300px; font-size: 20px;" onclick="Run()">Start/Faster</button>
     <button style="position:absolute; width: 200px; top: 300px; left: 300px; font-size: 20px;" onclick="randomColorBackground()">Random Background</button>
-    <button style="position:absolute; width: 200px; top: 300px; left: 600px; font-size: 20px;" onclick="randomColorPacMan()">Random PacMan Color</button>
 </body>
 
 </html>
