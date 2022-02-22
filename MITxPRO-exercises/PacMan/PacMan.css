@@ -1,7 +1,7 @@
 .pacman {
     z-index: 1;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     background: #F2D648;
     position: relative;
@@ -11,11 +11,11 @@
 .pacman__eye {
     z-index: 2;
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 10%;
+    height: 10%;
     border-radius: 50%;
     top: 20px;
-    right: 45px;
+    right: 90px;
     background: #333333;
 }
 .pacman__mouth-1 {

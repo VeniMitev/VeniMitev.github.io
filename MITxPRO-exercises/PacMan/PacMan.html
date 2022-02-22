@@ -17,7 +17,7 @@
     function Run() {
         let img = document.getElementById("PacMan");
         let mouth = document.getElementById("PacMan-Mouth")
-        let imgWidth = 100;
+        let imgWidth = 200;
         focus = (focus + 1) % 2;
         direction = checkPageBounds(direction, imgWidth, pos, pageWidth);
         mouth.className = pacArray[direction][focus];
@@ -60,6 +60,12 @@
 
         return direction;
     }
+
+    function resetColors(){
+        document.getElementById("PacMan").style.background =  "#F2D648";
+        document.body.style.backgroundColor =  "white";
+        document.getElementById("PacMan-Mouth").style.background = "white";
+    }
 </SCRIPT>
 
 <body>
@@ -68,9 +74,10 @@
         <div class="pacman__eye"></div>
         <div id="PacMan-Mouth" class="pacman__mouth-1"></div>
     </div>
-    <button style="position:absolute; width: 200px; top: 300px; font-size: 20px;" onclick="Run()">Start/Faster</button>
-    <button style="position:absolute; width: 200px; top: 300px; left: 300px; font-size: 20px;" onclick="randomColorBackground()">Random Background</button>
-    <button style="position:absolute; width: 200px; top: 300px; left: 600px; font-size: 20px;" onclick="randomColorPacMan()">Random PacMan Color</button>
+    <button style="position:absolute; width: 200px; top: 300px; left: 1%; font-size: 20px;" onclick="Run()">Start/Faster</button>
+    <button style="position:absolute; width: 200px; top: 300px; left: 25%; font-size: 20px;" onclick="randomColorBackground()">Random Background</button>
+    <button style="position:absolute; width: 200px; top: 300px; left: 50%; font-size: 20px;" onclick="randomColorPacMan()">Random PacMan Color</button>
+    <button style="position:absolute; width: 200px; top: 300px; left: 75%; font-size: 20px;" onclick="resetColors()">Reset Colors</button>
 </body>
 
 </html>
