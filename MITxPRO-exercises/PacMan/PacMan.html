@@ -1,83 +1,77 @@
+<html>
 <head>
     <link rel="stylesheet" href="./PacMan.css">
+    <title>PacMan Exercise</title>
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
-<html>
-<SCRIPT>
-    let pageWidth = window.innerWidth;
-    var pos = 0;
-    const pacArray = [
-        // Going forward
-        ["pacman__mouth-1", "pacman__mouth-2"],
-        // Going back
-        ["pacman__mouth-3", "pacman__mouth-4"]
-    ];
-    var direction = 0;
-    var focus = 0;
 
-    function Run() {
-        let img = document.getElementById("PacMan");
-        let mouth = document.getElementById("PacMan-Mouth")
-        let imgWidth = 200;
-        focus = (focus + 1) % 2;
-        direction = checkPageBounds(direction, imgWidth, pos, pageWidth);
-        mouth.className = pacArray[direction][focus];
-        if (direction) {
-            pos -= 20;
-            img.style.left = pos + "px";
-        } else {
-            pos += 20;
-            img.style.left = pos + 'px';
-        }
-        // Use setTimeout to call Run every 200 millesecs
-        setTimeout(Run, 200);
-    }
 
-    function randomColorBackground(){
-        let red = Math.floor(Math.random() *255);
-        let green = Math.floor(Math.random() *255);
-        let blue = Math.floor(Math.random() *255);
-        
-        document.body.style.backgroundColor =  "rgb(" + red + ", " + green + ", " + blue + ")";
-        document.getElementById("PacMan-Mouth").style.background =  "rgb(" + red + ", " + green + ", " + blue + ")";
-    }
-  
-
-    function randomColorPacMan(){
-        let red = Math.floor(Math.random() *255)
-        let green = Math.floor(Math.random() *255)
-        let blue = Math.floor(Math.random() *255)
-
-        return document.getElementById("PacMan").style.background =  "rgb(" + red + ", " + green + ", " + blue + ")";
-    }
-
-    function checkPageBounds(direction, imgWidth, pos, pageWidth) {
-        //
-        // Complete this to reverse direction on hitting page bounds
-        // 
-        if (direction == 0 && pos + imgWidth > pageWidth) direction = 1;
-        if (direction == 1 && pos < 0) direction = 0;
-
-        return direction;
-    }
-
-    function resetColors(){
-        document.getElementById("PacMan").style.background =  "#F2D648";
-        document.body.style.backgroundColor =  "white";
-        document.getElementById("PacMan-Mouth").style.background = "white";
-    }
-
-</SCRIPT>
-
-<body>
-    <h3><a href="/index.html">Home</a></h3>
+<body style="background-color: white">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">Veni Mitev</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://open.spotify.com/episode/2A4VXiol7U1mRBaNE2QLMV?si=5268e9a0724f4501" target="_blank">Podcast Epiode Featuring Me</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Coding Projects
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/MITxPRO-exercises/Shapes/shapes.html">Shapes Excercise</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/MITxPRO-exercises/PacMan/PacMan.html">Pacman Excercise</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+  </header>
+    <div id="box" class="center">
     <div id="PacMan" class="pacman">
         <div class="pacman__eye"></div>
         <div id="PacMan-Mouth" class="pacman__mouth-1"></div>
     </div>
-    <button style="position:absolute; width: 200px; top: 300px; left: 1%; font-size: 20px;" onclick="Run()">Start/Faster</button>
-    <button style="position:absolute; width: 200px; top: 300px; left: 25%; font-size: 20px;" onclick="randomColorBackground()">Random Background</button>
-    <button style="position:absolute; width: 200px; top: 300px; left: 50%; font-size: 20px;" onclick="randomColorPacMan()">Random PacMan Color</button>
-    <button style="position:absolute; width: 200px; top: 300px; left: 75%; font-size: 20px;" onclick="resetColors()">Reset Colors</button>
-</body>
+    </div>
+  <div>
+    <button class="btn btn-outline-dark" style="position:relative; width: 150px; top: 100px; left: 10vh; font-size: 20px;" onclick="Run()">Start/Faster</button>
+    <button class="btn btn-outline-dark" style="position:relative; width: 150px; top: 100px; left: 40vh; font-size: 20px;" onclick="randomColorBackground()">Random Background</button>
+    <button class="btn btn-outline-dark" style="position:relative; width: 150px; top: 100px; left: 70vh; font-size: 20px;" onclick="randomColorPacMan()">Random PacMan Color</button>
+    <button class="btn btn-outline-dark" style="position:relative; width: 150px; top: 100px; left: 100vh; font-size: 20px;" onclick="resetColors()">Reset Colors</button>
+  </div>
 
+    <script type="text/javascript" src="/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="/MITxPRO-exercises/PacMan/PacMan.js"></script>
+
+  <footer>
+      <div class="row text-center">
+          <div class="col-md">
+              <a href="https://github.com/VeniMitev" target="_blank"><p>_GitHub <i class="bi bi-github"></i></p></a>
+          </div>
+          <div class="col-md">
+              <a href="https://www.linkedin.com/in/venelin-mitev/" target="_blank"><p>_LinkedIn <i class="bi bi-linkedin"></i></p></a>
+          </div>
+          <div class="col-md">
+              <a href="https://www.youtube.com/channel/UCoGzGTZdwwVaActFVhqygZg" target="_blank"><p>_YouTube <i class="bi bi-youtube"></i></p></a>
+          </div>
+          <div class="col-md">
+              <a href="https://www.instagram.com/venelin_m" target="_blank"><p>_Instagram <i class="bi bi-instagram"></i></p></a>
+          </div>
+      </div>
+  </footer>
+</body>
 </html>
