@@ -13,7 +13,7 @@
     function Run() {
         let img = document.getElementById("PacMan");
         let mouth = document.getElementById("PacMan-Mouth")
-        let imgWidth = 200;
+        let imgWidth = document.getElementById('PacMan').offsetWidth;
         focus = (focus + 1) % 2;
         direction = checkPageBounds(direction, imgWidth, pos, pageWidth);
         mouth.className = pacArray[direction][focus];
@@ -24,7 +24,7 @@
             pos += 20;
             img.style.left = pos + 'px';
         }
-        // Use setTimeout to call Run every 200 millesecs
+        
         setTimeout(Run, 200);
     }
 
@@ -47,9 +47,7 @@
     }
 
     function checkPageBounds(direction, imgWidth, pos, pageWidth) {
-        //
-        // Complete this to reverse direction on hitting page bounds
-        // 
+        
         if (direction == 0 && pos + imgWidth > pageWidth) direction = 1;
         if (direction == 1 && pos < 0) direction = 0;
 

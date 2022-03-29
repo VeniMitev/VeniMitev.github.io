@@ -1,82 +1,44 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Veni Mitev Portfolio</title>
-        <link type="text/css" rel="stylesheet" href="/css/bootstrap.css">
-        <link type="text/css" rel="stylesheet" href="/css/style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-        <link rel="icon" href="images/example.png">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Veni Mitev Portfolio</title>
+      <link type="text/css" rel="stylesheet" href="/css/bootstrap.css">
+      <link type="text/css" rel="stylesheet" href="/css/style.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+      <link rel="icon" href="images/example.png">
     </head>
 
     <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-              <div class="container-fluid">
-                <a class="navbar-brand" href="/">Veni Mitev</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/about.html">About Me</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                      <a class="nav-link" href="https://open.spotify.com/episode/2A4VXiol7U1mRBaNE2QLMV?si=5268e9a0724f4501" target="_blank">Podcast Epiode Featuring Me</a>
-                    </li> -->
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Coding Projects
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/MITxPRO-exercises/Shapes/shapes.html">Shapes Excercise</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="/MITxPRO-exercises/PacMan/PacMan.html">Pacman Excercise</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-          </nav>
-        </header>
+        <my-header></my-header>
 
-        <div class="col-sm center" style="border:0">
-            <img loading="lazy" src="/Images/BioPic.jpg" width="500rem" />
-        </div>
-        <div class="center" style="border:0">
-            <img loading="lazy" src="/Images/BioPic.jpg" width="500rem" />
-        </div>
-        <!-- <div class="center" style="border:0">
-            <img loading="lazy" src="/Images/BioPic.jpg" width="500rem" />
-        </div> -->
+        <main>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm center" style="border:0">
+                <img class="home-pg-img" loading="lazy" src="/Images/BioPic.jpg" width="100%" />
+              </div>
+            <div class="row">
+              <div class="col center">
+                <h1>Welcome to my Web developer porfolio</h1> 
+              </div>
+            </div>
+              <!-- <div class="col-sm center" style="border:0">
+                <img loading="lazy" src="/Images/BioPic.jpg" width="500rem" />
+              </div>
+              <div class="col-sm center" style="border:0">
+                <img loading="lazy" src="/Images/BioPic.jpg" width="500rem" />
+              </div>
+            </div> -->
+          </div>
+          
+        </main>
+        
         
 
 
-        <footer>
-            <div class="row text-center">
-                <div class="col-sm">
-                    <a href="https://github.com/VeniMitev" target="_blank"><p>_github <i class="bi bi-github"></i></p></a>
-                </div>
-                <div class="col-sm">
-                    <a href="https://www.linkedin.com/in/venelin-mitev/" target="_blank"><p>_linkedin <i class="bi bi-linkedin"></i></p></a>
-                </div>
-                <div class="col-sm">
-                    <a href="https://www.youtube.com/channel/UCoGzGTZdwwVaActFVhqygZg" target="_blank"><p>_youtube <i class="bi bi-youtube"></i></p></a>
-                </div>
-                <div class="col-sm">
-                    <a href="https://www.instagram.com/venelin_m" target="_blank"><p>_instagram <i class="bi bi-instagram"></i></p></a>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md">
-                    <p style="font-size: 0.75em; font-family: monospace">&copy; <span id="year"></span> by Veni Mitev</p>
-                </div>
-            </div>
-        </footer>
-        <script src="/Components/NavBar.js"></script>
+        <my-footer></my-footer>
+        <script src="/Components/header and footer.js"></script>
         <script type="text/javascript" src="/js/bootstrap.bundle.js"></script>
         <script type="text/javascript" src="/js/app.js"></script>
     </body>
