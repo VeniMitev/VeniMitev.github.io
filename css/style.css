@@ -1,45 +1,67 @@
-/* footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: red;
-    color: white;
-    text-align: center;
-} */
+
+:root {
+    --gray-clr: #bbb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+}
 
 body, html {
+    position: relative;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
 }
 
 body {
-    background: radial-gradient(rgba(129, 129, 129, 0.219), rgba(129, 129, 129, 0.6));
+    background: radial-gradient(var(--gray-clr), rgba(129, 129, 129, 0.6));
     /* background-color:rgba(129, 129, 129, 0.219); */
     align-items: center;
     justify-content: center;
+    
 }
 
-
 main {
-    padding: 5em;
+    padding: 3em;
 }
 
 footer {
-    position:relative;
-    font-family: monospace;
+    position:absolute;
     left: 0;
     bottom: 0px;
     width: 100%;
-    background-color: #bbb;
+    background-color: var(--gray-clr);
     color: white;
     text-align: center;
+    margin-top: 1em;
     padding-top: 1.5em;
     letter-spacing: 0.2vw;
+    overflow:auto;
+}
+
+footer p {
+    font-size: 1rem;
+    font-family: monospace;
+}
+
+footer .row {
+    padding: 0;
 }
 
 nav {
     font-family: monospace;
+    font-size: 1.25rem;
+}
+
+.nav-item {
+    padding-left: .5em;
+    padding-right: .5em;
 }
 
 a {
@@ -84,7 +106,6 @@ img {
 }
 
 
-
 /* p {
     font-family: Arial, Helvetica, sans-serif;
 } */
@@ -100,5 +121,77 @@ img {
 
 .home-pg-img {
     border-radius: 50%;
-    width: 50%;
+    width: 15em;
+    min-width: 14em;
 }
+
+/* .blink_me {
+    animation: blinker 0.5s linear infinite;
+    animation-play-state: paused;
+}
+
+.github:hover .blink_me:hover {
+    animation-play-state: running;
+}
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  } */
+
+.al-cntr {
+    text-align: center;
+}
+
+/* .card-img {
+    position: relative;
+    min-width: 20em;
+    max-width: 37em;
+}
+
+.card-img img {
+    border-radius: 0.5em;
+}
+
+.text-bg-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.text-background {
+    position: absolute;
+    display: block;
+    height: 3em;
+    width: 0;
+    background: #fff;
+    bottom: 1.5em;
+    background: linear-gradient(90deg,rgba(255,255,255,.7497373949579832) 50%,rgba(255,255,255,0) 100%);
+
+    transition: width 500ms ease;
+}
+
+.text-background:hover {
+    width: 100%;
+}
+
+
+.text-block {
+    position: absolute;
+    width: max-content;
+    font: 22px arial;    
+    bottom: -0.2em;
+    left: .5em;
+    color: steelblue;
+}
+
+
+.drop-shadow {
+    filter: drop-shadow(0);
+    transition: drop-shadow 500ms ease;
+}
+.drop-shadow:hover {
+    filter: drop-shadow(2px 2px 5px rgba(125, 125, 125, 0.5));
+} */
+

@@ -1,0 +1,19 @@
+{
+  "name": "vm-dev-portfolio",
+  "version": "1.0.0",
+  "description": "Venelin Mitev Web Developper Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VeniMitev/VeniMitev.github.io.git"
+  },
+  "author": "Venelin Mitev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VeniMitev/VeniMitev.github.io/issues"
+  },
+  "homepage": "https://github.com/VeniMitev/VeniMitev.github.io#readme"
+}
