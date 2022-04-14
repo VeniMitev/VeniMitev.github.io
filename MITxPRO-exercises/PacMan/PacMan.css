@@ -61,6 +61,7 @@
 }
 
 .btn {
+    align-self: center;
     text-align: center;
     position:relative; 
     /* top: 10em;  */
@@ -79,4 +80,9 @@ body {
 
 main {
     padding-top: 5em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }

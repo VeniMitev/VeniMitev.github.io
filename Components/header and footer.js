@@ -3,7 +3,7 @@ class MyHeader extends HTMLElement {
         this.innerHTML = `
         <link type="text/css" rel="stylesheet" href="/css/bootstrap.css">
         <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav id="myHeader" class="navbar navbar-expand-lg navbar-dark bg-dark">
               <div class="container-fluid">
                 <a class="navbar-brand" style="width: 10em; padding-left: 1em;" href="/">Veni Mitev .DEV</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,14 +15,9 @@ class MyHeader extends HTMLElement {
                       <a class="nav-link" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/about.html">About Me</a>
+                      <a class="nav-link" href="/#about-me">About Me</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Contact Me</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href=".Images/Venelin-Mitev-Portfolio.pdf" download>Download my Resume</a>
-                    </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Coding Projects
@@ -32,7 +27,7 @@ class MyHeader extends HTMLElement {
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="/MITxPRO-exercises/PacMan/PacMan.html">Pacman Excercise</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="/MITxPRO-exercises/Eyes/index.html">Eyes</a></li>
+                        <li><a class="dropdown-item" href="/MITxPRO-exercises/Eyes/Eyes.html">Eyes</a></li>
                       </ul>
                     </li>
                   </ul>

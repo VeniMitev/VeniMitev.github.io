@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  #map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+  }
+  
+  .map-overlay {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+  }
+  
+
+.map-box {
+  position: relative;
+  border: 2px solid black;
+  height: 20em;
+  width: 20em;
+  overflow: hidden;
+}
