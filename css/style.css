@@ -124,8 +124,8 @@ img {
 
 .home-pg-img {
     border-radius: 50%;
-    width: 15em;
-    min-width: 14em;
+    width: 20em;
+    min-width: 20em;
 }
 
 /* .blink_me {
@@ -155,6 +155,7 @@ img {
 
 .card-img img {
     border-radius: 0.5em;
+    padding-top: 1em;
 }
 
 .text-bg-container {
