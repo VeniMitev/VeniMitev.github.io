@@ -28,6 +28,8 @@ class MyHeader extends HTMLElement {
                         <li><a class="dropdown-item" href="/MITxPRO-exercises/PacMan/PacMan.html">Pacman Excercise</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="/MITxPRO-exercises/Eyes/Eyes.html">Eyes</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="MITxPRO-exercises/Real-Time-Bus/bus.html">Real-Time Bus Tracker</a></li>
                       </ul>
                     </li>
                   </ul>
