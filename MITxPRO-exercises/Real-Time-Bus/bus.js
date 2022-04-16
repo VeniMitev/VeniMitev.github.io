@@ -11,10 +11,10 @@ let map = new mapboxgl.Map({
 
 let busRoute1 = '';
 
-
 function getBusRoutes(data){
 	for (let i = 0; i < data.length; i++) {
 		if(data[i].relationships.route.data.id === '1'){
+			console.log(data[i]);
 			return busRoute1 = data[i];
 		}
 		// if(data[i].relationships.route.data.id === '1'){
@@ -27,6 +27,10 @@ function getBusRoutes(data){
 }
 
 
+
+
+
+
 async function run(){
 	// get bus data    
 	const locations = await getBusLocations();
@@ -36,11 +40,20 @@ async function run(){
 
 	getBusRoutes(locations)
 	
-
-
-
+	const el = document.createElement('div');
 	let longLat = [busRoute1.attributes.longitude, busRoute1.attributes.latitude];
-	let marker = new mapboxgl.Marker().setLngLat(longLat).addTo(map);
+	let marker = new mapboxgl.Marker()
+		
+	marker.setLngLat(longLat).setPopup(new mapboxgl.Popup().setHTML("<h1>Bus #1</h1>")).addTo(map);
+
+
+	document.getElementById('fly').addEventListener('click', () => {
+		map.flyTo({
+			center: longLat,
+		});
+	});
+
+
 	// timer
 	setTimeout(run, 15000);
 }
@@ -52,11 +65,9 @@ async function getBusLocations(){
 	const url = 'https://api-v3.mbta.com/vehicles';
 	const response = await fetch(url);
 	const json     = await response.json();
-	return json.data;
+
+	data = json.data;
+	return data;
 }
 
 run();
-
-
-
-// url = 'https://api-v3.mbta.com/vehicles?filter[route]=1&include=trip';
