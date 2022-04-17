@@ -9,17 +9,14 @@ let map = new mapboxgl.Map({
 	zoom: 14,
 });
 
-let busRoute1 = '';
+let busRoute1 = [];
+let marker = [];
 
 function getBusRoutes(data){
 	for (let i = 0; i < data.length; i++) {
 		if(data[i].relationships.route.data.id === '1'){
-			console.log(data[i]);
-			return busRoute1 = data[i];
+			busRoute1.push(data[i]);
 		}
-		// if(data[i].relationships.route.data.id === '1'){
-		// 	return busRoute1 = data[i];
-		// }
 		// if(data[i].relationships.route.data.id === '1'){
 		// 	return busRoute1 = data[i];
 		// }
@@ -27,25 +24,31 @@ function getBusRoutes(data){
 }
 
 
-
-
-
-
 async function run(){
 	// get bus data    
+
 	const locations = await getBusLocations();
 	console.log(new Date());
 	console.log(locations);
 	console.log(locations[8].relationships.route.data.id);
+	busRoute1 = [];
+	
+	for (let i = 0; i < marker.length; i++) {
+		marker[i].remove();
+	}
 
 	getBusRoutes(locations)
-	
-	const el = document.createElement('div');
-	let longLat = [busRoute1.attributes.longitude, busRoute1.attributes.latitude];
-	let marker = new mapboxgl.Marker()
-		
-	marker.setLngLat(longLat).setPopup(new mapboxgl.Popup().setHTML("<h1>Bus #1</h1>")).addTo(map);
 
+	console.log(busRoute1)
+	
+	for (let i = 0; i < busRoute1.length; i++) {
+		let longLat = [busRoute1[i].attributes.longitude, busRoute1[i].attributes.latitude];
+
+		marker[i] = new mapboxgl.Marker()
+			.setLngLat(longLat)
+			.setPopup(new mapboxgl.Popup().setHTML("<h1>Bus #1</h1>"))
+			.addTo(map);
+	}
 
 	document.getElementById('fly').addEventListener('click', () => {
 		map.flyTo({

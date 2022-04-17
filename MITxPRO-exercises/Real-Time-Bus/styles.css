@@ -19,6 +19,9 @@
       padding: 10px;
     }
     
+    #marker {
+      position: absolute;
+    }
   
   .map-box {
     position: relative;
