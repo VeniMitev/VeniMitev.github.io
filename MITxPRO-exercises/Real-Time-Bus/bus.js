@@ -17,12 +17,8 @@ function getBusRoutes(data){
 		if(data[i].relationships.route.data.id === '1'){
 			busRoute1.push(data[i]);
 		}
-		// if(data[i].relationships.route.data.id === '1'){
-		// 	return busRoute1 = data[i];
-		// }
 	}
 }
-
 
 async function run(){
 	// get bus data    
@@ -40,19 +36,30 @@ async function run(){
 	getBusRoutes(locations)
 
 	console.log(busRoute1)
+
+	let LngArr = [];
+	let LatArr = [];
 	
 	for (let i = 0; i < busRoute1.length; i++) {
 		let longLat = [busRoute1[i].attributes.longitude, busRoute1[i].attributes.latitude];
 
+		let occupancy = busRoute1[i].attributes.occupancy_status;
+
 		marker[i] = new mapboxgl.Marker()
 			.setLngLat(longLat)
-			.setPopup(new mapboxgl.Popup().setHTML("<h1>Bus #1</h1>"))
+			.setPopup(new mapboxgl.Popup().setHTML(`<p>Bus #1</p>`))
 			.addTo(map);
+
+		LngArr.push(busRoute1[i].attributes.longitude);
+		LatArr.push(busRoute1[i].attributes.latitude);
 	}
+
+	let average = arr => arr.reduce((a,b) => a + b, 0) / arr.length;	
 
 	document.getElementById('fly').addEventListener('click', () => {
 		map.flyTo({
-			center: longLat,
+			center: [average(LngArr), average(LatArr)],
+			zoom: 13
 		});
 	});
 
@@ -60,8 +67,6 @@ async function run(){
 	// timer
 	setTimeout(run, 15000);
 }
-
-
 
 // Request bus data from MBTA
 async function getBusLocations(){

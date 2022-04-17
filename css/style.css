@@ -127,8 +127,8 @@ img {
 
 .home-pg-img {
     border-radius: 50%;
-    width: 20em;
-    min-width: 20em;
+    width: 15em;
+    min-width: 15em;
 }
 
 /* .blink_me {
@@ -158,7 +158,7 @@ img {
 
 .card-img img {
     border-radius: 0.5em;
-    padding-top: 1em;
+    margin-top: 1em;
 }
 
 .text-bg-container {
@@ -203,8 +203,8 @@ img {
 }
 
 .about-me-cont {
-    padding-top: 50vh;
-    padding-bottom: 40vh;
+    padding-top: 25vh;
+    padding-bottom: 20vh;
     top: 100%;
 }
 
@@ -247,6 +247,12 @@ img {
     padding: 1em;
 }
 
+.project-cont {
+    padding-top: 5vh;
+    padding-bottom: 40vh;
+    top: 100%;
+}
+
 #about-me {
     padding-top: 6em;
 }
@@ -256,4 +262,14 @@ img {
     padding-right: 5%;
     align-items: center;
     justify-content: center;
+}
+
+#home-pg-links {
+    margin-top: 2em;
+    row-gap: 2em;
+}
+
+#home-pg-links .text-background {
+    position: relative;
+    margin-top: 1em;
 }
