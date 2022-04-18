@@ -1,6 +1,12 @@
 # Veni Mitev Web Dev Portfolio Project
+
 ## Description of Project
+
+### Deployment:
+**[www.venimitev.dev](https://www.venimitev.dev/)**
+
 ## Roadmap of future improvements:
+
 ## License: MIT
 Copyright (c) 2022 Venelin Mitev
 
