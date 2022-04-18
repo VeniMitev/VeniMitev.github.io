@@ -5,6 +5,8 @@
 ### Deployment:
 [Eyes](https://www.venimitev.dev/MITxPRO-exercises/Eyes/Eyes.html)
 
+## How to Run/Features
+
 ## Roadmap of future improvements:
 
 ## License: MIT
