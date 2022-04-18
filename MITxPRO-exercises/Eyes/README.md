@@ -1,4 +1,4 @@
-# Veni Mitev Web Dev Portfolio Project
+# Eyes
 
 ## Description of Project:
 
