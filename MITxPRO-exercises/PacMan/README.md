@@ -1,24 +1,13 @@
-# **Name:** PacMan Exercise
+# PacMan Exercise
 
-**Description:** Week 4 exercise in the MIT xPRO coding bootcamp
+## Description of Project
+Week 4 exercise in the MIT xPRO coding bootcamp
+### Deployment:
+**[PacMan App](https://venimitev.github.io/MITxPRO-exercises/PacMan/PacMan.html)**
 
+## Roadmap of future improvements:
 
-**Installation:** N/A
-
-
-**Usage:** For fun 
-
-
-**Support:** contact me
-
-
-**Roadmap:** N/A 
-
-
-**License information:** 
-
-MIT License
-
+## License: MIT
 Copyright (c) 2020 John Williams
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,5 +28,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
---------------------------------------------------
-[Link to the application](https://venimitev.github.io/MITxPRO-exercises/PacMan/PacMan.html)
