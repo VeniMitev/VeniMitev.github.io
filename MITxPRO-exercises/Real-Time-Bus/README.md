@@ -1,4 +1,4 @@
-# Veni Mitev Web Dev Portfolio Project
+# Real Time Bus Tracker
 
 ## Description of Project:
 
