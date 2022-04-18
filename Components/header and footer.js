@@ -23,8 +23,6 @@ class MyHeader extends HTMLElement {
                         Coding Projects
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/MITxPRO-exercises/Shapes/shapes.html">Shapes Excercise</a></li>
-                        <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="/MITxPRO-exercises/PacMan/PacMan.html">Pacman Excercise</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="/MITxPRO-exercises/Eyes/Eyes.html">Eyes</a></li>

@@ -273,3 +273,20 @@ img {
     position: relative;
     margin-top: 1em;
 }
+
+#technologies img {
+    height: 7em;
+}
+
+#tech-future img {
+    height: 5em;
+}
+
+.text-block img {
+    height: 2em;
+}
+
+.text-block .row {
+    padding: 0;
+    margin: 0;
+}

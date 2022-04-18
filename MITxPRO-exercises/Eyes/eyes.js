@@ -11,3 +11,13 @@ document.onmousemove = (event) => {
     balls[i].transform = 'translate(-' + x + ',-' + y + ')';
   }
 };
+
+
+function randomColorBackground(){
+  let red = Math.floor(Math.random() *255);
+  let green = Math.floor(Math.random() *255);
+  let blue = Math.floor(Math.random() *255);
+  
+  document.body.style.backgroundColor =  "rgb(" + red + ", " + green + ", " + blue + ")";
+  document.getElementById("body").style.background =  "rgb(" + red + ", " + green + ", " + blue + ")";
+}

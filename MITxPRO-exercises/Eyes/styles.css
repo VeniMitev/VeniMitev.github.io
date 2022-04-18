@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  background: #14495e;
 }
 
 .eyes {
@@ -34,4 +33,8 @@ body {
 
 footer {
   position: absolute;
+}
+
+.btn {
+  font-size: 2rem;
 }
