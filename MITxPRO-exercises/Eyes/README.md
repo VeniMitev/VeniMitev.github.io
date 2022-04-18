@@ -1,6 +1,12 @@
 # Veni Mitev Web Dev Portfolio Project
-## Description of Project
+
+## Description of Project:
+
+### Deployment:
+[Eyes](https://www.venimitev.dev/MITxPRO-exercises/Eyes/Eyes.html)
+
 ## Roadmap of future improvements:
+
 ## License: MIT
 Copyright (c) 2022 Venelin Mitev
 
