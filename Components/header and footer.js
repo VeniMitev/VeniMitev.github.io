@@ -18,17 +18,7 @@ class MyHeader extends HTMLElement {
                       <a class="nav-link" href="/#about-me">About Me</a>
                     </li>
                     <li class="nav-item">
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Coding Projects
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/MITxPRO-exercises/PacMan/PacMan.html">Pacman Excercise</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="/MITxPRO-exercises/Eyes/Eyes.html">Eyes</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="MITxPRO-exercises/Real-Time-Bus/bus.html">Real-Time Bus Tracker</a></li>
-                      </ul>
+                    <a class="nav-link" href="/projects.html">Coding Projects</a>
                     </li>
                   </ul>
                 </div>
@@ -53,20 +43,23 @@ class MyFooter extends HTMLElement {
           <div class="container-fluid">
             <div class="row">
                 <div class="col-sm">
-                    <a href="https://github.com/VeniMitev" target="_blank"><p class="github">github<span class="blink_me">_</span> <i class="bi bi-github"></i></p></a>
+                    <a href="https://github.com/VeniMitev" target="_blank"><p class="github">github_ <i class="bi bi-github"></i></p></a>
                 </div>
                 <div class="col-sm">
-                    <a href="https://www.linkedin.com/in/venelin-mitev/" target="_blank"><p class="linkedin">linkedin<span class="blink_me">_</span> <i class="bi bi-linkedin"></i></p></a>
+                    <a href="https://www.linkedin.com/in/venelin-mitev/" target="_blank"><p class="linkedin">linkedin_ <i class="bi bi-linkedin"></i></p></a>
                 </div>
                 <div class="col-sm">
-                    <a href="https://www.youtube.com/channel/UCoGzGTZdwwVaActFVhqygZg" target="_blank"><p class="youtube">youtube<span class="blink_me">_</span> <i class="bi bi-youtube"></i></p></a>
+                    <a href="https://www.youtube.com/channel/UCoGzGTZdwwVaActFVhqygZg" target="_blank"><p class="youtube">youtube_ <i class="bi bi-youtube"></i></p></a>
                 </div>
                 <div class="col-sm">
-                    <a href="https://www.instagram.com/venelin_m" target="_blank"><p class="instagram">instagram<span class="blink_me">_</span> <i class="bi bi-instagram"></i></p></a>
+                    <a href="https://www.instagram.com/venelin_m" target="_blank"><p class="instagram">instagram_ <i class="bi bi-instagram"></i></p></a>
+                </div>
+                <div class="col-sm">
+                    <a href="mailto:business@venimitev.com" target="_blank"><p class="email">email_ <i class="bi bi-envelope-fill"></i></p></a>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm">
+                <div style="display:flex; justify-content: center;" class="col">
                     <p style="font-size: 0.75em; font-family: monospace">&copy; <span id="year"></span> by Veni Mitev</p>
                 </div>
             </div>
@@ -78,29 +71,3 @@ class MyFooter extends HTMLElement {
 }
 
 customElements.define('my-footer', MyFooter);
-
-
-
-    // <footer>
-    //       <div class="container-fluid">
-    //         <div class="row">
-    //             <div class="col-sm">
-    //                 <a href="https://github.com/VeniMitev" target="_blank"><p class="github">github<div class="blink_me">_</div> <i class="bi bi-github"></i></p></a>
-    //             </div>
-    //             <div class="col-sm">
-    //                 <a href="https://www.linkedin.com/in/venelin-mitev/" target="_blank"><p class="linkedin">linkedin<div class="blink_me">_</div> <i class="bi bi-linkedin"></i></p></a>
-    //             </div>
-    //             <div class="col-sm">
-    //                 <a href="https://www.youtube.com/channel/UCoGzGTZdwwVaActFVhqygZg" target="_blank"><p class="youtube">youtube<div class="blink_me">_</div> <i class="bi bi-youtube"></i></p></a>
-    //             </div>
-    //             <div class="col-sm">
-    //                 <a href="https://www.instagram.com/venelin_m" target="_blank"><p class="instagram">instagram<div class="blink_me">_</div> <i class="bi bi-instagram"></i></p></a>
-    //             </div>
-    //         </div>
-    //         <div class="row">
-    //             <div class="col-sm">
-    //                 <p style="font-size: 0.75em; font-family: monospace">&copy; <span id="year"></span> by Veni Mitev</p>
-    //             </div>
-    //         </div>
-    //       </div>
-    //     </footer>

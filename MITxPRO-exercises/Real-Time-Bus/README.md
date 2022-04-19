@@ -3,7 +3,7 @@
 ## Description of Project:
 
 ### Deployment:
-**[Real Time Bus Tracker](https://www.venimitev.dev/MITxPRO-exercises/Real-Time-Bus/bus.html)**
+**[Real Time Bus Tracker](https://www.venimitev.dev/MITxPRO-exercises/Real-Time-Bus/index.html)**
 
 ## How to Run/Features
 

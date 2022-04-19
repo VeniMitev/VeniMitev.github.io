@@ -4,7 +4,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidmVuZWxpbjEiLCJhIjoiY2wxamxxaXNyMXN4bzNqcDhpZ
 
 let map = new mapboxgl.Map({
 	container: 'map',
-	style: 'mapbox://styles/mapbox/streets-v11',
+	style: 'mapbox://styles/venelin1/cl25sib6g000c14mjzb15spr8',
 	center: [-71.104081, 42.365554],
 	zoom: 14,
 });
@@ -59,7 +59,7 @@ async function run(){
 	document.getElementById('fly').addEventListener('click', () => {
 		map.flyTo({
 			center: [average(LngArr), average(LatArr)],
-			zoom: 13
+			zoom: 12
 		});
 	});
 

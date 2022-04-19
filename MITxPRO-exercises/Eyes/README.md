@@ -3,7 +3,7 @@
 ## Description of Project:
 
 ### Deployment:
-[Eyes](https://www.venimitev.dev/MITxPRO-exercises/Eyes/Eyes.html)
+[Eyes](https://www.venimitev.dev/MITxPRO-exercises/Eyes/index.html)
 
 ## How to Run/Features
 

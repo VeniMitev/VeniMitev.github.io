@@ -12,6 +12,7 @@
 p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.25rem;
+    max-width: 60ch;
 }
 
 body, html {
@@ -110,6 +111,12 @@ img {
 .instagram:hover {
     color: #8a3ab9;
 }
+.email {
+    color: inherit;
+}
+.email:hover {
+    color: steelblue;
+}
 
 
 /* p {
@@ -171,7 +178,7 @@ img {
     position: absolute;
     display: block;
     height: 3em;
-    width: 0;
+    width: 0%;
     background: #fff;
     bottom: 1.5em;
     background: linear-gradient(90deg,rgba(255,255,255,.7497373949579832) 50%,rgba(255,255,255,0) 100%);
@@ -190,15 +197,20 @@ img {
     font: 22px arial;    
     bottom: -0.2em;
     left: .5em;
-    color: steelblue;
+    color: white;
+
+    transition: color 300ms ease;
 }
 
+.text-block:hover {
+    color: steelblue
+}
 
 .drop-shadow {
     filter: drop-shadow(0);
     transition: drop-shadow 1000ms ease;
 }
-.drop-shadow:hover {
+.drop-shadow:hover .text-background:hover {
     filter: drop-shadow(2px 2px 5px rgba(125, 125, 125, 0.5));
 }
 
@@ -255,6 +267,7 @@ img {
 
 #about-me {
     padding-top: 6em;
+    padding-bottom: 10em;
 }
 
 .container-fluid .row {
@@ -265,8 +278,27 @@ img {
 }
 
 #home-pg-links {
-    margin-top: 2em;
-    row-gap: 2em;
+    margin-top: 5em;
+    row-gap: 1em;
+    max-width: 50em;
+    min-width: 20em;
+}
+
+#home-pg-links .row {
+    width: 100%;
+}
+
+#technologies {
+    align-self: center;
+    position: relative;
+    margin-top: 1em;
+    min-height: 5em;
+    max-width: 50em;
+}
+
+#technologies .center {
+    text-align: center;
+    width: 100%;
 }
 
 #home-pg-links .text-background {
@@ -274,8 +306,12 @@ img {
     margin-top: 1em;
 }
 
+
+
 #technologies img {
+    position: relative;
     height: 7em;
+    min-width: 3em;
 }
 
 #tech-future img {
@@ -289,4 +325,53 @@ img {
 .text-block .row {
     padding: 0;
     margin: 0;
+}
+
+#podcast {
+    max-width: 40em;
+}
+
+.center-sm {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 25%;
+    padding: 1em; 
+}
+
+.center-lg {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    padding: 1em; 
+}
+
+#about-me img {
+    min-width: 20em;
+}
+
+#about-me p {
+    margin-top: 1em;
+}
+
+#project-icons img {
+    height: 2em;
+}
+
+#project-icons button {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+#project-icons p {
+    margin-top: 1em;
+    height: 10em;
+}
+
+.text-background-2 {
+    width: 100%;
+    background: linear-gradient(90deg,rgba(255,255,255,.9) 75%,rgba(255,255,255,0) 100%);
 }

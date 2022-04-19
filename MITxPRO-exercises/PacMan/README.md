@@ -4,7 +4,7 @@
 Week 4 exercise in the MIT xPRO coding bootcamp
 
 ### Deployment:
-**[PacMan App](https://venimitev.github.io/MITxPRO-exercises/PacMan/PacMan.html)**
+**[PacMan App](https://venimitev.github.io/MITxPRO-exercises/PacMan/index.html)**
 
 ## How to Run/Features
 
