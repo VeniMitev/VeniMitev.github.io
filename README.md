@@ -2,10 +2,16 @@
 
 ## Description of Project
 
+My web dev portfolio project. It will always be a work in progress. Currently it has an "About Me" section on the home page, and a "Coding Projects" page.
+
 ### Deployment:
 **[www.venimitev.dev](https://www.venimitev.dev/)**
 
 ## Roadmap of future improvements:
+
+- Upgrade the entire website to be built on React, Express, MongoDB, and other new technologies.
+- Design changes.
+- Constantly adding new projects.
 
 ## License: MIT
 Copyright (c) 2022 Venelin Mitev
