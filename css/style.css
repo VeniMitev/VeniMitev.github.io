@@ -273,7 +273,7 @@ img {
 
 .project-cont {
     padding-top: 5vh;
-    padding-bottom: 10vh;
+    padding-bottom: 20vh;
     top: 100%;
 }
 
@@ -387,7 +387,7 @@ img {
 
 #project-icons p {
     margin-top: 0.5em;
-    height: 8em;
+    min-height: fit-content;
 }
 
 #project-icons h4 {

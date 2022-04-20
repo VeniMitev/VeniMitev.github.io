@@ -13,8 +13,7 @@ let busRoute1 = [];
 let marker = [];
 
 // Extracts data for the specified bus route, in this case Route 1
-
-function getBusRoutes(data){
+let getBusRoutes = (data) => {
 	for (let i = 0; i < data.length; i++) {
 		if(data[i].relationships.route.data.id === '1'){
 			busRoute1.push(data[i]);
@@ -65,20 +64,22 @@ async function run(){
 	// Sets the zoom of the map properly, according to the screen size of the user
 	let zoomScreen = () => {
 		if (window.innerWidth < 700) {
-			return 12
+			return 11.25
 		} else if (window.innerWidth > 2000) {
-			return 14
-		} else {
 			return 13
+		} else {
+			return 12.5
 		}
 	}
  
+	console.log(window.innerWidth);
 
 	// Takes the average longitudes and latitudes of the tracked buses in order to find the center point of all of them, and then zooms out (or in) to fit all busses in the screen
 	document.getElementById('fly').addEventListener('click', () => {
 		map.flyTo({
 			center: [average(LngArr), average(LatArr)],
 			zoom: zoomScreen(),
+			bearing: 0,
 		});
 	});
 
