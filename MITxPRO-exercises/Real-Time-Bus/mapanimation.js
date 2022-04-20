@@ -12,6 +12,8 @@ let map = new mapboxgl.Map({
 let busRoute1 = [];
 let marker = [];
 
+// Extracts data for the specified bus route, in this case Route 1
+
 function getBusRoutes(data){
 	for (let i = 0; i < data.length; i++) {
 		if(data[i].relationships.route.data.id === '1'){
@@ -20,13 +22,15 @@ function getBusRoutes(data){
 	}
 }
 
+
+// Main function
 async function run(){
 	// get bus data    
 
 	const locations = await getBusLocations();
 	console.log(new Date());
 	console.log(locations);
-	console.log(locations[8].relationships.route.data.id);
+	console.log(locations[1].relationships.route.data.id);
 	busRoute1 = [];
 	
 	for (let i = 0; i < marker.length; i++) {
@@ -39,7 +43,9 @@ async function run(){
 
 	let LngArr = [];
 	let LatArr = [];
-	
+
+
+	// Takes all buses from Route 1, and puts a marker for each on the map
 	for (let i = 0; i < busRoute1.length; i++) {
 		let longLat = [busRoute1[i].attributes.longitude, busRoute1[i].attributes.latitude];
 
@@ -56,10 +62,23 @@ async function run(){
 
 	let average = arr => arr.reduce((a,b) => a + b, 0) / arr.length;	
 
+	// Sets the zoom of the map properly, according to the screen size of the user
+	let zoomScreen = () => {
+		if (window.innerWidth < 700) {
+			return 12
+		} else if (window.innerWidth > 2000) {
+			return 14
+		} else {
+			return 13
+		}
+	}
+ 
+
+	// Takes the average longitudes and latitudes of the tracked buses in order to find the center point of all of them, and then zooms out (or in) to fit all busses in the screen
 	document.getElementById('fly').addEventListener('click', () => {
 		map.flyTo({
 			center: [average(LngArr), average(LatArr)],
-			zoom: 12
+			zoom: zoomScreen(),
 		});
 	});
 
