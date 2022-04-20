@@ -132,6 +132,15 @@ img {
     padding: 1em; 
 }
 
+.col {
+    display: block;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .home-pg-img {
     border-radius: 50%;
     width: 15em;
@@ -159,6 +168,9 @@ img {
 
 .card-img {
     position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     min-width: 20em;
     max-width: 37em;
 }
@@ -261,7 +273,7 @@ img {
 
 .project-cont {
     padding-top: 5vh;
-    padding-bottom: 40vh;
+    padding-bottom: 10vh;
     top: 100%;
 }
 
@@ -278,10 +290,10 @@ img {
 }
 
 #home-pg-links {
-    margin-top: 5em;
+    margin-top: 2em;
     row-gap: 1em;
-    max-width: 50em;
     min-width: 20em;
+    max-width: 55em;
 }
 
 #home-pg-links .row {
@@ -289,11 +301,15 @@ img {
 }
 
 #technologies {
-    align-self: center;
     position: relative;
     margin-top: 1em;
     min-height: 5em;
+    min-width: 20em;
     max-width: 50em;
+}
+
+#technologies .row {
+    width: 100%;
 }
 
 #technologies .center {
@@ -341,16 +357,19 @@ img {
 }
 
 .center-lg {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
+    margin:auto;
     width: 100%;
     padding: 1em; 
 }
 
 #about-me img {
-    min-width: 20em;
+    display: block;
+    margin: auto;
+    min-width: 15em;
+    border-radius: 0.5em;
 }
 
 #about-me p {
@@ -367,9 +386,15 @@ img {
 }
 
 #project-icons p {
-    margin-top: 1em;
-    height: 10em;
+    margin-top: 0.5em;
+    height: 8em;
 }
+
+#project-icons h4 {
+    margin-top: 1em;
+    height: 4rem
+}
+
 
 .text-background-2 {
     width: 100%;
