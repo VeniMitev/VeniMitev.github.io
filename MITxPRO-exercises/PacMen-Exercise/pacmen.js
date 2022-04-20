@@ -53,11 +53,14 @@ let makePac = () => {
   };
 }
 
+let raveTime = '';
+
 let raveMode = () => {
   randomColorPacMan();
   randomColorBackground();
 
-  setTimeout(raveMode, 500);
+  raveTime = setTimeout(raveMode, 500);
+  return raveTime
 }
 
 let updateMouth = () => {
@@ -74,6 +77,7 @@ let updateMouth = () => {
   }
 
   setTimeout(updateMouth, 400);
+  
 }
 
 let update = () => {
@@ -134,6 +138,8 @@ let randomColorPacMan = () => {
 }
 
 let resetColors = () => {
+    clearTimeout(raveTime);
+    
     let pacsMouth = document.querySelectorAll('#PacMan-Mouth');
     let pacs = document.querySelectorAll('#PacMan');
 
