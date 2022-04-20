@@ -1,0 +1,129 @@
+let pos = 0;
+const pacArray = ["pacman__mouth-1", "pacman__mouth-2"];
+let direction = 0;
+const pacMen = []; // This array holds all the pacmen
+let pageWidth = document.getElementById('box').offsetWidth;
+let pageHeight = document.getElementById('box').offsetHeight;
+
+// This function returns an object with random values
+function setToRandom(scale) {
+  return {
+    x: Math.random() * scale,
+    y: Math.random() * scale,
+  };
+}
+
+// Factory to make a PacMan at a random position with random velocity
+function makePac() {
+  // returns an object with random values scaled {x: 33, y: 21}
+  let velocity = setToRandom(10); // {x:?, y:?}
+  let position = setToRandom(200);
+  let pacWidth = Math.floor(Math.random() * 100);
+  let pacHeight = pacWidth;
+
+  let game = document.getElementById('game');
+  let newPac = document.createElement('div');
+  newPac.id = 'PacMan';
+  newPac.className = 'pacman';
+  newPac.width = pacWidth;
+  newPac.height = pacHeight;
+
+  game.appendChild(newPac);
+
+  let pacEye = document.createElement('div');
+  pacEye.className = 'pacman__eye';
+  newPac.appendChild(pacEye);
+
+  let pacMouth = document.createElement('div');
+  pacMouth.id = 'PacMan-Mouth';
+  pacMouth.className = 'pacman__mouth-1';
+  newPac.appendChild(pacMouth);
+
+  randomColorPacMan()
+  randomColorBackground()
+
+  newPac.style.left = position.x;
+  newPac.style.top = position.y;
+
+  // return details in an object
+  return {
+    position,
+    velocity,
+    newPac,
+  };
+}
+
+function update() {
+  // loop over pacmen array and move each one and move image in DOM
+  pacMen.forEach((item) => {
+    checkCollisions(item);
+    item.position.x += item.velocity.x;
+    item.position.y += item.velocity.y;
+
+    item.newPac.style.left = item.position.x;
+    item.newPac.style.top = item.position.y;
+  });
+
+  setTimeout(update, 20);
+}
+
+function checkCollisions(item) {
+  // TODO: detect collision with all walls and make pacman bounce
+  if (
+    item.position.x + item.velocity.x + item.newPac.offsetWidth > pageWidth ||
+    item.position.x + item.velocity.x < 0
+  )
+    item.velocity.x = -item.velocity.x;
+  if (
+    item.position.y + item.velocity.y + item.newPac.offsetHeight > pageHeight ||
+    item.position.y + item.velocity.y < 0
+  )
+    item.velocity.y = -item.velocity.y;
+}
+
+function makeOne() {
+  pacMen.push(makePac()); // add a new PacMan
+}
+
+
+
+
+function randomColorBackground(){
+    let red = Math.floor(Math.random() *255);
+    let green = Math.floor(Math.random() *255);
+    let blue = Math.floor(Math.random() *255);
+    let pacsMouth = document.querySelectorAll('#PacMan-Mouth');
+
+    for (let i = 0; i < pacsMouth.length; i++) {
+        pacsMouth[i].style.background =  "rgb(" + red + ", " + green + ", " + blue + ")";
+    }
+    
+    document.body.style.backgroundColor =  "rgb(" + red + ", " + green + ", " + blue + ")";
+}
+
+
+function randomColorPacMan(){
+    let red = Math.floor(Math.random() *255)
+    let green = Math.floor(Math.random() *255)
+    let blue = Math.floor(Math.random() *255)
+    let pacs = document.querySelectorAll('#PacMan');
+
+    for (let i = 0; i < pacs.length; i++) {
+        pacs[i].style.background =  "rgb(" + red + ", " + green + ", " + blue + ")";
+    }
+}
+
+function resetColors(){
+    let pacsMouth = document.querySelectorAll('#PacMan-Mouth');
+    let pacs = document.querySelectorAll('#PacMan');
+
+    for (let i = 0; i < pacs.length; i++) {
+        pacs[i].style.background =  "#F2D648";
+    }
+
+    for (let i = 0; i < pacsMouth.length; i++) {
+        pacsMouth[i].style.background =  'white';
+    }
+
+    document.body.style.backgroundColor =  "white";
+}

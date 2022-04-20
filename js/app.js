@@ -2,10 +2,9 @@ document.getElementById("year").innerHTML = new Date().getFullYear()
 
 
 window.onscroll = function() {myFunction(), scrollFunction()};
-window.onmouseover = function() {cardTextBG()}
+// window.onmouseover = function() {cardTextBG()}
 
 let header = document.getElementById("myHeader");
-
 
 let sticky = header.offsetTop;
 
@@ -17,8 +16,6 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
-
-
 
 let mybutton = document.getElementById("myBtn");
 
@@ -37,9 +34,13 @@ function topFunction() {
 }
 
 
-let card = document.getElementById('card-hover')
+// let card = document.getElementById('card-hover')
+// let cardBG = document.getElementsByID('card-bg')
 
-let cardTextBG = () => {
-    
-    // return card.style.width = '100%';
-}
+// card.addEventListener('mouseover', function() {
+//   cardBG.style.width = '100%';
+// });
+
+// // let cardTextBG = () => {
+//     cardBG.style.width = '100%';
+// }
