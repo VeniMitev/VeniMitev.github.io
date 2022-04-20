@@ -60,7 +60,6 @@ let raveMode = () => {
   randomColorBackground();
 
   raveTime = setTimeout(raveMode, 500);
-  return raveTime
 }
 
 let updateMouth = () => {
