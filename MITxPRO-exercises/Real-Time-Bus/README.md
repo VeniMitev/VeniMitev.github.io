@@ -2,12 +2,20 @@
 
 ## Description of Project:
 
-### Deployment:
-**[Real Time Bus Tracker](https://www.venimitev.dev/MITxPRO-exercises/Real-Time-Bus/index.html)**
+Bus Tracking exercise from MIT.
+A real-time bus tracker, that track all of the buses on route #1 in Boston. In addition, you can zoom to see all the busses at once by clicking the button on the top left.
 
 ## How to Run/Features
 
+- Push the button on the top right to zoom in/out the map to show all active buses that are being tracked.
+- Click on each bus for more information about that bus.
+
+### Deployment:
+**[Real Time Bus Tracker](https://www.venimitev.dev/MITxPRO-exercises/Real-Time-Bus/index.html)**
+
 ## Roadmap of future improvements:
+
+To be determined
 
 ## License: MIT
 Copyright (c) 2022 Venelin Mitev

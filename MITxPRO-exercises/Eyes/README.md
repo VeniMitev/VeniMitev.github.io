@@ -1,13 +1,21 @@
-# Eyes
+# Eyes Exercise
 
 ## Description of Project:
 
-### Deployment:
-[Eyes](https://www.venimitev.dev/MITxPRO-exercises/Eyes/index.html)
+Eye movement exercise from MIT.
+The eyes in the middle of your browser follow the movement of your cursor. In addition, you can change the backgrand color with a click of a button.
 
 ## How to Run/Features
 
+- Move your cursor around the screen, and the eyes will folow you. 
+- Click the buttom in the top-middle to change the color of the background to a random one.
+
+### Deployment:
+**[Eyes](https://www.venimitev.dev/MITxPRO-exercises/Eyes/index.html)**
+
 ## Roadmap of future improvements:
+
+To be determined
 
 ## License: MIT
 Copyright (c) 2022 Venelin Mitev
