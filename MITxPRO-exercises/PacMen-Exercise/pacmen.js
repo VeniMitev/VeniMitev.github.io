@@ -1,5 +1,4 @@
 let pos = 0;
-const pacArray = ["pacman__mouth-1", "pacman__mouth-2"];
 let direction = 0;
 const pacMen = []; // This array holds all the pacmen
 let pageWidth = document.getElementById('box').offsetWidth;
@@ -18,15 +17,16 @@ function makePac() {
   // returns an object with random values scaled {x: 33, y: 21}
   let velocity = setToRandom(10); // {x:?, y:?}
   let position = setToRandom(200);
-  let pacWidth = Math.floor(Math.random() * 100);
-  let pacHeight = pacWidth;
+  let pacSize = Math.floor(Math.random() * 150);
+  
 
   let game = document.getElementById('game');
   let newPac = document.createElement('div');
   newPac.id = 'PacMan';
   newPac.className = 'pacman';
-  newPac.width = pacWidth;
-  newPac.height = pacHeight;
+  newPac.style.width = pacSize;
+  newPac.style.height = pacSize
+  
 
   game.appendChild(newPac);
 
@@ -51,6 +51,22 @@ function makePac() {
     velocity,
     newPac,
   };
+}
+
+let updateMouth = () => {
+  let mouth = document.querySelectorAll('#PacMan-Mouth');
+
+  for (let i = 0; i < mouth.length; i++) {
+    if (mouth[i].classList.contains('pacman__mouth-1')){
+      mouth[i].classList.remove('pacman__mouth-1');
+      mouth[i].classList.add('pacman__mouth-2');
+    } else if (mouth[i].classList.contains('pacman__mouth-2')) {
+      mouth[i].classList.remove('pacman__mouth-2');
+      mouth[i].classList.add('pacman__mouth-1');
+    }
+  }
+
+  setTimeout(updateMouth, 400);
 }
 
 function update() {
@@ -84,9 +100,6 @@ function checkCollisions(item) {
 function makeOne() {
   pacMen.push(makePac()); // add a new PacMan
 }
-
-
-
 
 function randomColorBackground(){
     let red = Math.floor(Math.random() *255);
@@ -126,4 +139,8 @@ function resetColors(){
     }
 
     document.body.style.backgroundColor =  "white";
+}
+
+let stopGame = () => {
+  window.location.reload();
 }
