@@ -5,7 +5,7 @@ let pageWidth = document.getElementById('box').offsetWidth;
 let pageHeight = document.getElementById('box').offsetHeight;
 
 // This function returns an object with random values
-function setToRandom(scale) {
+let setToRandom = (scale) => {
   return {
     x: Math.random() * scale,
     y: Math.random() * scale,
@@ -13,7 +13,7 @@ function setToRandom(scale) {
 }
 
 // Factory to make a PacMan at a random position with random velocity
-function makePac() {
+let makePac = () => {
   // returns an object with random values scaled {x: 33, y: 21}
   let velocity = setToRandom(10); // {x:?, y:?}
   let position = setToRandom(200);
@@ -53,6 +53,13 @@ function makePac() {
   };
 }
 
+let raveMode = () => {
+  randomColorPacMan();
+  randomColorBackground();
+
+  setTimeout(raveMode, 500);
+}
+
 let updateMouth = () => {
   let mouth = document.querySelectorAll('#PacMan-Mouth');
 
@@ -69,7 +76,7 @@ let updateMouth = () => {
   setTimeout(updateMouth, 400);
 }
 
-function update() {
+let update = () => {
   // loop over pacmen array and move each one and move image in DOM
   pacMen.forEach((item) => {
     checkCollisions(item);
@@ -83,7 +90,7 @@ function update() {
   setTimeout(update, 20);
 }
 
-function checkCollisions(item) {
+let checkCollisions = (item) => {
   // TODO: detect collision with all walls and make pacman bounce
   if (
     item.position.x + item.velocity.x + item.newPac.offsetWidth > pageWidth ||
@@ -97,11 +104,11 @@ function checkCollisions(item) {
     item.velocity.y = -item.velocity.y;
 }
 
-function makeOne() {
+let makeOne = () => {
   pacMen.push(makePac()); // add a new PacMan
 }
 
-function randomColorBackground(){
+let randomColorBackground = () => {
     let red = Math.floor(Math.random() *255);
     let green = Math.floor(Math.random() *255);
     let blue = Math.floor(Math.random() *255);
@@ -115,7 +122,7 @@ function randomColorBackground(){
 }
 
 
-function randomColorPacMan(){
+let randomColorPacMan = () => {
     let red = Math.floor(Math.random() *255)
     let green = Math.floor(Math.random() *255)
     let blue = Math.floor(Math.random() *255)
@@ -126,7 +133,7 @@ function randomColorPacMan(){
     }
 }
 
-function resetColors(){
+let resetColors = () => {
     let pacsMouth = document.querySelectorAll('#PacMan-Mouth');
     let pacs = document.querySelectorAll('#PacMan');
 
