@@ -21,3 +21,13 @@ function randomColorBackground(){
   document.body.style.backgroundColor =  "rgb(" + red + ", " + green + ", " + blue + ")";
   document.getElementById("body").style.background =  "rgb(" + red + ", " + green + ", " + blue + ")";
 }
+
+let raveMode = () => {
+  randomColorBackground();
+
+  raveTime = setTimeout(raveMode, 500);
+}
+
+let stopGame = () => {
+  window.location.reload();
+}

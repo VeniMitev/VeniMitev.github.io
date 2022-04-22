@@ -35,6 +35,20 @@ footer {
   position: absolute;
 }
 
+
 .btn {
+  display: block;
+  align-self: center;
+  text-align: center;
+  margin: auto;
+  position:relative; 
+  /* top: 10em;  */
+  margin-top: 0em;
   font-size: 2rem;
+  width: 100%;
+}
+
+button {
+  z-index: 10;
+  position: relative;
 }
