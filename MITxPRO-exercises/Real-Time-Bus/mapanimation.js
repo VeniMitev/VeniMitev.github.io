@@ -117,11 +117,11 @@ async function run(){
 	// Sets the zoom of the map properly, according to the screen size of the user
 	let zoomScreen = () => {
 		if (window.innerWidth < 700) {
-			return 11.25
+			return 12;
 		} else if (window.innerWidth > 2000) {
-			return 13.1
+			return 13.1;
 		} else {
-			return 12.5
+			return 12.5;
 		}
 	}
  
