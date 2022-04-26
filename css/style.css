@@ -372,6 +372,11 @@ img {
     border-radius: 0.5em;
 }
 
+#about-me button {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
 #about-me p {
     margin-top: 1em;
 }
