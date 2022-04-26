@@ -6,10 +6,13 @@ The PacMan on the screen can be activated by pressing the start button. In addit
 
 ## How to Run/Features
 
-- Push the Start/Faster button to initialize the PacMan, or make it go faster.
-- Push the Random Background button to change the color of the background to a random one.
-- Push the Random PacMan Color button to change the color of the PacMan to a random one.
-- Push the Reset Color button to change the colors back to the original.
+- To start, press "Add PacMan" button to add as many random sized PAcMen to the screen.
+- Press "Start Game" to start moving the PacMen in random directions and speeds around the screen.
+- Press "Random Background" button to change the color of the background to a random one.
+- Press "Random PacMan Color" button to change the color of the PacMan to a random one.
+- Press "Rave Mode" for a party!!!
+- Press "Reset Color" button to change the colors back to the original.
+- Press "Reload Page" to clear everything. Use in extreme circumstances.
 
 ### Deployment:
 **[PacMan App](https://venimitev.github.io/MITxPRO-exercises/PacMan/index.html)**
