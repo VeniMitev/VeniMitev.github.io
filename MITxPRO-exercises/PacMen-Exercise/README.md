@@ -15,7 +15,7 @@ The PacMan on the screen can be activated by pressing the start button. In addit
 - Press "Reload Page" to clear everything. Use in extreme circumstances.
 
 ### Deployment:
-**[PacMan App](https://venimitev.github.io/MITxPRO-exercises/PacMan/index.html)**
+**[PacMan App](https://www.venimitev.dev/MITxPRO-exercises/PacMen-Exercise/index.html)**
 
 ## Roadmap of future improvements:
 
