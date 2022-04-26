@@ -400,3 +400,11 @@ img {
     width: 100%;
     background: linear-gradient(90deg,rgba(255,255,255,.9) 75%,rgba(255,255,255,0) 100%);
 }
+
+.row iframe {
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;    
+}
