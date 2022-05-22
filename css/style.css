@@ -198,7 +198,7 @@ img {
     transition: width 500ms ease;
 }
 
-.text-background:hover {
+.card-img:hover .text-background {
     width: 100%;
 }
 

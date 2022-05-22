@@ -1,22 +1,22 @@
 let pageWidth = document.getElementById('box').offsetWidth;
 
-var pos = 0;
+let pos = 0;
 const pacArray = [
     // Going forward
     ["pacman__mouth-1", "pacman__mouth-2"],
     // Going back
     ["pacman__mouth-3", "pacman__mouth-4"]
 ];
-var direction = 0;
-var focus = 0;
+let direction = 0;
+let mouthOpenClose = 0;
 
 function Run() {
     let img = document.getElementById("PacMan");
     let mouth = document.getElementById("PacMan-Mouth")
     let imgWidth = document.getElementById('PacMan').offsetWidth;
-    focus = (focus + 1) % 2;
+    mouthOpenClose = (mouthOpenClose + 1) % 2;
     direction = checkPageBounds(direction, imgWidth, pos, pageWidth);
-    mouth.className = pacArray[direction][focus];
+    mouth.className = pacArray[direction][mouthOpenClose];
     if (direction) {
         pos -= 20;
         img.style.left = pos + "px";
