@@ -202,6 +202,10 @@ img {
     width: 100%;
 }
 
+.card-img:hover .text-block {
+    color: steelblue
+}
+
 
 .text-block {
     position: absolute;
