@@ -1,18 +1,20 @@
-import NavBar from '../components/NavBar'
-import './globals.css'
+import Footer from '../components/Footer';
+import NavBar from '../components/NavBar';
+import './globals.css';
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode
+    children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <head />
-      <body className='min-h-screen'>
-        <NavBar />
-        {children}
-      </body>
-    </html>
-  )
+    return (
+        <html lang='en'>
+            <head />
+            <body className='flex flex-col min-h-screen'>
+                <NavBar />
+                {children}
+                <Footer />
+            </body>
+        </html>
+    );
 }
