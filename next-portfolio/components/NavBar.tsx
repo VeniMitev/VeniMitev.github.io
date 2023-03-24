@@ -3,22 +3,7 @@
 import Link from 'next/link';
 import React from 'react';
 
-type Mood = 'ocean' | 'forrest';
-
-const NavBar = ({ mood  }: { mood: Mood }) => {
-
-    const handleThemeChange = () => {
-        console.log('here')
-
-        if (mood === 'ocean') {
-            console.log('here-2')
-            mood = 'forrest'
-        } else {
-            console.log('here-3')
-            mood = 'ocean'
-        }
-    }
-
+const NavBar = ({ handleThemeChange  }: { handleThemeChange: Function }) => {
     return (
         <nav className='flex items-center justify-between px-4 py-3'>
             <div className='flex justify-center text-center'>

@@ -1,14 +1,24 @@
 'use client'
 import Footer from './Footer';
 import NavBar from './NavBar';
-import React, {  } from 'react'
+import React, { useState } from 'react'
 
 type Mood = 'ocean' | 'forrest';
 
 const Body = ({children} : {children: React.ReactNode;}) => {
-    const [mood, setMood] = useState()
+    const [mood, setMood] = useState<Mood>('ocean')
 
-    console.log(mood)
+    const handleThemeChange = () => {
+      console.log('here')
+
+      if (mood === 'ocean') {
+          console.log('here-2')
+          setMood('forrest')
+      } else {
+          console.log('here-3')
+          setMood('ocean')
+      }
+  }
 
     const backgroundStyle = {
         backgroundImage: `url('/background_${mood}.svg')`,
@@ -19,7 +29,7 @@ const Body = ({children} : {children: React.ReactNode;}) => {
 
   return (
     <body style={backgroundStyle} className='flex flex-col min-h-screen transition duration-700 transform'>
-        <NavBar mood={mood} />
+        <NavBar handleThemeChange={handleThemeChange} />
         {children}
         <Footer />
     </body>

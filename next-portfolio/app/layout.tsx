@@ -1,5 +1,6 @@
 
 
+import Body from '../components/Body';
 import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
 import './globals.css';
@@ -18,11 +19,9 @@ export default function RootLayout({
     return (
         <html lang='en'>
             <head />
-            <body style={backgroundStyle} className='flex flex-col min-h-screen transition duration-700 transform'>
-                <NavBar mood={mood} />
+            <Body>
                 {children}
-                <Footer />
-            </body>
+            </Body>
         </html>
     );
 }
