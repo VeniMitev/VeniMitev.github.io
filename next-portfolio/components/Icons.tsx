@@ -7,7 +7,7 @@ const Icons = () => {
             <h2 className='my-6 text-center text-lg font-medium select-none'>
                 Technologies:
             </h2>
-            <div className='grid grid-cols-3 content-center gap-4 md:grid-cols-4'>
+            <div className='grid grid-cols-3 content-center gap-6 md:grid-cols-4'>
                 <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg '>
                     <Image
                         src='/icons/html5.svg'
@@ -157,7 +157,7 @@ const Icons = () => {
             <h2 className='my-6 text-center text-lg font-medium select-none'>
                 Coming soon:
             </h2>
-            <div className='grid grid-cols-3 gap-4 md:grid-cols-3'>
+            <div className='grid grid-cols-3 gap-6 md:grid-cols-3'>
                 <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg '>
                     <Image
                         src='/icons/python.svg'

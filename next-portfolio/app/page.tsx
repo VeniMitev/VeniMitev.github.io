@@ -25,7 +25,7 @@ export default function Home() {
                 </h2>
             </section>
 
-            <section className='my-12 max-w-screen-md'>
+            <section className='my-14 max-w-screen-md'>
                 <Icons />
             </section>
 
@@ -56,6 +56,22 @@ export default function Home() {
                     worked on, and feel free to get in touch if you have any
                     questions or would like to collaborate on a project.
                 </p>
+            </section>
+
+            <section className='mx-10 my-2 '>
+                <h2>
+                    <span className='text-center text-2xl font-semibold'>
+                        Learn more about me
+                    </span>
+                </h2>
+                <iframe
+                    className='mx-auto my-6 w-full select-none'
+                    id='podcast'
+                    src='https://open.spotify.com/embed/episode/2A4VXiol7U1mRBaNE2QLMV?utm_source=generator'
+                    width='100%'
+                    height='300em'
+                    allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+                />
             </section>
         </div>
     );

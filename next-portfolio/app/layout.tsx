@@ -13,10 +13,19 @@ export default function RootLayout({
 }: {
     children: React.ReactNode;
 }) {
+
+    const backgroundStyle = {
+        backgroundImage: `url('/background.svg')`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+
+    }
+
     return (
         <html lang='en'>
             <head />
-            <body className='flex flex-col min-h-screen'>
+            <body style={backgroundStyle} className='flex flex-col min-h-screen transform transition duration-700'>
                 <NavBar />
                 {children}
                 <Footer />
