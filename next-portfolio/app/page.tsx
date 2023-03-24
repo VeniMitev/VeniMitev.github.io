@@ -23,18 +23,35 @@ export default function Home() {
                         Full Stack Web Developer | Product Manager
                     </span>
                 </h2>
+            </section>
+
+            <section className='my-12 max-w-screen-md'>
                 <Icons />
-                <p className='my-6 max-w-prose mx-auto'>
+            </section>
+
+            <section className='mx-10 my-2 '>
+                <h2 className='my-6 text-center'>
+                    <span className='text-2xl font-semibold'>About Me</span>
+                </h2>
+                <p className='my-6 mx-auto max-w-screen-md text-base'>
                     I have a Professional Certificate in Full Stack Development
                     with MERN Stack from Massachusetts Institute of Technology.
+                    I am passionate about delivering innovative solutions that
+                    meet user needs and exceed expectations. With experience in
+                    product management and CMS support, I have a deep
+                    understanding of how to develop and deliver high-quality
+                    products that meet business goals.
                 </p>
-                <p className='my-6 max-w-prose mx-auto'>
+                <p className='my-6 mx-auto max-w-screen-md text-base'>
                     In addition to my technical skills, I have experience in
-                    product management, CMS support, and event coordination, and
-                    I&apos;m passionate about nature conservation and wildlife
-                    rehabilitation.
+                    product management, CMS support, and event coordination.
+                    When I&apos;m not working on web development, I am actively
+                    involved in nature conservation and wildlife rehabilitation
+                    efforts. I believe in using my skills to make a positive
+                    impact in the world and contribute to the betterment of our
+                    planet.
                 </p>
-                <p className='my-6 max-w-prose mx-auto'>
+                <p className='my-6 mx-auto max-w-screen-md text-base'>
                     Check out my portfolio to see some of the projects I&apos;ve
                     worked on, and feel free to get in touch if you have any
                     questions or would like to collaborate on a project.

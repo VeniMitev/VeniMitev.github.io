@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
     return (
-        <footer className='mt-auto flex h-max w-screen justify-center overflow-hidden align-middle md:h-28'>
+        <footer className='bottom-0 mt-auto flex h-max justify-center overflow-hidden align-middle md:h-28'>
             <div className='w-11/12 transform overflow-hidden rounded-lg border bg-gray-50 p-2 text-center drop-shadow-sm transition duration-500 ease-in-out hover:translate-y-2 hover:bg-white hover:drop-shadow-xl md:w-[60em] md:translate-y-14'>
                 <code className='select-none'>
                     &copy; Veni Mitev {new Date().getFullYear()}

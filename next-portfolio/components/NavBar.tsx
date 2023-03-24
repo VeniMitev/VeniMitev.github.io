@@ -17,12 +17,12 @@ const NavBar = () => {
                 >
                     Home
                 </Link>
-                <Link
+                {/* <Link
                     href='/about'
                     className='lg:text-md m-2 text-sm font-medium tracking-tight text-gray-700 hover:text-blue-500 lg:m-6'
                 >
                     About
-                </Link>
+                </Link> */}
                 <Link
                     href='/projects'
                     className='lg:text-md m-2 text-sm font-medium tracking-tight text-gray-700 hover:text-blue-500 lg:m-6'
@@ -35,11 +35,9 @@ const NavBar = () => {
                 >
                     Contact
                 </Link>
-            </div>
-            <div>
                 <Link
                     href='/'
-                    className='focus:shadow-outline rounded bg-white px-4 py-2 font-bold text-black outline-4 outline-slate-700 hover:bg-slate-200 hover:text-white focus:outline-none'
+                    className='lg:text-md m-2 text-sm font-medium tracking-tight text-gray-700 hover:text-blue-500 lg:m-6'
                 >
                     Download CV
                 </Link>
