@@ -1,14 +1,15 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from'next/image'
+
 
 const Icons = () => {
     return (
         <>
-            <h2 className='my-6 text-center text-lg font-medium select-none'>
+            <h2 className='my-6 text-lg font-medium text-center select-none'>
                 Technologies:
             </h2>
-            <div className='grid grid-cols-3 content-center gap-6 md:grid-cols-4'>
-                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg '>
+            <div className='grid content-center grid-cols-3 gap-6 md:grid-cols-4'>
+                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg hover:animate-pulse '>
                     <Image
                         src='/icons/html5.svg'
                         alt='HTML5'
@@ -17,7 +18,7 @@ const Icons = () => {
                     />
                     <span className='font-sans'>HTML5</span>
                 </div>
-                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg '>
+                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg hover:animate-pulse '>
                     <Image
                         src='/icons/css3.svg'
                         alt='CSS3'
@@ -26,7 +27,7 @@ const Icons = () => {
                     />
                     <span className='font-sans'>CSS3</span>
                 </div>
-                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg '>
+                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg hover:animate-pulse '>
                     <Image
                         src='/icons/javascript.svg'
                         alt='JavaScript'
@@ -35,7 +36,7 @@ const Icons = () => {
                     />
                     <span className='font-sans'>JavaScript</span>
                 </div>
-                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg '>
+                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg hover:animate-pulse '>
                     <Image
                         src='/icons/typescript.svg'
                         alt='TypeScript'
@@ -44,7 +45,7 @@ const Icons = () => {
                     />
                     <span className='font-sans'>TypeScript</span>
                 </div>
-                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg '>
+                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg hover:animate-pulse '>
                     <Image
                         src='/icons/react.svg'
                         alt='React'
@@ -53,7 +54,7 @@ const Icons = () => {
                     />
                     <span className='font-sans'>ReactJS</span>
                 </div>
-                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg'>
+                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg hover:animate-pulse'>
                     <Image
                         src='/icons/nextjs.svg'
                         alt='Next.js'
@@ -62,7 +63,7 @@ const Icons = () => {
                     />
                     <span className='font-sans'>NextJS</span>
                 </div>
-                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg'>
+                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg hover:animate-pulse'>
                     <Image
                         src='/icons/nodejs.svg'
                         alt='Node.js'
@@ -71,7 +72,7 @@ const Icons = () => {
                     />
                     <span className='font-sans'>NodeJS</span>
                 </div>
-                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg'>
+                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg hover:animate-pulse'>
                     <Image
                         src='/icons/express.svg'
                         alt='Express'
@@ -80,7 +81,7 @@ const Icons = () => {
                     />
                     <span className='font-sans'>ExpressJS</span>
                 </div>
-                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg'>
+                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg hover:animate-pulse'>
                     <Image
                         src='/icons/mongodb.svg'
                         alt='MongoDB'
@@ -89,7 +90,7 @@ const Icons = () => {
                     />
                     <span className='font-sans'>MongoDB</span>
                 </div>
-                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg'>
+                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg hover:animate-pulse'>
                     <Image
                         src='/icons/npm.svg'
                         alt='npm'
@@ -98,7 +99,7 @@ const Icons = () => {
                     />
                     <span className='font-sans'>npm</span>
                 </div>
-                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg'>
+                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg hover:animate-pulse'>
                     <Image
                         src='/icons/git.svg'
                         alt='git'
@@ -107,7 +108,7 @@ const Icons = () => {
                     />
                     <span className='font-sans'>git</span>
                 </div>
-                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg'>
+                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg hover:animate-pulse'>
                     <Image
                         src='/icons/github.svg'
                         alt='GitHub'
@@ -116,7 +117,7 @@ const Icons = () => {
                     />
                     <span className='font-sans'>GitHub</span>
                 </div>
-                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg '>
+                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg hover:animate-pulse '>
                     <Image
                         src='/icons/firebase.svg'
                         alt='Firebase'
@@ -125,7 +126,7 @@ const Icons = () => {
                     />
                     <span className='font-sans'>Firebase</span>
                 </div>
-                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg '>
+                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg hover:animate-pulse '>
                     <Image
                         src='/icons/photoshop.svg'
                         alt='Photoshop'
@@ -134,7 +135,7 @@ const Icons = () => {
                     />
                     <span className='font-sans'>Photoshop</span>
                 </div>
-                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg '>
+                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg hover:animate-pulse '>
                     <Image
                         src='/icons/premierepro.svg'
                         alt='Premier Pro'
@@ -143,7 +144,7 @@ const Icons = () => {
                     />
                     <span className='font-sans'>Premier Pro</span>
                 </div>
-                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg '>
+                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg hover:animate-pulse '>
                     <Image
                         src='/icons/magento.svg'
                         alt='Magento'
@@ -154,11 +155,11 @@ const Icons = () => {
                 </div>
             </div>
 
-            <h2 className='my-6 text-center text-lg font-medium select-none'>
+            <h2 className='my-6 text-lg font-medium text-center select-none'>
                 Coming soon:
             </h2>
             <div className='grid grid-cols-3 gap-6 md:grid-cols-3'>
-                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg '>
+                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg hover:animate-pulse '>
                     <Image
                         src='/icons/python.svg'
                         alt='Python'
@@ -167,7 +168,7 @@ const Icons = () => {
                     />
                     <span className='font-sans'>Python</span>
                 </div>
-                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg '>
+                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg hover:animate-pulse '>
                     <Image
                         src='/icons/rust.svg'
                         alt='Rust'
@@ -176,7 +177,7 @@ const Icons = () => {
                     />
                     <span className='font-sans'>Rust</span>
                 </div>
-                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg '>
+                <div className='inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:drop-shadow-lg hover:animate-pulse '>
                     <Image
                         src='/icons/svelte.svg'
                         alt='Svelte'
