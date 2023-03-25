@@ -20,7 +20,8 @@ export default function Home() {
                 </h1>
                 <h2 className='my-6'>
                     <span className='text-2xl font-semibold'>
-                        Full Stack Web Developer | Product Manager
+                        Full Stack Web Developer | Product Manager |
+                        Photographer
                     </span>
                 </h2>
             </section>
