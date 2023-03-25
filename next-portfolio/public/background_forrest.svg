@@ -1,1 +1,7 @@
-<svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="900" height="600" fill="#e4f4ff"></rect><path d="M0 196L225 79L450 139L675 201L900 53L900 601L675 601L450 601L225 601L0 601Z" fill="#a7d8b0"></path><path d="M0 250L225 335L450 381L675 246L900 217L900 601L675 601L450 601L225 601L0 601Z" fill="#b2e3b9"></path><path d="M0 304L225 394L450 339L675 368L900 346L900 601L675 601L450 601L225 601L0 601Z" fill="#beefc3"></path><path d="M0 547L225 475L450 410L675 445L900 398L900 601L675 601L450 601L225 601L0 601Z" fill="#cafacd"></path></svg>
+<svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+    <rect x="0" y="0" width="900" height="600" fill="#e4f4ff"></rect>
+    <path d="M0 196L225 79L450 139L675 201L900 53L900 601L675 601L450 601L225 601L0 601Z" fill="#a7d8b0"></path>
+    <path d="M0 250L225 335L450 381L675 246L900 217L900 601L675 601L450 601L225 601L0 601Z" fill="#b2e3b9"></path>
+    <path d="M0 304L225 394L450 339L675 368L900 346L900 601L675 601L450 601L225 601L0 601Z" fill="#beefc3"></path>
+    <path d="M0 547L225 475L450 410L675 445L900 398L900 601L675 601L450 601L225 601L0 601Z" fill="#cafacd"></path>
+</svg>

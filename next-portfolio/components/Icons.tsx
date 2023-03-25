@@ -127,6 +127,15 @@ const Icons = () => {
                 </div>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
                     <Image
+                        src='/icons/magento.svg'
+                        alt='Magento'
+                        width={50}
+                        height={50}
+                    />
+                    <span className='font-sans'>Magento</span>
+                </div>
+                <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
+                    <Image
                         src='/icons/photoshop.svg'
                         alt='Photoshop'
                         width={50}
@@ -142,15 +151,6 @@ const Icons = () => {
                         height={50}
                     />
                     <span className='font-sans'>Premier Pro</span>
-                </div>
-                <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
-                    <Image
-                        src='/icons/magento.svg'
-                        alt='Magento'
-                        width={50}
-                        height={50}
-                    />
-                    <span className='font-sans'>Magento</span>
                 </div>
             </div>
 
