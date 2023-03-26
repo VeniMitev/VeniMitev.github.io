@@ -7,16 +7,16 @@ type Mood = 'ocean' | 'forrest';
 
 const Body = ({ children }: { children: React.ReactNode }) => {
     const [mood, setMood] = useState<Mood>(() => {
-        const storedMood = localStorage.getItem('mood');
+        const storedMood = window.localStorage.getItem('mood');
         return storedMood ? (storedMood as Mood) : 'ocean';
     });
 
     const handleThemeChange = () => {
         if (mood === 'ocean') {
             setMood('forrest');
-            localStorage.setItem('mood', 'forrest');            
+            window.localStorage.setItem('mood', 'forrest');            
         } else {
-            localStorage.setItem('mood', 'ocean');
+            window.localStorage.setItem('mood', 'ocean');
             setMood('ocean');
         }
     };
