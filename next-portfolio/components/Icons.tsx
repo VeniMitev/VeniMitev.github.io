@@ -4,10 +4,10 @@ import Image from 'next/image';
 const Icons = () => {
     return (
         <>
-            <h2 className='my-6 select-none text-center text-lg font-medium'>
+            <h2 className='my-6 text-lg font-medium text-center select-none'>
                 Technologies:
             </h2>
-            <div className='grid grid-cols-2 content-center gap-6 md:grid-cols-3 lg:grid-cols-4'>
+            <div className='grid content-center grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4'>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
                     <Image
                         src='/icons/html5.svg'
@@ -64,6 +64,15 @@ const Icons = () => {
                 </div>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg'>
                     <Image
+                        src='/icons/vitejs.svg'
+                        alt='ViteJS'
+                        width={50}
+                        height={50}
+                    />
+                    <span className='font-sans'>ViteJS</span>
+                </div>
+                <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg'>
+                    <Image
                         src='/icons/nodejs.svg'
                         alt='Node.js'
                         width={50}
@@ -107,7 +116,7 @@ const Icons = () => {
                     />
                     <span className='font-sans'>git</span>
                 </div>
-                <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg'>
+                {/* <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg'>
                     <Image
                         src='/icons/github.svg'
                         alt='GitHub'
@@ -115,7 +124,7 @@ const Icons = () => {
                         height={50}
                     />
                     <span className='font-sans'>GitHub</span>
-                </div>
+                </div> */}
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
                     <Image
                         src='/icons/firebase.svg'
@@ -154,10 +163,10 @@ const Icons = () => {
                 </div>
             </div>
 
-            <h2 className='my-6 select-none text-center text-lg font-medium'>
+            <h2 className='my-6 text-lg font-medium text-center select-none'>
                 Coming soon:
             </h2>
-            <div className='grid grid-cols-3 gap-6 md:grid-cols-3'>
+            <div className='grid content-center grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4'>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
                     <Image
                         src='/icons/python.svg'
@@ -166,6 +175,15 @@ const Icons = () => {
                         height={50}
                     />
                     <span className='font-sans'>Python</span>
+                </div>
+                <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
+                    <Image
+                        src='/icons/flask.svg'
+                        alt='Flask'
+                        width={50}
+                        height={50}
+                    />
+                    <span className='font-sans'>Flask</span>
                 </div>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
                     <Image

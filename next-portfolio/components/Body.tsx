@@ -1,22 +1,34 @@
 'use client';
 import Footer from './Footer';
 import NavBar from './NavBar';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-type Mood = 'ocean' | 'forrest';
+type Mood = 'main' | 'ocean' | 'forrest';
 
 const Body = ({ children }: { children: React.ReactNode }) => {
-    const [mood, setMood] = useState<Mood>(() => {
-        const storedMood = window.localStorage.getItem('mood');
-        return storedMood ? (storedMood as Mood) : 'ocean';
-    });
+    const [mood, setMood] = useState<Mood>('main');
+
+    useEffect(() => {
+        const storedMood =
+            typeof window !== 'undefined' &&
+            window.localStorage.getItem('mood');
+
+        if (storedMood) {
+            setMood((storedMood as Mood) || 'main');
+        }
+    }, []);
 
     const handleThemeChange = () => {
-        if (mood === 'ocean') {
+        if (typeof window === 'undefined') return;
+
+        if (mood === 'main') {
+            setMood('ocean');
+            localStorage.setItem('mood', 'ocean');
+        } else if (mood === 'ocean') {
             setMood('forrest');
-            window.localStorage.setItem('mood', 'forrest');            
+            localStorage.setItem('mood', 'forrest');
         } else {
-            window.localStorage.setItem('mood', 'ocean');
+            localStorage.setItem('mood', 'ocean');
             setMood('ocean');
         }
     };
