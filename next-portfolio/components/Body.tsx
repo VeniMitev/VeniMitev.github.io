@@ -6,16 +6,17 @@ import React, { useState } from 'react';
 type Mood = 'ocean' | 'forrest';
 
 const Body = ({ children }: { children: React.ReactNode }) => {
-    const [mood, setMood] = useState<Mood>('ocean');
+    const [mood, setMood] = useState<Mood>(() => {
+        const storedMood = localStorage.getItem('mood');
+        return storedMood ? (storedMood as Mood) : 'ocean';
+    });
 
     const handleThemeChange = () => {
-        console.log('here');
-
         if (mood === 'ocean') {
-            console.log('here-2');
             setMood('forrest');
+            localStorage.setItem('mood', 'forrest');            
         } else {
-            console.log('here-3');
+            localStorage.setItem('mood', 'ocean');
             setMood('ocean');
         }
     };
@@ -30,7 +31,7 @@ const Body = ({ children }: { children: React.ReactNode }) => {
     return (
         <body
             style={backgroundStyle}
-            className='flex min-h-screen transform flex-col overflow-y-scroll transition duration-700'
+            className='flex flex-col min-h-screen overflow-y-scroll transition duration-700 transform'
         >
             <NavBar handleThemeChange={handleThemeChange} mood={mood} />
             {children}
