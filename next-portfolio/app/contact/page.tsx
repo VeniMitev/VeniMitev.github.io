@@ -13,19 +13,20 @@ type Inputs = {
     message: string;
 };
 
-const serviceId = process.env.EMAILJS_SERVICE_ID;
-const templateId = process.env.EMAILJS_TEMPLATE_INVOICE_ID;
-const userId = process.env.EMAILJS_PUBLIC_KEY;
+const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_INVOICE_ID;
+const userId = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
 const Contact = () => {
     const {
         register,
         handleSubmit,
         formState: { errors },
+        reset
     } = useForm<Inputs>();
 
     const onSubmit: SubmitHandler<Inputs> = (data) => {
-        if (!serviceId || !templateId || !userId) return;
+        if (!serviceId || !templateId || !userId)  return;
 
         const emailContent = {
             from_name: data.name,
@@ -42,6 +43,8 @@ const Contact = () => {
                 console.log(error.text);
             }
         );
+
+        reset();
     };
 
     return (
