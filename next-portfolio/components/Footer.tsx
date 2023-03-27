@@ -10,61 +10,61 @@ import {
 
 const Footer = () => {
     return (
-        <footer className='bottom-0 mt-auto flex h-max justify-center overflow-hidden align-middle md:h-28'>
+        <footer className='bottom-0 flex justify-center mt-auto overflow-hidden align-middle h-max md:h-28'>
             <div className='w-11/12 transform overflow-hidden rounded-lg border bg-gray-50 p-2 text-center drop-shadow-sm transition duration-500 ease-in-out hover:translate-y-2 hover:bg-white hover:drop-shadow-xl md:w-[60em] md:translate-y-14'>
                 <code className='select-none'>
                     &copy; Veni Mitev {new Date().getFullYear()}
                 </code>
 
-                <div className='m-2 flex flex-col flex-wrap md:flex-row'>
+                <div className='flex flex-col flex-wrap m-2 md:flex-row'>
                     <Link
                         className='m-1 inline-flex grow select-none justify-center align-middle hover:text-[#171515]'
                         href='https://github.com/VeniMitev'
                         target='_blank'
                     >
-                        <FaGithub className='m-1 self-center' />
+                        <FaGithub className='self-center m-1' />
                         GitHub
-                        <span className='animate-pulse font-extrabold'>_</span>
+                        <span className='font-extrabold animate-pulse'>_</span>
                     </Link>
                     <Link
                         className='m-1 inline-flex grow select-none justify-center align-middle hover:text-[#0072b1]'
                         href='https://www.linkedin.com/in/venelin-mitev/'
                         target='_blank'
                     >
-                        <FaLinkedin className='m-1 self-center' />
+                        <FaLinkedin className='self-center m-1' />
                         LinkedIn
-                        <span className='animate-pulse font-extrabold'>_</span>
+                        <span className='font-extrabold animate-pulse'>_</span>
                     </Link>
                     <Link
                         className='m-1 inline-flex grow select-none justify-center align-middle hover:text-[#8a3ab9]'
                         href='https://www.instagram.com/venelin_m'
                         target='_blank'
                     >
-                        <FaInstagram className='m-1 self-center' />
+                        <FaInstagram className='self-center m-1' />
                         Instagram
-                        <span className='animate-pulse font-extrabold'>_</span>
+                        <span className='font-extrabold animate-pulse'>_</span>
                     </Link>
                     <Link
                         className='m-1 inline-flex grow select-none justify-center align-middle hover:text-[steelblue]'
                         href='mailto:business@venimitev.com'
                         target='_blank'
                     >
-                        <FaEnvelope className='m-1 self-center' />
+                        <FaEnvelope className='self-center m-1' />
                         Email
-                        <span className='animate-pulse font-extrabold'>_</span>
+                        <span className='font-extrabold animate-pulse'>_</span>
                     </Link>
                     <Link
                         className='m-1 inline-flex grow select-none justify-center align-middle hover:text-[#ff0000]'
                         href='https://www.youtube.com/channel/UCoGzGTZdwwVaActFVhqygZg'
                         target='_blank'
                     >
-                        <FaYoutube className='m-1 self-center' />
+                        <FaYoutube className='self-center m-1' />
                         YouTube
-                        <span className='animate-pulse font-extrabold'>_</span>
+                        <span className='font-extrabold animate-pulse'>_</span>
                     </Link>
                 </div>
                 <div>
-                    <p className='select-none text-xs'>
+                    <p className='text-xs select-none'>
                         Built with{' '}
                         <Link
                             className='text-blue-500 hover:text-blue-600'
@@ -80,7 +80,14 @@ const Footer = () => {
                             target='_blank'
                         >
                             Tailwind CSS
-                        </Link>
+                        </Link>. Deployed on{' '}
+                        <Link
+                            className='text-blue-500 hover:text-blue-600'
+                            href='https://vercel.com/'
+                            target='_blank'
+                        >
+                            Vercel
+                        </Link>.
                     </p>
                 </div>
             </div>

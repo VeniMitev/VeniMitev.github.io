@@ -4,12 +4,13 @@ import Image from 'next/image';
 const Icons = () => {
     return (
         <>
-            <h2 className='my-6 select-none text-center text-lg font-medium'>
+            <h2 className='my-6 text-lg font-medium text-center select-none'>
                 Technologies:
             </h2>
-            <div className='grid grid-cols-2 content-center gap-6 md:grid-cols-3 lg:grid-cols-4'>
+            <div className='grid content-center grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4'>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
                     <Image
+                        draggable={false}
                         loading='lazy'
                         src='/icons/html5.svg'
                         alt='HTML5'
@@ -20,6 +21,7 @@ const Icons = () => {
                 </div>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
                     <Image
+                        draggable={false}
                         loading='lazy'
                         src='/icons/css3.svg'
                         alt='CSS3'
@@ -30,6 +32,7 @@ const Icons = () => {
                 </div>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
                     <Image
+                        draggable={false}
                         loading='lazy'
                         src='/icons/javascript.svg'
                         alt='JavaScript'
@@ -40,6 +43,7 @@ const Icons = () => {
                 </div>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
                     <Image
+                        draggable={false}
                         loading='lazy'
                         src='/icons/typescript.svg'
                         alt='TypeScript'
@@ -50,6 +54,7 @@ const Icons = () => {
                 </div>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
                     <Image
+                        draggable={false}
                         loading='lazy'
                         src='/icons/react.svg'
                         alt='React'
@@ -60,6 +65,7 @@ const Icons = () => {
                 </div>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg'>
                     <Image
+                        draggable={false}
                         loading='lazy'
                         src='/icons/nextjs.svg'
                         alt='Next.js'
@@ -70,6 +76,7 @@ const Icons = () => {
                 </div>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg'>
                     <Image
+                        draggable={false}
                         loading='lazy'
                         src='/icons/vitejs.svg'
                         alt='ViteJS'
@@ -80,6 +87,7 @@ const Icons = () => {
                 </div>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg'>
                     <Image
+                        draggable={false}
                         loading='lazy'
                         src='/icons/nodejs.svg'
                         alt='Node.js'
@@ -90,6 +98,7 @@ const Icons = () => {
                 </div>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg'>
                     <Image
+                        draggable={false}
                         loading='lazy'
                         src='/icons/express.svg'
                         alt='Express'
@@ -100,6 +109,7 @@ const Icons = () => {
                 </div>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg'>
                     <Image
+                        draggable={false}
                         loading='lazy'
                         src='/icons/mongodb.svg'
                         alt='MongoDB'
@@ -110,6 +120,7 @@ const Icons = () => {
                 </div>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg'>
                     <Image
+                        draggable={false}
                         loading='lazy'
                         src='/icons/npm.svg'
                         alt='npm'
@@ -120,6 +131,7 @@ const Icons = () => {
                 </div>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg'>
                     <Image
+                        draggable={false}
                         loading='lazy'
                         src='/icons/git.svg'
                         alt='git'
@@ -130,6 +142,7 @@ const Icons = () => {
                 </div>
                 {/* <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg'>
                     <Image
+                    draggable={false}
                     loading='lazy'
                         src='/icons/github.svg'
                         alt='GitHub'
@@ -140,6 +153,7 @@ const Icons = () => {
                 </div> */}
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
                     <Image
+                        draggable={false}
                         loading='lazy'
                         src='/icons/firebase.svg'
                         alt='Firebase'
@@ -150,6 +164,7 @@ const Icons = () => {
                 </div>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
                     <Image
+                        draggable={false}
                         loading='lazy'
                         src='/icons/magento.svg'
                         alt='Magento'
@@ -160,6 +175,7 @@ const Icons = () => {
                 </div>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
                     <Image
+                        draggable={false}
                         loading='lazy'
                         src='/icons/photoshop.svg'
                         alt='Photoshop'
@@ -170,6 +186,7 @@ const Icons = () => {
                 </div>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
                     <Image
+                        draggable={false}
                         loading='lazy'
                         src='/icons/premierepro.svg'
                         alt='Premier Pro'
@@ -180,12 +197,13 @@ const Icons = () => {
                 </div>
             </div>
 
-            <h2 className='my-6 select-none text-center text-lg font-medium'>
+            <h2 className='my-6 text-lg font-medium text-center select-none'>
                 Coming soon:
             </h2>
-            <div className='grid grid-cols-2 content-center gap-6 md:grid-cols-3 lg:grid-cols-4'>
+            <div className='grid content-center grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4'>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
                     <Image
+                        draggable={false}
                         loading='lazy'
                         src='/icons/python.svg'
                         alt='Python'
@@ -196,6 +214,7 @@ const Icons = () => {
                 </div>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
                     <Image
+                        draggable={false}
                         loading='lazy'
                         src='/icons/flask.svg'
                         alt='Flask'
@@ -206,6 +225,7 @@ const Icons = () => {
                 </div>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
                     <Image
+                        draggable={false}
                         loading='lazy'
                         src='/icons/rust.svg'
                         alt='Rust'
@@ -216,6 +236,7 @@ const Icons = () => {
                 </div>
                 <div className='mx-3 inline-flex transform select-none !items-center gap-3 rounded-sm p-2 drop-shadow-sm transition duration-700 hover:scale-105 hover:animate-pulse hover:drop-shadow-lg '>
                     <Image
+                        draggable={false}
                         loading='lazy'
                         src='/icons/svelte.svg'
                         alt='Svelte'

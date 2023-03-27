@@ -5,14 +5,15 @@ export default function Home() {
     return (
         <div className='flex flex-col items-center justify-center'>
             <Image
-                className='rounded-full'
+                draggable={false}
+                className='rounded-full select-none'
                 src='/BioPic.jpg'
                 alt='Veni Mitev - Web developer'
                 width={300}
                 height={300}
             />
 
-            <section className='mx-10 my-2 text-center'>
+            <section className='mx-10 my-2 text-center select-none'>
                 <h1 className='my-6'>
                     <span className='text-4xl font-bold'>
                         Hi, I&apos;m Veni Mitev
@@ -45,18 +46,15 @@ export default function Home() {
                     products that meet business goals.
                 </p>
                 <p className='max-w-screen-md mx-auto my-6 text-base'>
-                    In addition to my technical skills, I have a deep
-                    understanding of how to develop and deliver high-quality
-                    products that meet business goals. With experience in
-                    product management, CMS support, and event coordination, I
-                    have a versatile skill set that allows me to take on a range
-                    of projects. When I&#39;m not coding, you can often find me
-                    exploring off-the-beaten-path destinations, capturing life&#39;s
-                    moments through my photography and videography skills, and
-                    volunteering in nature conservation and wildlife
-                    rehabilitation efforts. I believe in using my skills to make
-                    a positive impact in the world and contribute to the
-                    betterment of our planet.
+                    With experience in product management, CMS support, and
+                    event coordination, I have a versatile skill set that allows
+                    me to take on a range of projects. When I&#39;m not coding,
+                    you can often find me exploring off-the-beaten-path
+                    destinations, capturing life&#39;s moments through my
+                    photography and videography skills, and volunteering in
+                    nature conservation and wildlife rehabilitation efforts. I
+                    believe in using my skills to make a positive impact in the
+                    world and contribute to the betterment of our planet.
                 </p>
                 <p className='max-w-screen-md mx-auto my-6 text-base'>
                     Please take a look at my portfolio to see some of the
