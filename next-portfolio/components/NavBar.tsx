@@ -14,12 +14,12 @@ const NavBar = ({
         <nav className='flex items-center justify-between px-4 py-3'>
             <div className='flex justify-center text-center'>
                 <div>
-                    <h1 className='select-none text-2xl font-semibold tracking-tight text-gray-700 md:text-3xl lg:text-4xl'>
+                    <h1 className='text-2xl font-semibold tracking-tight text-gray-700 select-none md:text-3xl lg:text-4xl'>
                         VeniMitev.dev
                     </h1>
                 </div>
                 <button
-                    className='mx-6 flex items-center rounded border px-3 py-2 text-gray-700 hover:border-blue-500 hover:text-blue-500'
+                    className='flex items-center px-3 py-2 mx-6 text-gray-700 border rounded hover:border-blue-500 hover:text-blue-500'
                     onClick={() => handleThemeChange()}
                 >
                     Switch to {mood === 'ocean' ? 'Forrest' : 'Ocean'}
@@ -29,34 +29,34 @@ const NavBar = ({
             <div className='flex justify-center text-center'>
                 <Link
                     href='/'
-                    className='lg:text-md m-2 text-sm font-medium tracking-tight text-gray-700 hover:text-blue-500 lg:m-6'
+                    className='m-2 text-sm font-medium tracking-tight text-gray-700 lg:text-md hover:text-blue-500 lg:m-6'
                 >
                     Home
                 </Link>
                 <Link
                     href='/experience'
-                    className='lg:text-md m-2 text-sm font-medium tracking-tight text-gray-700 hover:text-blue-500 lg:m-6'
+                    className='m-2 text-sm font-medium tracking-tight text-gray-700 lg:text-md hover:text-blue-500 lg:m-6'
                 >
                     Experience
                 </Link>
                 <Link
                     href='/projects'
-                    className='lg:text-md m-2 text-sm font-medium tracking-tight text-gray-700 hover:text-blue-500 lg:m-6'
+                    className='m-2 text-sm font-medium tracking-tight text-gray-700 lg:text-md hover:text-blue-500 lg:m-6'
                 >
                     Projects
                 </Link>
                 <Link
                     href='/contact'
-                    className='lg:text-md m-2 text-sm font-medium tracking-tight text-gray-700 hover:text-blue-500 lg:m-6'
+                    className='m-2 text-sm font-medium tracking-tight text-gray-700 lg:text-md hover:text-blue-500 lg:m-6'
                 >
                     Contact
                 </Link>
-                <Link
+                {/* <Link
                     href='/'
-                    className='lg:text-md m-2 text-sm font-medium tracking-tight text-gray-700 hover:text-blue-500 lg:m-6'
+                    className='m-2 text-sm font-medium tracking-tight text-gray-700 lg:text-md hover:text-blue-500 lg:m-6'
                 >
                     Download CV
-                </Link>
+                </Link> */}
             </div>
         </nav>
     );
