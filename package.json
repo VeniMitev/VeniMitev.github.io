@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/VeniMitev/VeniMitev.github.io/issues"
   },
-  "homepage": "https://github.com/VeniMitev/VeniMitev.github.io/index.html"
+  "homepage": "https://github.com/VeniMitev/VeniMitev.github.io/index.html",
+  "dependencies": {
+    "emailjs": "^4.0.1",
+    "react-hook-form": "^7.43.8"
+  }
 }
