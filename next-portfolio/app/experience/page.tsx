@@ -1,5 +1,7 @@
 import React from 'react';
 import data from '../../data/experience.json';
+import Link from 'next/link';
+import DownloadCV from '../../components/DownloadCV';
 
 const Experience = () => {
     return (
@@ -10,6 +12,8 @@ const Experience = () => {
                         Work Experience
                     </span>
                 </h1>
+                <DownloadCV />
+
                 <Section data={data.Twenty7estore} />
                 <Section data={data.usBext} />
             </section>
@@ -41,14 +45,14 @@ const Section = ({
     africaTwo?: boolean;
 }) => {
     return (
-        <div className='my-4'>
+        <div className='m-4'>
             {!africaTwo && (
                 <h2 className='text-lg font-medium'>{data.title}</h2>
             )}
-            <h3 className='text-md underline underline-offset-2'>
+            <h3 className='underline text-md underline-offset-2'>
                 {data.subtitle}
             </h3>
-            <ul className='mx-auto my-3 max-w-prose px-6 text-base'>
+            <ul className='px-6 mx-auto my-3 text-base max-w-prose'>
                 {data.list.map((item: string) => (
                     <li key={item.length} className='my-2 list-disc'>
                         {item}
