@@ -1,0 +1,45 @@
+{
+    "Twenty7estore": {
+        "title": "Product Manager / Web Developer",
+        "subtitle": "27estore | 2019 to present",
+        "list": [
+            "Utilized my expertise in React, Node.js, and MongoDB to design and develop an innovative in-house invoice management software that streamlines the company's billing process.",
+            "Elevated the company's product management by expertly overseeing all SKU's, effectively maintaining the company website and online store using Magento e-commerce CMS v2.3.",
+            "Demonstrated strong leadership skills by successfully supervising the warehouse team and operations, ensuring seamless incoming and outgoing shipments through effective coordination and organization."
+        ]
+    },
+    "usBext": {
+        "title": "Product Manager / CMS Support Specialist",
+        "subtitle": "US Bext Ltd | 2016 to 2019",
+        "list": [
+            "Demonstrated exceptional organizational and leadership skills by efficiently managing the company's products, incoming shipments, and inventory, ensuring accuracy and availability.",
+            "Supervised the warehouse and shipping department, executing smooth operations and elevating team productivity.",
+            "Utilized my technical expertise in Magento e-commerce CMS v1.9 to effectively manage the company's website and online store, driving online sales and improving customer experience."
+        ]
+    },
+    "africa_school": {
+        "title": "Volunteering in Africa",
+        "subtitle": "Umbuyisa School of Arts and Culture, Soweto Township, South Africa | 2022",
+        "list": [
+            "Helped fundraise and participate in programs that support disadvantaged kids",
+            "Contributed to the growth and development of children in need by actively championing and participating in programs that provide educational and cultural opportunities."
+        ]
+    },
+    "africa_animals": {
+        "title": "Volunteering in Africa",
+        "subtitle": "Living with Big Cats in Glen Afric, Hartbeespoort, South Africa | 2022",
+        "list": [
+            "Engaged with a diverse range of African wild animals.",
+            "Gained hands-on experience and developed a deeper appreciation for wildlife conservation by engaging with a diverse range of African wild animals on a daily basis, including cleaning, feeding, and creating big cat enrichment programs."
+        ]
+    },
+    "amorpha": {
+        "title": "Event Staff Lead / Event Photographer",
+        "subtitle": "Amorpha Youth Organization | 2012 to 2016",
+        "list": [
+            "Led and executed successful youth events and festivals in Varna, Bulgaria as the Event Staff Lead for a youth-focused organization.",
+            "Lead event photographer and content creator.",
+            "Demonstrated creativity and technical skill as the lead event photographer and content creator, with work published in local newspapers and magazines."
+        ]
+    }
+}
