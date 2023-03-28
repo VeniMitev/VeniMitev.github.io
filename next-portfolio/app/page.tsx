@@ -30,7 +30,7 @@ export default function Home() {
                 <Icons />
             </section>
 
-            <section className='mx-10 my-2 '>
+            <section className='mx-5 my-2 md:mx-10 '>
                 <h2 className='my-6 text-center'>
                     <span className='text-2xl font-semibold'>About Me</span>
                 </h2>
