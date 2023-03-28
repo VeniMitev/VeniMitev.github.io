@@ -12,7 +12,7 @@ const NavBar = ({
 }) => {
     return (
         <nav className='flex flex-col items-center px-4 py-3 md:flex-row md:justify-between'>
-            <div className='flex w-full gap-10 text-center justify-evenly md:justify-center'>
+            <div className='flex w-full gap-10 text-center md:w-fit justify-evenly md:justify-center'>
                 <div className='m-0'>
                     <h1 className='text-2xl font-semibold tracking-tight text-gray-700 select-none md:text-3xl lg:text-4xl'>
                         VeniMitev.dev
