@@ -6,6 +6,9 @@ import React, { useEffect, useState } from 'react';
 type Mood = 'main' | 'ocean' | 'forrest';
 
 const Body = ({ children }: { children: React.ReactNode }) => {
+    // force light mode even if dark mode is enabled
+    localStorage.theme = 'light'
+    
     const [mood, setMood] = useState<Mood>('main');
 
     useEffect(() => {
