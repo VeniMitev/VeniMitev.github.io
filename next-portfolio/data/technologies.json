@@ -11,11 +11,6 @@
             "alt": "CSS3"
         },
         {
-            "name": "JavaScript",
-            "image": "/icons/javascript.svg",
-            "alt": "JavaScript"
-        },
-        {
             "name": "TypeScript",
             "image": "/icons/typescript.svg",
             "alt": "TypeScript"
@@ -64,6 +59,11 @@
             "name": "git",
             "image": "/icons/git.svg",
             "alt": "git"
+        },
+        {
+            "name": "GitHub",
+            "image": "/icons/github.svg",
+            "alt": "GitHub"
         },
         {
             "name": "Firebase",
