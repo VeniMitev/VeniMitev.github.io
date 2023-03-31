@@ -6,7 +6,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        github: "#171515",
+        linkedin: "#0072b1",
+        instagram: "#8a3ab9",
+        youtube: "#ff0000",
+      }
+    },
   },
   plugins: [],
   darkMode: "class",

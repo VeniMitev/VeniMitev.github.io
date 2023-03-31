@@ -13,31 +13,31 @@ const footerButtons = [
         name: 'GitHub',
         icon: <FaGithub className='m-1 self-center' />,
         href: 'https://github.com/VeniMitev',
-        color: '#171515',
+        hover: 'hover:text-github',
     },
     {
         name: 'LinkedIn',
         icon: <FaLinkedin className='m-1 self-center ' />,
         href: 'https://www.linkedin.com/in/venelin-mitev/',
-        color: '#0072b1',
+        hover: 'hover:text-linkedin',
     },
     {
         name: 'Instagram',
         icon: <FaInstagram className='m-1 self-center' />,
         href: 'https://www.instagram.com/venelin_m',
-        color: '#8a3ab9',
+        hover: 'hover:text-instagram',
     },
     {
         name: 'Email',
         icon: <FaEnvelope className='m-1 self-center' />,
         href: 'mailto:business@venimitev.com',
-        color: 'steelblue',
+        hover: 'hover:text-emerald-500',
     },
     {
         name: 'YouTube',
         icon: <FaYoutube className='m-1 self-center' />,
         href: 'https://www.youtube.com/channel/UCoGzGTZdwwVaActFVhqygZg',
-        color: '#ff0000',
+        hover: 'hover:text-youtube',
     },
 ];
 
@@ -81,7 +81,13 @@ const Footer = () => {
 
                 <div className='m-2 flex flex-col flex-wrap md:flex-row'>
                     {footerButtons.map((button) => (
-                        <FooterButton key={button.name} {...button} />
+                        <FooterButton
+                            key={button.name}
+                            href={button.href}
+                            icon={button.icon}
+                            name={button.name}
+                            hover={button.hover}
+                        />
                     ))}
                 </div>
                 <div>
@@ -98,21 +104,25 @@ const FooterButton = ({
     href,
     icon,
     name,
-    color,
+    hover,
 }: {
     href: string;
     icon: React.ReactNode;
     name: string;
-    color: string;
+    hover: string;
 }) => {
+
     return (
         <Link
-            className={`m-1 inline-flex grow select-none justify-center align-middle hover:text-[${color}]`}
+            className={
+                `m-1 inline-flex grow select-none justify-center align-middle bg-st ${hover}`
+            }
             href={href}
             target='_blank'
         >
             {icon}
             {name}
+
             <span className='animate-pulse font-extrabold'>_</span>
         </Link>
     );

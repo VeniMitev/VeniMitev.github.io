@@ -51,9 +51,9 @@ const Contact = () => {
         <div className='flex flex-col items-center justify-center'>
             <h1 className='text-3xl font-semibold'>Contact Me</h1>
 
-            <div className='flex flex-col gap-5 my-12 md:gap-10 md:flex-row'>
+            <div className='my-12 flex flex-col gap-5 md:flex-row md:gap-10'>
                 <div className='flex flex-col '>
-                    <FaEnvelope className='self-center m-1 scale-150' />
+                    <FaEnvelope className='m-1 scale-150 self-center' />
                     <Link
                         href='mailto:business@venimitev.com'
                         target='_blank'
@@ -63,7 +63,7 @@ const Contact = () => {
                     </Link>
                 </div>
                 <div className='flex flex-col '>
-                    <FaGithub className='self-center m-1 scale-150' />
+                    <FaGithub className='m-1 scale-150 self-center' />
                     <Link
                         href='https://github.com/VeniMitev'
                         target='_blank'
@@ -73,7 +73,7 @@ const Contact = () => {
                     </Link>
                 </div>
                 <div className='flex flex-col '>
-                    <FaLinkedin className='self-center m-1 scale-150' />
+                    <FaLinkedin className='m-1 scale-150 self-center' />
                     <Link
                         href='https://www.linkedin.com/in/venelin-mitev/'
                         target='_blank'
@@ -83,7 +83,7 @@ const Contact = () => {
                     </Link>
                 </div>
                 <div className='flex flex-col '>
-                    <FaInstagram className='self-center m-1 scale-150' />
+                    <FaInstagram className='m-1 scale-150 self-center' />
                     <Link
                         href='https://www.instagram.com/venelin_m'
                         target='_blank'
@@ -96,11 +96,11 @@ const Contact = () => {
 
             <h2 className='text-xl font-medium'>Or fill out the form below!</h2>
             <form
-                className='flex flex-col items-center justify-center max-w-lg'
+                className='flex max-w-lg flex-col items-center justify-center'
                 onSubmit={handleSubmit(onSubmit)}
             >
-                <div className='flex flex-col my-3'>
-                    <label className='px-3 text-medium' htmlFor='name'>
+                <div className='my-3 flex flex-col'>
+                    <label className='text-medium px-3' htmlFor='name'>
                         Name
                     </label>
                     <input
@@ -117,8 +117,8 @@ const Contact = () => {
                     )}
                 </div>
 
-                <div className='flex flex-col my-3'>
-                    <label className='px-3 text-medium' htmlFor='email'>
+                <div className='my-3 flex flex-col'>
+                    <label className='text-medium px-3' htmlFor='email'>
                         Email
                     </label>
                     <input
@@ -141,8 +141,8 @@ const Contact = () => {
                     )}
                 </div>
 
-                <div className='flex flex-col my-3'>
-                    <label className='px-3 text-medium' htmlFor='subject'>
+                <div className='my-3 flex flex-col'>
+                    <label className='text-medium px-3' htmlFor='subject'>
                         Subject
                     </label>
                     <input
@@ -162,14 +162,14 @@ const Contact = () => {
                     )}
                 </div>
 
-                <div className='flex flex-col my-3'>
-                    <label className='px-3 text-medium' htmlFor='message'>
+                <div className='my-3 flex flex-col'>
+                    <label className='text-medium px-3' htmlFor='message'>
                         Message
                     </label>
                     <textarea
                         id='message'
                         placeholder='Enter your message here'
-                        className='h-32 w-80 max-w-prose rounded-md rounded-b-sm border-2 border-slate-200 px-3 md:min-w-[30rem]'
+                        className='h-32 w-80 max-w-prose rounded-md rounded-b-sm border-2 border-slate-200 px-3 py-2 md:min-w-[30rem]'
                         {...register('message', { required: true })}
                         disabled={isSubmitting}
                     />
@@ -181,7 +181,7 @@ const Contact = () => {
                 </div>
 
                 <button
-                    className='px-4 py-2 text-white bg-black rounded-md hover:bg-white hover:text-black '
+                    className='rounded-md bg-black px-4 py-2 text-white hover:bg-white hover:text-black '
                     type='submit'
                 >
                     Send

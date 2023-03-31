@@ -23,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-    @apply text-black;
+    @apply text-gray-700
 }
 
 input,
@@ -40,10 +40,10 @@ button {
 
 * {
     box-sizing: border-box;
-    color: black;
+    /* color: black; */
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     html {
         color-scheme: dark;
     }
@@ -51,4 +51,4 @@ button {
         color: white;
         background: black;
     }
-}
+} */
