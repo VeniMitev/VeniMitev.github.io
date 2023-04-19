@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Invoice Management System",
+        "description": "IMS is a web application that allows users to manage their invoices. It is a full stack application that uses the MEAN stack (MongoDB, Express, Angular, Node.js).",
+        "image": "/background_forrest.svg",
+        "links": { "code": "", "project": "" },
+        "tech": [
+            {
+                "name": "MongoDB",
+                "icon": "/icons/mongodb.svg"
+            },
+            {
+                "name": "Express",
+                "icon": "/icons/express.svg"
+            },
+            {
+                "name": "React",
+                "icon": "/icons/react.svg"
+            },
+            {
+                "name": "Node.js",
+                "icon": "/icons/nodejs.svg"
+            }
+        ]
+    },
+    {
+        "title": "Home Improvement Configurator",
+        "description": "HIC is a web application that allows users to configure their home improvement projects. It is a full stack application that uses the MEAN stack (MongoDB, Express, Angular, Node.js).",
+        "image": "/background_ocean.svg",
+        "links": { "code": "", "project": "" },
+        "tech": [
+            {
+                "name": "NextJS",
+                "icon": "/icons/nextjs.svg"
+            },
+            {
+                "name": "Tailwind CSS",
+                "icon": "/icons/tailwindcss.svg"
+            },
+            {
+                "name": "Magento 2",
+                "icon": "/icons/magento.svg"
+            },
+            {
+                "name": "Firebase",
+                "icon": "/icons/firebase.svg"
+            }
+        ]
+    }
+]
