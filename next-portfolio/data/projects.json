@@ -25,7 +25,7 @@
     },
     {
         "title": "Home Improvement Configurator",
-        "description": "HIC is a web application that allows users to configure their home improvement projects. It is a full stack application that uses the MEAN stack (MongoDB, Express, Angular, Node.js).",
+        "description": "HIC is a web application that allows users to configure their home improvement projects. It is a full stack application that uses the NextJS, Magento for CMS, and Firebase for Auth.",
         "image": "/background_ocean.svg",
         "links": { "code": "", "project": "" },
         "tech": [
@@ -40,6 +40,26 @@
             {
                 "name": "Magento 2",
                 "icon": "/icons/magento.svg"
+            },
+            {
+                "name": "Firebase",
+                "icon": "/icons/firebase.svg"
+            }
+        ]
+    },
+    {
+        "title": "Bad Bank",
+        "description": "Bad Bank is a web application that allows users to create accounts and transfer money between them. It is a full stack application that uses ViteJS with React and TypeScript, and Firebase for database and Auth.",
+        "image": "/background_main.svg",
+        "links": { "code": "", "project": "" },
+        "tech": [
+            {
+                "name": "ViteJS",
+                "icon": "/icons/vitejs.svg"
+            },
+            {
+                "name": "ReactJS",
+                "icon": "/icons/react.svg"
             },
             {
                 "name": "Firebase",
