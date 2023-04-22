@@ -1,9 +1,10 @@
 [
     {
         "title": "Invoice Management System",
-        "description": "IMS is a web application that allows users to manage their invoices. It is a full stack application that uses the MEAN stack (MongoDB, Express, Angular, Node.js).",
-        "image": "/background_forrest.svg",
-        "links": { "code": "", "project": "" },
+        "client": "27estore.com",
+        "description": "IMS is a web application that allows the company to manage their invoices. It is an internal tool that allows the sales team to effortlessly create anything from initial quotes, to finalized invoices for clients. Current set up is tailored for an interior design company specializing in kitchens, bathroom vanities, and interior doors. It is a full stack application that uses the MERN stack (MongoDB, Express, React, Node.js). The source code is private, based on company desires, but I can provide a demo if you are interested. A demo application is currently in the works.",
+        "image": "/projects/IMS_thumbnail.png",
+        "links": { "code": "no", "project": "no" },
         "tech": [
             {
                 "name": "MongoDB",
@@ -25,9 +26,10 @@
     },
     {
         "title": "Home Improvement Configurator",
-        "description": "HIC is a web application that allows users to configure their home improvement projects. It is a full stack application that uses the NextJS, Magento for CMS, and Firebase for Auth.",
-        "image": "/background_ocean.svg",
-        "links": { "code": "", "project": "" },
+        "client": "27estore.com",
+        "description": "HIC is a web application that allows clients to configure their home improvement projects. It is a full stack application that uses the NextJS and tailwindCSS. It is still in prototyping phase, so the company is currently deciding on what the backend infrastructure is going to look like. Currently, the application is using a mock API to simulate the backend. The source code is private, based on company desires, but I can provide a demo if you are interested. A demo application is currently in the works.",
+        "image": "/projects/HIC_thumbnail.png",
+        "links": { "code": "no", "project": "no" },
         "tech": [
             {
                 "name": "NextJS",
@@ -49,9 +51,13 @@
     },
     {
         "title": "Bad Bank",
-        "description": "Bad Bank is a web application that allows users to create accounts and transfer money between them. It is a full stack application that uses ViteJS with React and TypeScript, and Firebase for database and Auth.",
-        "image": "/background_main.svg",
-        "links": { "code": "", "project": "" },
+        "client": "MIT Professional Certificate in Coding - Capstone Project",
+        "description": "Bad Bank is a web application that allows users to create accounts, deposit and withdraw fictional money, and see all transactions that have been made by other users. It is a full stack application that uses ViteJS with React and TypeScript, and Firebase for Auth and Firestore for database. The source code is public, and you can find it on my GitHub. This application is the capstone project for the MIT Professional Certificate in Coding.",
+        "image": "/projects/bad-bank_thumbnail.png",
+        "links": {
+            "code": "https://github.com/VeniMitev/Bad-Bank",
+            "project": "https://bad-bank.venimitev.dev/"
+        },
         "tech": [
             {
                 "name": "ViteJS",

@@ -9,21 +9,11 @@ const Projects = () => {
             </h1>
             <div className='3xl:grid-cols-3 mx-auto grid max-w-5xl grid-cols-1 items-center justify-center gap-12 md:grid-cols-2'>
                 {data.map((project) => (
-                    <Project
-                        key={project.title}
-                        title={project.title}
-                        description={project.description}
-                        image={project.image}
-                        technologies={project.tech}
-                        links={project.links}
-                    />
+                    <Project key={project.title} {...project} />
                 ))}
             </div>
         </>
     );
 };
-
-
-
 
 export default Projects;
