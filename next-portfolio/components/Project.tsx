@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 
 type ProjectProps = {
     title: string;
@@ -24,11 +27,15 @@ const Project = ({
     tech,
     links,
 }: ProjectProps) => {
+    const [lineClamp, setLineClamp] = useState(' line-clamp-6');
+
     return (
-        <div className='grid h-full w-11/12 max-w-xl content-between justify-self-center rounded-sm bg-white shadow-lg xl:rounded-lg'>
+        <div className='grid h-full w-11/12 max-w-xl content-between justify-self-center rounded-sm bg-white py-2 shadow-lg xl:rounded-lg'>
             <div>
                 <h1 className='m-2 px-8 text-xl font-semibold'>{title}</h1>
-                <h2 className='m-2 px-8 text-lg font-medium'>{client}</h2>
+                <h2 className='text-md m-2 px-8 font-medium opacity-75'>
+                    {client}
+                </h2>
 
                 <Image
                     src={image}
@@ -38,7 +45,21 @@ const Project = ({
                     className='mb-5'
                 />
 
-                <p className='px-8'>{description}</p>
+                <p className={'px-8' + lineClamp}>{description}</p>
+                <button
+                    className='px-8 py-2 text-blue-400 hover:text-blue-700'
+                    onClick={() => {
+                        setLineClamp(
+                            lineClamp === ' line-clamp-6'
+                                ? ' line-clamp-none'
+                                : ' line-clamp-6'
+                        );
+                    }}
+                >
+                    {lineClamp === ' line-clamp-6'
+                        ? 'Read More...'
+                        : 'Read Less...'}
+                </button>
             </div>
 
             <div>

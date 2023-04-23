@@ -1,7 +1,7 @@
 [
     {
         "title": "Invoice Management System",
-        "client": "27estore.com",
+        "client": "Client - 27estore.com",
         "description": "IMS is a web application that allows the company to manage their invoices. It is an internal tool that allows the sales team to effortlessly create anything from initial quotes, to finalized invoices for clients. Current set up is tailored for an interior design company specializing in kitchens, bathroom vanities, and interior doors. It is a full stack application that uses the MERN stack (MongoDB, Express, React, Node.js). The source code is private, based on company desires, but I can provide a demo if you are interested. A demo application is currently in the works.",
         "image": "/projects/IMS_thumbnail.png",
         "links": { "code": "no", "project": "no" },
@@ -26,7 +26,7 @@
     },
     {
         "title": "Home Improvement Configurator",
-        "client": "27estore.com",
+        "client": "Client - 27estore.com",
         "description": "HIC is a web application that allows clients to configure their home improvement projects. It is a full stack application that uses the NextJS and tailwindCSS. It is still in prototyping phase, so the company is currently deciding on what the backend infrastructure is going to look like. Currently, the application is using a mock API to simulate the backend. The source code is private, based on company desires, but I can provide a demo if you are interested. A demo application is currently in the works.",
         "image": "/projects/HIC_thumbnail.png",
         "links": { "code": "no", "project": "no" },

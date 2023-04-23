@@ -17,6 +17,12 @@ const NavBar = ({
     handleThemeChange: Function;
     mood: string;
 }) => {
+    const pathname = usePathname();
+
+    if (pathname.includes('/studio')) {
+        return null;
+    }
+
     return (
         <nav className='flex flex-col items-center px-4 py-3 md:flex-row md:justify-between'>
             <div className='flex w-full justify-evenly gap-10 text-center md:w-fit md:justify-center'>
