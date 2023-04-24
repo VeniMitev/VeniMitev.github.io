@@ -1,5 +1,6 @@
 import Body from '../components/Body';
 import './globals.css';
+import { getProjects } from '../sanity/sanity-utils'
 
 export const metadata = {
     title: 'Veni Mitev | Web Developer',
@@ -12,6 +13,8 @@ export default function RootLayout({
 }: {
     children: React.ReactNode;
 }) {
+    
+
     return (
         <html lang='en'>
             <head />

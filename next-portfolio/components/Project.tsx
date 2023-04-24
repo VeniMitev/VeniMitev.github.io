@@ -3,29 +3,30 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { PortableTextBlock } from 'sanity';
+import { PortableText } from '@portabletext/react';
 
 type ProjectProps = {
     title: string;
-    client: string;
-    description: string;
+    subTitle: string;
+    description: PortableTextBlock[];
     image: string;
     tech: {
         name: string;
         icon: string;
     }[];
-    links: {
-        code: string;
-        project: string;
-    };
+    github: string;
+    projectUrl: string;
 };
 
 const Project = ({
     title,
-    client,
+    subTitle,
     description,
     image,
     tech,
-    links,
+    github,
+    projectUrl,
 }: ProjectProps) => {
     const [lineClamp, setLineClamp] = useState(' line-clamp-6');
 
@@ -34,7 +35,7 @@ const Project = ({
             <div>
                 <h1 className='m-2 px-8 text-xl font-semibold'>{title}</h1>
                 <h2 className='text-md m-2 px-8 font-medium opacity-75'>
-                    {client}
+                    {subTitle}
                 </h2>
 
                 <Image
@@ -45,7 +46,12 @@ const Project = ({
                     className='mb-5'
                 />
 
-                <p className={'px-8' + lineClamp}>{description}</p>
+                {/* <p className={'px-8' + lineClamp}>{description}</p> */}
+
+                <div className={'px-8' + lineClamp}>
+                    <PortableText value={description} />
+                </div>
+
                 <button
                     className='px-8 py-2 text-blue-400 hover:text-blue-700'
                     onClick={() => {
@@ -76,20 +82,20 @@ const Project = ({
                 </div>
 
                 <div>
-                    {links.project !== 'no' && (
+                    {projectUrl !== 'no' && (
                         <Link
-                            href={links.project}
-                            className='my-4 mx-6 block rounded-sm bg-slate-900 px-8 py-2 text-center text-slate-200 hover:bg-slate-200 hover:text-slate-900'
+                            href={projectUrl}
+                            className='mx-6 my-4 block rounded-sm bg-slate-900 px-8 py-2 text-center text-slate-200 hover:bg-slate-200 hover:text-slate-900'
                             target='_blank'
                         >
                             View Project
                         </Link>
                     )}
 
-                    {links.code !== 'no' && (
+                    {github !== 'no' && (
                         <Link
-                            href={links.code}
-                            className='my-4 mx-6 block rounded-sm bg-slate-900 px-8 py-2 text-center text-slate-200 hover:bg-slate-200 hover:text-slate-900'
+                            href={github}
+                            className='mx-6 my-4 block rounded-sm bg-slate-900 px-8 py-2 text-center text-slate-200 hover:bg-slate-200 hover:text-slate-900'
                             target='_blank'
                         >
                             View Code

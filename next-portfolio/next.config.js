@@ -4,6 +4,9 @@ const nextConfig = {
     appDir: true,
   },
   reactStrictMode: true,
+  images: {
+		domains: ['cdn.sanity.io']
+	}
 }
 
 module.exports = nextConfig

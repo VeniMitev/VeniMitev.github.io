@@ -3,7 +3,7 @@ import Icons from '../components/Icons';
 import data from '../data/homePage.json';
 import DownloadCV from '../components/DownloadCV';
 
-export default function Home() {
+export default async function Home() {
     return (
         <div className='flex flex-col items-center justify-center'>
             <Image

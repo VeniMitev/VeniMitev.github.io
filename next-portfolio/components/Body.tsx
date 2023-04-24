@@ -43,10 +43,12 @@ const Body = ({ children }: { children: React.ReactNode }) => {
     return (
         <body
             style={backgroundStyle}
-            className='flex flex-col min-h-screen overflow-y-scroll transition duration-700 transform'
+            className='flex min-h-screen transform flex-col overflow-y-scroll transition duration-700'
         >
             <NavBar handleThemeChange={handleThemeChange} mood={mood} />
-            {children}
+
+            <div className='mb-8'>{children}</div>
+            
             <Footer />
         </body>
     );
