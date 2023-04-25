@@ -25,7 +25,7 @@ const NavBar = ({
 
     return (
         <nav className='flex flex-col items-center px-4 py-3 md:flex-row md:justify-between'>
-            <div className='flex w-full justify-evenly gap-10 text-center md:w-fit md:justify-center'>
+            <div className='flex w-full justify-evenly gap-10 text-center md:w-fit md:justify-start'>
                 <Link href='/'>
                     <h1 className='select-none text-2xl font-semibold tracking-tight text-gray-700 md:text-3xl lg:text-4xl'>
                         VeniMitev.dev
