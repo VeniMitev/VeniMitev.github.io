@@ -3,7 +3,6 @@ import Icons from '../components/Icons';
 import { PortableText } from '@portabletext/react';
 import DownloadCV from '../components/DownloadCV';
 import { getHomePage } from '../sanity/sanity-utils';
-import * as dataOld from '../data/homePage.json';
 
 export default async function Home() {
     const data = await getHomePage();
