@@ -58,13 +58,17 @@ const Project = ({
             <div>
                 <div className='mt-4 flex justify-center gap-8 px-8 py-2'>
                     {tech.map((technology) => (
-                        <Image
-                            key={technology.name}
-                            src={technology.icon}
-                            alt={technology.name}
-                            width={30}
-                            height={30}
-                        />
+                        <div key={technology.name} className='group relative'>
+                            <span className='absolute bottom-10 min-w-fit scale-0 rounded bg-slate-800 p-2 text-xs text-white transition-all group-hover:scale-100'>
+                                {technology.name}
+                            </span>
+                            <Image
+                                src={technology.icon}
+                                alt={technology.name}
+                                width={30}
+                                height={30}
+                            />
+                        </div>
                     ))}
                 </div>
 

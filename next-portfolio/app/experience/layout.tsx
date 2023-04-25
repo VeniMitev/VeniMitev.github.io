@@ -7,7 +7,7 @@ export const metadata = {
 };
 
 const ExperienceLayout = ({ children }: { children: React.ReactNode }) => {
-    return <article>{children}</article>;
+    return <article className='mb-8'>{children}</article>;
 };
 
 export default ExperienceLayout;

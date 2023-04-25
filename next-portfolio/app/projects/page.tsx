@@ -1,5 +1,10 @@
-import Project from '../../components/Project';
+// import Project from '../../components/Project';
 import { getProjects } from '../../sanity/sanity-utils';
+import dynamic from 'next/dynamic';
+
+const Project = dynamic(() => import('../../components/DownloadCV'), {
+    ssr: false,
+});
 
 const Projects = async () => {
     const projects = await getProjects();

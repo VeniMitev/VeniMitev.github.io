@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { getTechnologies } from '../sanity/sanity-utils';
-// import data from '../data/technologies.json';
 
 const Icons = async () => {
     const data = await getTechnologies();

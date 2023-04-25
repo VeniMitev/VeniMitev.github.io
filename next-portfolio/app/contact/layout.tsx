@@ -7,7 +7,7 @@ export const metadata = {
 };
 
 const ContactLayout = ({ children }: { children: React.ReactNode }) => {
-    return <article>{children}</article>;
+    return <article className='mb-8'>{children}</article>;
 };
 
 export default ContactLayout;

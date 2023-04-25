@@ -3,6 +3,7 @@ import Icons from '../components/Icons';
 import { PortableText } from '@portabletext/react';
 import DownloadCV from '../components/DownloadCV';
 import { getHomePage } from '../sanity/sanity-utils';
+import dynamic from 'next/dynamic';
 
 export default async function Home() {
     const data = await getHomePage();
@@ -18,6 +19,7 @@ export default async function Home() {
                 height={300}
                 placeholder='blur'
                 blurDataURL={data.image.image}
+                priority={true}
             />
 
             <section className='mx-10 my-2 select-none text-center'>
@@ -66,6 +68,8 @@ export default async function Home() {
                     </span>
                 </h2>
                 <iframe
+                    title='Unpopular Passion Podcast - Veni Mitev'
+                    loading='lazy'
                     className='mx-auto my-6 w-full select-none'
                     id='podcast'
                     src='https://open.spotify.com/embed/episode/2A4VXiol7U1mRBaNE2QLMV?utm_source=generator'
