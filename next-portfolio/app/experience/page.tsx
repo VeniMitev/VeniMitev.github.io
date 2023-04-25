@@ -1,5 +1,4 @@
 import React from 'react';
-import data from '../../data/experience.json';
 import DownloadCV from '../../components/DownloadCV';
 import { getExperiences, Experience as ExperienceType } from '../../sanity/sanity-utils';
 
