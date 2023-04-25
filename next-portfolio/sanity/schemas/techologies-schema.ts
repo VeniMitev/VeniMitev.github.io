@@ -24,10 +24,15 @@ const technologies = defineType({
             ],
         },
         {
+            name: 'sort',
+            title: 'Sort',
+            type: 'number',
+        },
+        {
             name: 'comingSoon',
             title: 'Coming Soon',
             type: 'boolean',
-        }
+        },
     ],
 });
 

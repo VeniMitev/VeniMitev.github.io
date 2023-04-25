@@ -1,18 +1,24 @@
 import Image from 'next/image';
 import Icons from '../components/Icons';
-import data from '../data/homePage.json';
+import { PortableText } from '@portabletext/react';
 import DownloadCV from '../components/DownloadCV';
+import { getHomePage } from '../sanity/sanity-utils';
+import * as dataOld from '../data/homePage.json';
 
 export default async function Home() {
+    const data = await getHomePage();
+
     return (
         <div className='flex flex-col items-center justify-center'>
             <Image
                 draggable={false}
-                className='mt-10 mb-5 select-none rounded-full'
-                src='/BioPic.jpg'
-                alt='Veni Mitev - Web developer'
+                className='mb-5 mt-10 select-none rounded-full'
+                src={data.image.image}
+                alt={data.image.alt}
                 width={300}
                 height={300}
+                placeholder='blur'
+                blurDataURL={data.image.image}
             />
 
             <section className='mx-10 my-2 select-none text-center'>
@@ -21,12 +27,13 @@ export default async function Home() {
                 </h1>
                 <h2 className='my-6'>
                     <span className='text-2xl font-semibold'>
-                        {data.subtitle}
+                        {data.subTitle}
                     </span>
                 </h2>
             </section>
 
             <section className='my-14 max-w-screen-md'>
+                {/* @ts-expect-error Server Component */}
                 <Icons />
             </section>
 
@@ -34,25 +41,23 @@ export default async function Home() {
                 <h2 className='my-6 text-center'>
                     <span className='text-2xl font-semibold'>About Me</span>
                 </h2>
-                <p className='mx-auto my-6 max-w-screen-md text-base'>
-                    {data.aboutMe.paragraphOne}
-                </p>
-                <p className='mx-auto my-6 max-w-screen-md text-base'>
-                    {data.aboutMe.paragraphTwo}
-                </p>
-                <p className='mx-auto my-6 max-w-screen-md text-base'>
-                    {data.aboutMe.paragraphThree}
-                </p>
+
+                <div className='my-6 max-w-screen-md rich-text-container'>
+                    <PortableText value={data.aboutMe} />
+                </div>
+
                 <DownloadCV />
             </section>
 
             <Image
                 draggable={false}
                 className='my-12 select-none'
-                src='/MIT_Certificate_Venelin_Mitev.png'
-                alt='Professional Certificate in Full Stack Development with MERN Stack from Massachusetts Institute of Technology'
+                src={data.certification.image}
+                alt={data.certification.alt}
                 width={800}
                 height={800}
+                placeholder='blur'
+                blurDataURL={data.certification.image}
             />
 
             <section className='mx-10 my-2 '>

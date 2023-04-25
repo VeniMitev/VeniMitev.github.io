@@ -1,9 +1,11 @@
 import React from 'react';
 import data from '../../data/experience.json';
-import Link from 'next/link';
 import DownloadCV from '../../components/DownloadCV';
+import { getExperiences, Experience as ExperienceType } from '../../sanity/sanity-utils';
 
-const Experience = () => {
+const Experience = async () => {
+    const data = await getExperiences();
+
     return (
         <>
             <section className='flex flex-col items-center justify-center'>
@@ -14,8 +16,13 @@ const Experience = () => {
                 </h1>
                 <DownloadCV />
 
-                <Section data={data.Twenty7estore} />
-                <Section data={data.usBext} />
+                {data.map((item) => (
+                    <>
+                        {!item.volunteer && (
+                            <Section key={item.title} data={item} />
+                        )}
+                    </>
+                ))}
             </section>
             <section className='flex flex-col items-center justify-center'>
                 <h1 className='my-6 text-center'>
@@ -23,38 +30,33 @@ const Experience = () => {
                         Volunteer Experience
                     </span>
                 </h1>
-                <Section data={data.africa_school} />
-                <Section data={data.africa_animals} africaTwo />
-                <Section data={data.amorpha} />
+
+                {data.map((item) => (
+                    <>
+                        {item.volunteer && (
+                            <Section key={item.title} data={item} />
+                        )}
+                    </>
+                ))}
             </section>
         </>
     );
 };
 
 type SectionProps = {
-    title: string;
-    subtitle: string;
-    list: string[];
+    data: ExperienceType;
 };
 
-const Section = ({
-    data,
-    africaTwo,
-}: {
-    data: SectionProps;
-    africaTwo?: boolean;
-}) => {
+const Section = ({ data }: SectionProps) => {
     return (
         <div className='m-4'>
-            {!africaTwo && (
-                <h2 className='text-lg font-medium'>{data.title}</h2>
-            )}
-            <h3 className='underline text-md underline-offset-2'>
-                {data.subtitle}
+            <h2 className='text-lg font-medium'>{data.title}</h2>
+            <h3 className='text-md underline underline-offset-2'>
+                {data.subTitle}
             </h3>
-            <ul className='px-6 mx-auto my-3 text-base max-w-prose'>
-                {data.list.map((item: string) => (
-                    <li key={item.length} className='my-2 list-disc'>
+            <ul className='mx-auto my-3 max-w-prose px-6 text-base'>
+                {data.description.map((item: string, index) => (
+                    <li key={index} className='my-2 list-disc'>
                         {item}
                     </li>
                 ))}

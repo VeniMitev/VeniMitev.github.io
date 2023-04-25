@@ -6,6 +6,11 @@ const experience = defineType({
     type: 'document',
     fields: [
         {
+            name: 'company',
+            title: 'Company',
+            type: 'string',
+        },
+        {
             name: 'title',
             title: 'Title',
             type: 'string',
@@ -21,6 +26,16 @@ const experience = defineType({
             type: 'array',
             of: [{ type: 'text' }],
         },
+        {
+            name: 'sort',
+            title: 'Sort',
+            type: 'number',
+        },
+        {
+            name: 'volunteer',
+            title: 'Volunteer',
+            type: 'boolean',
+        }
     ],
 });
 

@@ -1,7 +1,5 @@
 import Project from '../../components/Project';
-import data from '../../data/projects.json';
 import { getProjects } from '../../sanity/sanity-utils';
-
 
 const Projects = async () => {
     const projects = await getProjects();
@@ -12,9 +10,11 @@ const Projects = async () => {
                 <span className='text-3xl font-semibold'>Projects</span>
             </h1>
             <div className='3xl:grid-cols-3 mx-auto grid max-w-5xl grid-cols-1 items-center justify-center gap-12 md:grid-cols-2'>
-                {projects.map((project) => (
-                    <Project key={project.title} {...project} />
-                ))}
+                {projects
+                    .sort((a, b) => a.sort - b.sort)
+                    .map((project) => (
+                        <Project key={project.title} {...project} />
+                    ))}
             </div>
         </>
     );

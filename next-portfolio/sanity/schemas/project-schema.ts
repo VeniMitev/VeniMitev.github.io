@@ -63,6 +63,11 @@ const project = defineType({
         },
       ],
     },
+    {
+      name: 'sort',
+      title: 'Sort',
+      type: 'number',
+    },
   ],
 })
 

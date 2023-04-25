@@ -47,7 +47,7 @@ const Body = ({ children }: { children: React.ReactNode }) => {
         >
             <NavBar handleThemeChange={handleThemeChange} mood={mood} />
 
-            <div className='mb-8'>{children}</div>
+            {children}
             
             <Footer />
         </body>

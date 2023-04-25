@@ -3,21 +3,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { PortableTextBlock } from 'sanity';
 import { PortableText } from '@portabletext/react';
-
-type ProjectProps = {
-    title: string;
-    subTitle: string;
-    description: PortableTextBlock[];
-    image: string;
-    tech: {
-        name: string;
-        icon: string;
-    }[];
-    github: string;
-    projectUrl: string;
-};
+import { Project as ProjectType } from '../sanity/sanity-utils';
 
 const Project = ({
     title,
@@ -27,7 +14,7 @@ const Project = ({
     tech,
     github,
     projectUrl,
-}: ProjectProps) => {
+}: ProjectType) => {
     const [lineClamp, setLineClamp] = useState(' line-clamp-6');
 
     return (
@@ -44,11 +31,11 @@ const Project = ({
                     width={1000}
                     height={600}
                     className='mb-5'
+                    placeholder='blur'
+                    blurDataURL={image}
                 />
 
-                {/* <p className={'px-8' + lineClamp}>{description}</p> */}
-
-                <div className={'px-8' + lineClamp}>
+                <div className={'px-8' + lineClamp + ' rich-text-container'}>
                     <PortableText value={description} />
                 </div>
 
