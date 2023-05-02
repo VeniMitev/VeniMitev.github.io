@@ -1,6 +1,9 @@
 import React from 'react';
 import DownloadCV from '../../components/DownloadCV';
-import { getExperiences, Experience as ExperienceType } from '../../sanity/sanity-utils';
+import {
+    getExperiences,
+    Experience as ExperienceType,
+} from '../../sanity/sanity-utils';
 
 const Experience = async () => {
     const data = await getExperiences();
@@ -15,10 +18,18 @@ const Experience = async () => {
                 </h1>
                 <DownloadCV />
 
-                {data.map((item) => (
+                {data.map((item, index) => (
                     <>
                         {!item.volunteer && (
-                            <Section key={item.title} data={item} />
+                            <div
+                                className={
+                                    index % 2 !== 0
+                                        ? 'translate-x-6'
+                                        : '-translate-x-6'
+                                }
+                            >
+                                <Section key={item.title} data={item} />
+                            </div>
                         )}
                     </>
                 ))}
@@ -30,10 +41,18 @@ const Experience = async () => {
                     </span>
                 </h1>
 
-                {data.map((item) => (
+                {data.map((item, index) => (
                     <>
                         {item.volunteer && (
-                            <Section key={item.title} data={item} />
+                            <div
+                                className={
+                                    index % 2 === 0
+                                        ? 'translate-x-6'
+                                        : '-translate-x-6'
+                                }
+                            >
+                                <Section key={item.title} data={item} />
+                            </div>
                         )}
                     </>
                 ))}
@@ -48,7 +67,7 @@ type SectionProps = {
 
 const Section = ({ data }: SectionProps) => {
     return (
-        <div className='m-4'>
+        <div className='m-4 transform rounded-xl bg-gray-50 px-6 py-3 shadow-lg transition duration-500 ease-in-out hover:bg-white'>
             <h2 className='text-lg font-medium'>{data.title}</h2>
             <h3 className='text-md underline underline-offset-2'>
                 {data.subTitle}

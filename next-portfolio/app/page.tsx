@@ -38,12 +38,12 @@ export default async function Home() {
                 <Icons />
             </section>
 
-            <section className='mx-5 my-2 md:mx-10 '>
-                <h2 className='my-6 text-center'>
+            <section className='m-4 mx-5 my-36 transform rounded-md bg-gray-50 p-6 shadow-lg transition duration-500 ease-in-out hover:bg-white md:mx-10'>
+                <h2 className='mb-6 text-center'>
                     <span className='text-2xl font-semibold'>About Me</span>
                 </h2>
 
-                <div className='my-6 max-w-screen-md rich-text-container'>
+                <div className='rich-text-container my-6 max-w-screen-md'>
                     <PortableText value={data.aboutMe} />
                 </div>
 
@@ -52,7 +52,7 @@ export default async function Home() {
 
             <Image
                 draggable={false}
-                className='my-12 select-none'
+                className='my-12 select-none shadow-lg rounded-sm'
                 src={data.certification.image}
                 alt={data.certification.alt}
                 width={800}

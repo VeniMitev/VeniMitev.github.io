@@ -53,6 +53,7 @@ export async function getProjects(): Promise<Project[]> {
         projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '1x7x7x7x',
         dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
         apiVersion: '2023-04-23',
+        useCdn: true
     });
 
     return client.fetch(
@@ -77,6 +78,7 @@ export async function getExperiences(): Promise<Experience[]> {
         projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '1x7x7x7x',
         dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
         apiVersion: '2023-04-23',
+        useCdn: true
     });
 
     return client.fetch(
@@ -96,6 +98,7 @@ export async function getTechnologies(): Promise<Technology[]> {
         projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '1x7x7x7x',
         dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
         apiVersion: '2023-04-23',
+        useCdn: true
     });
 
     return client.fetch(
@@ -116,6 +119,7 @@ export async function getHomePage(): Promise<HomePage> {
         projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '1x7x7x7x',
         dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
         apiVersion: '2023-04-23',
+        useCdn: true
     });
 
     return client.fetch(

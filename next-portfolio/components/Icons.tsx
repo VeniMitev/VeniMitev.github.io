@@ -28,7 +28,7 @@ const Icons = async () => {
                                 placeholder='blur'
                                 blurDataURL={item.icon.image}
                             />
-                            <span className='font-sans'>{item.title}</span>
+                            <span className='font-sans font-semibold text-lg'>{item.title}</span>
                         </div>
                     ))}
             </div>
@@ -55,7 +55,7 @@ const Icons = async () => {
                                 placeholder='blur'
                                 blurDataURL={item.icon.image}
                             />
-                            <span className='font-sans'>{item.title}</span>
+                            <span className='font-sans font-semibold text-lg'>{item.title}</span>
                         </div>
                     ))}
             </div>

@@ -42,37 +42,37 @@ const footerButtons = [
     },
 ];
 
+const next = (
+    <Link
+        className='text-blue-500 hover:text-blue-600'
+        href='https://nextjs.org/'
+        target='_blank'
+    >
+        Next.js
+    </Link>
+);
+
+const tailwind = (
+    <Link
+        className='text-blue-500 hover:text-blue-600'
+        href='https://tailwindcss.com/'
+        target='_blank'
+    >
+        Tailwind CSS
+    </Link>
+);
+
+const vercel = (
+    <Link
+        className='text-blue-500 hover:text-blue-600'
+        href='https://vercel.com/'
+        target='_blank'
+    >
+        Vercel
+    </Link>
+);
+
 const Footer = () => {
-    const next = (
-        <Link
-            className='text-blue-500 hover:text-blue-600'
-            href='https://nextjs.org/'
-            target='_blank'
-        >
-            Next.js
-        </Link>
-    );
-
-    const tailwind = (
-        <Link
-            className='text-blue-500 hover:text-blue-600'
-            href='https://tailwindcss.com/'
-            target='_blank'
-        >
-            Tailwind CSS
-        </Link>
-    );
-
-    const vercel = (
-        <Link
-            className='text-blue-500 hover:text-blue-600'
-            href='https://vercel.com/'
-            target='_blank'
-        >
-            Vercel
-        </Link>
-    );
-
     const pathname = usePathname();
 
     if (pathname.includes('/studio')) {
@@ -81,7 +81,7 @@ const Footer = () => {
 
     return (
         <footer className='bottom-0 mt-auto flex h-max justify-center overflow-hidden align-middle md:h-28'>
-            <div className='w-11/12 transform overflow-hidden rounded-lg border bg-gray-50 p-2 text-center drop-shadow-sm transition duration-500 ease-in-out hover:drop-shadow-xl md:w-[60em] md:translate-y-14 md:hover:translate-y-2 md:hover:bg-white'>
+            <div className='w-11/12 transform overflow-hidden rounded-lg border bg-gray-50 p-2 pb-8 text-center drop-shadow-sm transition duration-500 ease-in-out hover:drop-shadow-xl md:w-[60em] md:translate-y-14 md:hover:translate-y-2 md:hover:bg-white'>
                 <code className='select-none'>
                     &copy; Veni Mitev {new Date().getFullYear()}
                 </code>
@@ -92,7 +92,7 @@ const Footer = () => {
                     ))}
                 </div>
                 <div>
-                    <p className='select-none text-xs'>
+                    <p className='select-none text-xs mb-10'>
                         Built with {next} and {tailwind}. Deployed on {vercel}.
                     </p>
                 </div>
@@ -114,7 +114,7 @@ const FooterButton = ({
 }) => {
     return (
         <Link
-            className={`bg-st m-1 inline-flex grow select-none justify-center align-middle ${hover}`}
+            className={`bg-st m-1 inline-flex grow select-none justify-center align-middle transition duration-500 ease-in-out ${hover}`}
             href={href}
             target='_blank'
         >
