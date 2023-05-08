@@ -24,8 +24,8 @@ const Experience = async () => {
                             <div
                                 className={
                                     index % 2 !== 0
-                                        ? 'translate-x-6'
-                                        : '-translate-x-6'
+                                        ? 'md:translate-x-6'
+                                        : 'md:-translate-x-6'
                                 }
                             >
                                 <Section key={item.title} data={item} />
@@ -34,8 +34,8 @@ const Experience = async () => {
                     </>
                 ))}
             </section>
-            <section className='flex flex-col items-center justify-center'>
-                <h1 className='my-6 text-center'>
+            <section className='my-24 flex flex-col items-center justify-center'>
+                <h1 className='my-5 text-center'>
                     <span className='text-3xl font-semibold'>
                         Volunteer Experience
                     </span>
@@ -47,8 +47,8 @@ const Experience = async () => {
                             <div
                                 className={
                                     index % 2 === 0
-                                        ? 'translate-x-6'
-                                        : '-translate-x-6'
+                                        ? 'md:translate-x-6'
+                                        : 'md:-translate-x-6'
                                 }
                             >
                                 <Section key={item.title} data={item} />
