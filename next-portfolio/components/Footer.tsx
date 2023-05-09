@@ -44,7 +44,7 @@ const footerButtons = [
 
 const next = (
     <Link
-        className='text-blue-500 hover:text-blue-600'
+        className='text-blue-600 hover:text-blue-800'
         href='https://nextjs.org/'
         target='_blank'
     >
@@ -54,7 +54,7 @@ const next = (
 
 const tailwind = (
     <Link
-        className='text-blue-500 hover:text-blue-600'
+        className='text-blue-600 hover:text-blue-800'
         href='https://tailwindcss.com/'
         target='_blank'
     >
@@ -64,7 +64,7 @@ const tailwind = (
 
 const vercel = (
     <Link
-        className='text-blue-500 hover:text-blue-600'
+        className='text-blue-600 hover:text-blue-800'
         href='https://vercel.com/'
         target='_blank'
     >

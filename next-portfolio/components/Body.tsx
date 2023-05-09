@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 type Mood = 'main' | 'ocean' | 'forrest';
 
 const Body = ({ children }: { children: React.ReactNode }) => {
-    const [mood, setMood] = useState<Mood>('main');
+    const [mood, setMood] = useState<Mood>('ocean');
 
     useEffect(() => {
         const storedMood =
@@ -14,7 +14,7 @@ const Body = ({ children }: { children: React.ReactNode }) => {
             window.localStorage.getItem('mood');
 
         if (storedMood) {
-            setMood((storedMood as Mood) || 'main');
+            setMood((storedMood as Mood) || 'ocean');
         }
     }, []);
 

@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState } from 'react';
+import { Switch } from '@headlessui/react';
 
 const menuItems = [
     { href: '/', text: 'Home' },
@@ -17,6 +19,7 @@ const NavBar = ({
     handleThemeChange: Function;
     mood: string;
 }) => {
+    const [enabled, setEnabled] = useState(false);
     const pathname = usePathname();
 
     if (pathname.includes('/studio')) {
@@ -31,17 +34,25 @@ const NavBar = ({
                         VeniMitev.dev
                     </h1>
                 </Link>
-                <button
-                    className='flex items-center rounded border text-gray-700 hover:border-blue-500 hover:text-blue-500'
-                    onClick={() => handleThemeChange()}
-                >
-                    <span className='invisible h-0 w-0 select-none p-0 md:visible md:mx-6 md:h-auto md:w-auto md:py-2 md:px-3'>
-                        Switch to {mood === 'ocean' ? 'Forrest' : 'Ocean'}
-                    </span>
-                    <span className='visible h-auto w-auto select-none p-1 md:invisible md:m-0 md:h-0 md:w-0 md:p-0'>
-                        {mood === 'ocean' ? '🌲' : '🌊'}
-                    </span>
-                </button>
+                <div className='flex items-center px-1'>
+                    <Switch
+                        checked={enabled}
+                        onChange={() => handleThemeChange()}
+                        className={`${
+                            mood === 'ocean' ? 'bg-blue-300' : 'bg-green-400'
+                        } relative inline-flex h-8 w-14 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
+                    >
+                        <span className='sr-only'>Change Mood</span>
+                        <span
+                            aria-hidden='true'
+                            className={`${
+                                mood === 'ocean' ? 'translate-x-6' : 'translate-x-0'
+                            } pointer-events-none flex h-7 w-7 transform items-center justify-center rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
+                        >
+                            {mood === 'forrest' ? '🌲' : '🌊'}
+                        </span>
+                    </Switch>
+                </div>
             </div>
 
             <div className='flex justify-around gap-5 text-center md:justify-center'>
