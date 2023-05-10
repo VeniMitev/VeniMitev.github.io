@@ -18,7 +18,7 @@ const Project = ({
     const [lineClamp, setLineClamp] = useState(' line-clamp-6');
 
     return (
-        <div className='grid h-full w-11/12 max-w-xl content-between justify-self-center rounded-sm bg-white py-2 shadow-lg xl:rounded-lg'>
+        <div className='grid h-full w-11/12 max-w-xl content-between justify-self-center rounded-sm bg-white py-2 shadow-lg md:rounded-md lg:rounded-lg'>
             <div>
                 <h1 className='m-2 px-8 text-xl font-semibold'>{title}</h1>
                 <h2 className='text-md m-2 px-8 font-medium opacity-75'>

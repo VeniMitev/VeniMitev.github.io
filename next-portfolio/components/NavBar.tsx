@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { Switch } from '@headlessui/react';
 
 const menuItems = [
-    { href: '/', text: 'Home' },
+    // { href: '/', text: 'Home' },
     { href: '/experience', text: 'Experience' },
     { href: '/projects', text: 'Projects' },
     { href: '/contact', text: 'Contact' },
@@ -55,7 +55,7 @@ const NavBar = ({
                 </div>
             </div>
 
-            <div className='flex justify-around gap-5 text-center md:justify-center'>
+            <div className='flex justify-around space-x-16 px-6 md:gap-5 text-center md:justify-center'>
                 {menuItems.map((item) => (
                     <NavButton
                         key={item.href}
@@ -92,7 +92,7 @@ const NavButton = ({ href, text, mood }: NavButtonProps) => {
     return (
         <Link
             href={href}
-            className={`m-2 select-none text-sm font-medium tracking-tight ${hover} ${active} md:text-lg lg:m-6 lg:text-lg`}
+            className={`m-2 select-none text-lg font-medium tracking-tight ${hover} ${active} md:text-xl lg:m-6`}
         >
             {text}
         </Link>

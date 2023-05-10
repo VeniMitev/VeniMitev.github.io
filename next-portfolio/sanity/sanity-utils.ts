@@ -13,6 +13,7 @@ export type Project = {
     github: string;
     projectUrl: string;
     sort: number;
+    slug: string;
 };
 
 export type Experience = {
@@ -68,9 +69,37 @@ export async function getProjects(): Promise<Project[]> {
                 name,
                 "icon": asset->url
             },
+            sort,
+            slug
+        }`
+    );
+}
+
+export async function getSingleProject(slug: string): Promise<Project> {
+    const client = createClient({
+        projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '1x7x7x7x',
+        dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+        apiVersion: '2023-04-23',
+        useCdn: true
+    });
+
+    const data = await client.fetch(
+        groq`*[_type == "project" && slug.current == "/${slug}"]{
+            title,
+            subTitle,
+            description,
+            "image": image.asset->url,
+            github,
+            projectUrl,
+            "tech": tech[] {
+                name,
+                "icon": asset->url
+            },
             sort
         }`
     );
+
+    return data[0]
 }
 
 export async function getExperiences(): Promise<Experience[]> {

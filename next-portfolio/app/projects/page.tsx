@@ -10,7 +10,7 @@ const Projects = async () => {
             <h1 className='py-6 text-center'>
                 <span className='text-3xl font-semibold'>Projects</span>
             </h1>
-            <div className='3xl:grid-cols-3 mx-auto grid max-w-5xl grid-cols-1 items-center justify-center gap-12 md:grid-cols-2'>
+            <div className='3xl:grid-cols-3 mx-auto grid max-w-6xl grid-cols-1 items-center justify-center gap-12 md:grid-cols-2'>
                 {projects
                     .sort((a, b) => a.sort - b.sort)
                     .map((project) => (

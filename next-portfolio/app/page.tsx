@@ -3,7 +3,6 @@ import Icons from '../components/Icons';
 import { PortableText } from '@portabletext/react';
 import DownloadCV from '../components/DownloadCV';
 import { getHomePage } from '../sanity/sanity-utils';
-import dynamic from 'next/dynamic';
 
 export default async function Home() {
     const data = await getHomePage();
@@ -33,12 +32,12 @@ export default async function Home() {
                 </h2>
             </section>
 
-            <section className='my-14 max-w-screen-md'>
+            <section className='my-14'>
                 {/* @ts-expect-error Server Component */}
                 <Icons />
             </section>
 
-            <section className='m-4 mx-5 my-36 transform rounded-md bg-gray-50 p-6 shadow-lg transition duration-500 ease-in-out hover:bg-white md:mx-10'>
+            <section className='m-4 mx-5 my-36 transform rounded-md bg-gray-50 p-6 shadow-lg transition duration-500 ease-in-out hover:bg-white'>
                 <h2 className='mb-6 text-center'>
                     <span className='text-2xl font-semibold'>About Me</span>
                 </h2>
