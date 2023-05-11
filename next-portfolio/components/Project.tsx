@@ -14,6 +14,7 @@ const Project = ({
     tech,
     github,
     projectUrl,
+    slug
 }: ProjectType) => {
     const [lineClamp, setLineClamp] = useState(' line-clamp-6');
 
@@ -73,6 +74,15 @@ const Project = ({
                 </div>
 
                 <div>
+                    {slug && (
+                        <Link
+                            href={'/projects/' + slug.current}
+                            className='mx-6 my-4 block rounded-sm bg-slate-900 px-8 py-2 text-center text-slate-200 hover:bg-slate-200 hover:text-slate-900'
+                        >
+                            Case Study
+                        </Link>
+                    )}
+
                     {projectUrl !== 'no' && (
                         <Link
                             href={projectUrl}

@@ -10,10 +10,13 @@ export type Project = {
         name: string;
         icon: string;
     }[];
+    caseStudy: PortableTextBlock[];
     github: string;
     projectUrl: string;
     sort: number;
-    slug: string;
+    slug: {
+        current: string;
+    };
 };
 
 export type Experience = {
@@ -95,7 +98,7 @@ export async function getSingleProject(slug: string): Promise<Project> {
                 name,
                 "icon": asset->url
             },
-            sort
+            caseStudy,
         }`
     );
 

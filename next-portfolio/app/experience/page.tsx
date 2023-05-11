@@ -18,21 +18,23 @@ const Experience = async () => {
                 </h1>
                 <DownloadCV />
 
-                {data.map((item, index) => (
-                    <>
-                        {!item.volunteer && (
-                            <div
-                                className={
-                                    index % 2 !== 0
-                                        ? 'md:translate-x-6'
-                                        : 'md:-translate-x-6'
-                                }
-                            >
-                                <Section key={item.title} data={item} />
-                            </div>
-                        )}
-                    </>
-                ))}
+                {data
+                    .sort((a, b) => a.sort - b.sort)
+                    .map((item, index) => (
+                        <>
+                            {!item.volunteer && (
+                                <div
+                                    className={
+                                        index % 2 !== 0
+                                            ? 'md:-translate-x-6'
+                                            : 'md:translate-x-6'
+                                    }
+                                >
+                                    <Section key={item.title} data={item} />
+                                </div>
+                            )}
+                        </>
+                    ))}
             </section>
             <section className='my-24 flex flex-col items-center justify-center'>
                 <h1 className='my-5 text-center'>
@@ -41,21 +43,23 @@ const Experience = async () => {
                     </span>
                 </h1>
 
-                {data.map((item, index) => (
-                    <>
-                        {item.volunteer && (
-                            <div
-                                className={
-                                    index % 2 === 0
-                                        ? 'md:translate-x-6'
-                                        : 'md:-translate-x-6'
-                                }
-                            >
-                                <Section key={item.title} data={item} />
-                            </div>
-                        )}
-                    </>
-                ))}
+                {data
+                    .sort((a, b) => a.sort - b.sort)
+                    .map((item, index) => (
+                        <>
+                            {item.volunteer && (
+                                <div
+                                    className={
+                                        index % 2 === 0
+                                            ? 'md:translate-x-6'
+                                            : 'md:-translate-x-6'
+                                    }
+                                >
+                                    <Section key={item.title} data={item} />
+                                </div>
+                            )}
+                        </>
+                    ))}
             </section>
         </>
     );

@@ -78,14 +78,18 @@ type NavButtonProps = {
 const NavButton = ({ href, text, mood }: NavButtonProps) => {
     const pathname = usePathname();
 
+    const cleanPathname = pathname.split('/')[1];
+
+    const cleanHref = href.split('/')[1];
+
     const hover =
         mood === 'ocean' ? 'hover:text-blue-500' : 'hover:text-green-500';
 
     const activeOcean =
-        pathname === href ? 'text-blue-400 drop-shadow-sm' : 'text-gray-700';
+        cleanPathname === cleanHref ? 'text-blue-400 drop-shadow-sm' : 'text-gray-700';
 
     const activeForrest =
-        pathname === href ? 'text-green-400 drop-shadow-sm' : 'text-gray-700';
+        cleanPathname === cleanHref ? 'text-green-400 drop-shadow-sm' : 'text-gray-700';
 
     const active = mood === 'ocean' ? activeOcean : activeForrest;
 

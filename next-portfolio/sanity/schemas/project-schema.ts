@@ -64,6 +64,12 @@ const project = defineType({
       ],
     },
     {
+      name: 'caseStudy',
+      title: 'Case Study',
+      type: 'array',
+      of: [{type: 'block'}],
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
