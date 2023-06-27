@@ -33,6 +33,11 @@ const technologies = defineType({
             title: 'Coming Soon',
             type: 'boolean',
         },
+        {
+            name: 'active',
+            title: 'Active',
+            type: 'boolean',
+        },
     ],
 });
 

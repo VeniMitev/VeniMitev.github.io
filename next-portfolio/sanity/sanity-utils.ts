@@ -36,6 +36,7 @@ export type Technology = {
     };
     sort: number;
     comingSoon: boolean;
+    active: boolean;
 }
 
 export type HomePage = {
@@ -120,7 +121,8 @@ export async function getTechnologies(): Promise<Technology[]> {
                 alt
             },
             sort,
-            comingSoon
+            comingSoon,
+            active
         }`
     );
 }

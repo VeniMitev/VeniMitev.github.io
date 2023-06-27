@@ -12,7 +12,7 @@ const Icons = ({ technologies }: { technologies: Technology[] }) => {
                 </h2>
                 <div className='grid grid-cols-2 content-center gap-3 md:grid-cols-3 lg:grid-cols-4'>
                     {technologies
-                        .filter((item) => !item.comingSoon)
+                        .filter((item) => !item.comingSoon && item.active)
                         .sort((a, b) => a.sort - b.sort)
                         .map((item) => (
                             <div
@@ -43,7 +43,7 @@ const Icons = ({ technologies }: { technologies: Technology[] }) => {
                 </h2>
                 <div className='grid grid-cols-2 content-center gap-3 md:grid-cols-3 lg:grid-cols-4'>
                     {technologies
-                        .filter((item) => item.comingSoon)
+                        .filter((item) => item.comingSoon && item.active)
                         .sort((a, b) => a.sort - b.sort)
                         .map((item) => (
                             <div
