@@ -2,16 +2,11 @@
 
 ## Description of Project
 
-My web dev portfolio project. It will always be a work in progress. Currently it has an "About Me" section on the home page, and a "Coding Projects" page.
+My web dev portfolio project. Newest version built with NextJS 13 using the app router, Tailwind for styling, and Sanity.io for CMS. Deployed on Vercel.
 
+Repo includes folder with older exercises for MIT Professional Certificate in Coding, and a folder containing the current source code for my portfolio website.
 ### Deployment:
 **[www.venimitev.dev](https://www.venimitev.dev/)**
-
-## Roadmap of future improvements:
-
-- Upgrade the entire website to be built on React, Express, MongoDB, and other new technologies.
-- Design changes.
-- Constantly adding new projects.
 
 ## License: MIT
 Copyright (c) 2022 Venelin Mitev
