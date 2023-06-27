@@ -22,7 +22,7 @@ export default async function Home() {
                 priority={true}
             />
 
-            <section className='mx-10 my-2 select-none text-center'>
+            <section className='mx-4 my-2 select-none text-center'>
                 <h1 className='my-6'>
                     <span className='text-4xl font-bold'>{data.title}</span>
                 </h1>
