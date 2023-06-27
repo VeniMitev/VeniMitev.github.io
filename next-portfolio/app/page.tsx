@@ -2,10 +2,11 @@ import Image from 'next/image';
 import Icons from '../components/Icons';
 import { PortableText } from '@portabletext/react';
 import DownloadCV from '../components/DownloadCV';
-import { getHomePage } from '../sanity/sanity-utils';
+import { getHomePage, getTechnologies } from '../sanity/sanity-utils';
 
 export default async function Home() {
     const data = await getHomePage();
+    const technologies = await getTechnologies();
 
     return (
         <div className='flex flex-col items-center justify-center'>
@@ -33,8 +34,7 @@ export default async function Home() {
             </section>
 
             <section className='my-10'>
-                {/* @ts-expect-error Server Component */}
-                <Icons />
+                <Icons technologies={technologies} />
             </section>
 
             <section className='m-4 mx-2 my-24 transform rounded-md bg-gray-50 p-4 shadow-lg transition duration-500 ease-in-out hover:bg-white lg:mx-5 lg:p-6'>

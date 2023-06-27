@@ -1,9 +1,9 @@
+'use client';
+
 import Image from 'next/image';
-import { getTechnologies } from '../sanity/sanity-utils';
+import { Technology } from '../sanity/sanity-utils';
 
-const Icons = async () => {
-    const data = await getTechnologies();
-
+const Icons = ({ technologies }: { technologies: Technology[] }) => {
     return (
         <>
             <div>
@@ -11,7 +11,7 @@ const Icons = async () => {
                     Technologies:
                 </h2>
                 <div className='grid grid-cols-2 content-center gap-3 md:grid-cols-3 lg:grid-cols-4'>
-                    {data
+                    {technologies
                         .filter((item) => !item.comingSoon)
                         .sort((a, b) => a.sort - b.sort)
                         .map((item) => (
@@ -42,7 +42,7 @@ const Icons = async () => {
                     Coming soon:
                 </h2>
                 <div className='grid grid-cols-2 content-center gap-3 md:grid-cols-3 lg:grid-cols-4'>
-                    {data
+                    {technologies
                         .filter((item) => item.comingSoon)
                         .sort((a, b) => a.sort - b.sort)
                         .map((item) => (
