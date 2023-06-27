@@ -52,14 +52,14 @@ export type HomePage = {
     }
 }
 
-export async function getProjects(): Promise<Project[]> {
-    const client = createClient({
-        projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '1x7x7x7x',
-        dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-        apiVersion: '2023-04-23',
-        useCdn: true
-    });
+const client = createClient({
+    projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '1x7x7x7x',
+    dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+    apiVersion: '2023-04-23',
+    useCdn: true
+});
 
+export async function getProjects(): Promise<Project[]> {
     return client.fetch(
         groq`*[_type == "project"]{
             title,
@@ -79,13 +79,6 @@ export async function getProjects(): Promise<Project[]> {
 }
 
 export async function getSingleProject(slug: string): Promise<Project> {
-    const client = createClient({
-        projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '1x7x7x7x',
-        dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-        apiVersion: '2023-04-23',
-        useCdn: true
-    });
-
     const data = await client.fetch(
         groq`*[_type == "project" && slug.current == "/${slug}"]{
             title,
@@ -106,13 +99,6 @@ export async function getSingleProject(slug: string): Promise<Project> {
 }
 
 export async function getExperiences(): Promise<Experience[]> {
-    const client = createClient({
-        projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '1x7x7x7x',
-        dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-        apiVersion: '2023-04-23',
-        useCdn: true
-    });
-
     return client.fetch(
         groq`*[_type == "experience"]{
             company,
@@ -126,13 +112,6 @@ export async function getExperiences(): Promise<Experience[]> {
 }
 
 export async function getTechnologies(): Promise<Technology[]> {
-    const client = createClient({
-        projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '1x7x7x7x',
-        dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-        apiVersion: '2023-04-23',
-        useCdn: true
-    });
-
     return client.fetch(
         groq`*[_type == "technologies"]{
             title,
@@ -147,13 +126,6 @@ export async function getTechnologies(): Promise<Technology[]> {
 }
 
 export async function getHomePage(): Promise<HomePage> {
-    const client = createClient({
-        projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '1x7x7x7x',
-        dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-        apiVersion: '2023-04-23',
-        useCdn: true
-    });
-
     return client.fetch(
         groq`*[_type == "homePage"][0]{
             title,

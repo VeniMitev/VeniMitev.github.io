@@ -14,15 +14,15 @@ const Project = ({
     tech,
     github,
     projectUrl,
-    slug
+    slug,
 }: ProjectType) => {
     const [lineClamp, setLineClamp] = useState(' line-clamp-6');
 
     return (
-        <div className='grid h-full w-11/12 max-w-xl content-between justify-self-center rounded-sm bg-white py-2 shadow-lg md:rounded-md lg:rounded-lg'>
+        <div className='mx-2 grid h-full max-w-xl content-between justify-self-center rounded-md bg-white py-2 shadow-lg md:rounded-lg lg:w-11/12 lg:rounded-lg'>
             <div>
-                <h1 className='m-2 px-8 text-xl font-semibold'>{title}</h1>
-                <h2 className='text-md m-2 px-8 font-medium opacity-75'>
+                <h1 className='px-4 text-xl font-semibold lg:px-8'>{title}</h1>
+                <h2 className='text-md px-4 font-medium opacity-75 lg:px-8'>
                     {subTitle}
                 </h2>
 
@@ -31,17 +31,21 @@ const Project = ({
                     alt={title}
                     width={1000}
                     height={600}
-                    className='mb-5'
+                    className='my-5'
                     placeholder='blur'
                     blurDataURL={image}
                 />
 
-                <div className={'px-8' + lineClamp + ' rich-text-container'}>
+                <div
+                    className={
+                        'px-4 lg:px-8' + lineClamp + ' rich-text-container'
+                    }
+                >
                     <PortableText value={description} />
                 </div>
 
                 <button
-                    className='px-8 py-2 text-blue-400 hover:text-blue-700'
+                    className='px-4 py-2 text-blue-400 hover:text-blue-700 lg:px-8'
                     onClick={() => {
                         setLineClamp(
                             lineClamp === ' line-clamp-6'
@@ -57,7 +61,7 @@ const Project = ({
             </div>
 
             <div>
-                <div className='mt-4 flex justify-center gap-8 px-8 py-2'>
+                <div className='mt-4 flex justify-center gap-4 lg:gap-8 px-8 py-2'>
                     {tech.map((technology) => (
                         <div key={technology.name} className='group relative'>
                             <span className='absolute bottom-10 min-w-fit scale-0 rounded bg-slate-800 p-2 text-xs text-white transition-all group-hover:scale-100'>

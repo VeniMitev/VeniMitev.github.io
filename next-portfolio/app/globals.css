@@ -45,6 +45,7 @@ button {
 
 .rich-text-container p {
     margin-bottom: 1.5rem;
+    text-align: justify;
   }
 
 /* @media (prefers-color-scheme: dark) {

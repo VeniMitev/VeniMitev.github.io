@@ -71,12 +71,12 @@ type SectionProps = {
 
 const Section = ({ data }: SectionProps) => {
     return (
-        <div className='m-4 transform rounded-xl bg-gray-50 px-6 py-3 shadow-lg transition duration-500 ease-in-out hover:bg-white'>
+        <div className='mx-2 my-4 transform rounded-xl bg-gray-50 px-4 py-3 shadow-lg transition duration-500 ease-in-out hover:bg-white lg:m-4 lg:px-6'>
             <h2 className='text-lg font-medium'>{data.title}</h2>
             <h3 className='text-md underline underline-offset-2'>
                 {data.subTitle}
             </h3>
-            <ul className='mx-auto my-3 max-w-prose px-6 text-base'>
+            <ul className='mx-auto my-3 max-w-prose px-4 text-base'>
                 {data.description.map((item: string, index) => (
                     <li key={index} className='my-2 list-disc'>
                         {item}

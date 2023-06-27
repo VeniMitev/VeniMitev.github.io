@@ -28,10 +28,10 @@ const NavBar = ({
 
     return (
         <nav className='flex flex-col items-center px-4 py-3 md:flex-row md:justify-between'>
-            <div className='flex w-full justify-evenly gap-10 text-center md:w-fit md:justify-start'>
+            <div className='flex w-full justify-around gap-10 text-center md:w-fit md:justify-start'>
                 <Link href='/'>
-                    <h1 className='select-none text-2xl font-semibold tracking-tight text-gray-700 md:text-3xl lg:text-4xl'>
-                        VeniMitev.dev
+                    <h1 className='tracking-wide select-none text-2xl font-semibold uppercase text-gray-700 md:text-3xl lg:text-4xl'>
+                        Veni Mitev
                     </h1>
                 </Link>
                 <div className='flex items-center px-1'>
@@ -55,7 +55,7 @@ const NavBar = ({
                 </div>
             </div>
 
-            <div className='flex justify-around space-x-16 px-6 md:gap-5 text-center md:justify-center'>
+            <div className='flex justify-around md:gap-5 w-full text-center md:justify-center'>
                 {menuItems.map((item) => (
                     <NavButton
                         key={item.href}

@@ -32,12 +32,12 @@ export default async function Home() {
                 </h2>
             </section>
 
-            <section className='my-14'>
+            <section className='my-10'>
                 {/* @ts-expect-error Server Component */}
                 <Icons />
             </section>
 
-            <section className='m-4 mx-5 my-36 transform rounded-md bg-gray-50 p-6 shadow-lg transition duration-500 ease-in-out hover:bg-white'>
+            <section className='m-4 mx-2 my-24 transform rounded-md bg-gray-50 p-4 shadow-lg transition duration-500 ease-in-out hover:bg-white lg:mx-5 lg:p-6'>
                 <h2 className='mb-6 text-center'>
                     <span className='text-2xl font-semibold'>About Me</span>
                 </h2>
@@ -49,16 +49,18 @@ export default async function Home() {
                 <DownloadCV />
             </section>
 
-            <Image
-                draggable={false}
-                className='my-12 select-none shadow-lg rounded-sm'
-                src={data.certification.image}
-                alt={data.certification.alt}
-                width={800}
-                height={800}
-                placeholder='blur'
-                blurDataURL={data.certification.image}
-            />
+            <div className='p-2'>
+                <Image
+                    draggable={false}
+                    className='my-10 select-none rounded-sm shadow-lg'
+                    src={data.certification.image}
+                    alt={data.certification.alt}
+                    width={800}
+                    height={800}
+                    placeholder='blur'
+                    blurDataURL={data.certification.image}
+                />
+            </div>
 
             <section className='mx-10 my-2 '>
                 <h2>
