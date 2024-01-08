@@ -5,6 +5,10 @@ import { getProjects } from '../../sanity/sanity-utils';
 const Projects = async () => {
     const projects = await getProjects();
 
+    console.log('Projects Page');
+
+    console.log(projects);
+
     return (
         <>
             <h1 className='py-6 text-center'>

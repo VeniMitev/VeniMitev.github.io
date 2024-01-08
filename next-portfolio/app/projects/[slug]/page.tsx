@@ -8,6 +8,8 @@ import { PortableText } from '@portabletext/react';
 const ProjectPage = async ({ params }: { params: { slug: string } }) => {
     const project = await getSingleProject(params.slug);
 
+    console.log(params.slug);
+
     return (
         <section className='flex flex-col items-center justify-center'>
             <Link
@@ -18,7 +20,7 @@ const ProjectPage = async ({ params }: { params: { slug: string } }) => {
             </Link>
             <h1 className='my-6 text-center text-xl font-semibold'>
                 <span className='text-3xl font-semibold'>Case Study:</span>
-                <br /> {project.title}
+                <br /> {project?.title}
             </h1>
 
             <Image

@@ -37,7 +37,7 @@ export default async function Home() {
                 <Icons technologies={technologies} />
             </section>
 
-            <section className='m-4 mx-2 my-24 transform rounded-md bg-gray-50 p-4 shadow-lg transition duration-500 ease-in-out hover:bg-white lg:mx-5 lg:p-6'>
+            <section className='m-4 mx-2 my-12 transform rounded-md bg-gray-50 p-4 shadow-lg transition duration-500 ease-in-out hover:bg-white lg:mx-5 lg:p-6'>
                 <h2 className='mb-6 text-center'>
                     <span className='text-2xl font-semibold'>About Me</span>
                 </h2>
@@ -62,7 +62,7 @@ export default async function Home() {
                 />
             </div>
 
-            <section className='mx-10 my-2 '>
+            {/* <section className='mx-10 my-2 '>
                 <h2>
                     <span className='text-center text-2xl font-semibold'>
                         Learn more about me
@@ -78,7 +78,7 @@ export default async function Home() {
                     height='300em'
                     allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
                 />
-            </section>
+            </section> */}
         </div>
     );
 }
