@@ -8,6 +8,7 @@ import {
     FaLinkedin,
     FaYoutube,
 } from 'react-icons/fa';
+import { twMerge } from 'tailwind-merge';
 
 const footerButtons = [
     {
@@ -114,7 +115,10 @@ const FooterButton = ({
 }) => {
     return (
         <Link
-            className={`bg-st m-1 inline-flex grow select-none justify-center align-middle transition duration-500 ease-in-out ${hover}`}
+            className={twMerge(
+                'm-1 inline-flex grow select-none justify-center align-middle transition duration-500 ease-in-out',
+                hover
+            )}
             href={href}
             target='_blank'
         >
