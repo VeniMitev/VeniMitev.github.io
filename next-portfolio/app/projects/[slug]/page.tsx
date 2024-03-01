@@ -8,8 +8,6 @@ import { PortableText } from '@portabletext/react';
 const ProjectPage = async ({ params }: { params: { slug: string } }) => {
     const project = await getSingleProject(params.slug);
 
-    console.log(params.slug);
-
     return (
         <section className='flex flex-col items-center justify-center'>
             <Link
