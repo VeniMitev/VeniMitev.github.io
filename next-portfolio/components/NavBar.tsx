@@ -32,17 +32,17 @@ const NavBar = ({
         <nav className='flex flex-col items-center px-4 py-3 md:flex-row md:justify-between gap-2'>
             <div
                 className={twMerge(
-                    'z-50 flex justify-between w-full flex-row divide-x-2 bg-white rounded-lg px-3 py-2 md:px-5 md:py-4 gap-5 shadow-sm items-center',
+                    'z-50 flex justify-between w-full md:w-fit flex-row divide-x-2 bg-white rounded-lg px-3 py-2 md:px-5 md:py-4 gap-5 shadow-sm items-center',
                     mood === 'ocean' ? 'divide-blue-400' : 'divide-green-400'
                 )}
             >
-                <Link className='grow' href='/'>
+                <Link className='grow md:grow-0' href='/'>
                     <h1 className='tracking-wide select-none text-2xl font-semibold uppercase text-gray-700 md:text-3xl lg:text-4xl'>
                         Veni Mitev
                     </h1>
                 </Link>
                 
-                <div className='grow flex items-center px-1 '>
+                <div className='grow md:grow-0 flex items-center px-1 '>
                     <Switch
                         checked={enabled}
                         onChange={() => handleThemeChange()}
