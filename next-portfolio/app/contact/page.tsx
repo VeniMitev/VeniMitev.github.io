@@ -48,10 +48,10 @@ const Contact = () => {
     };
 
     return (
-        <div className='flex flex-col items-center justify-center px-2'>
+        <div className='flex flex-col items-center justify-center px-2 py-6'>
             <h1 className='text-3xl font-semibold text-center'>Contact Me</h1>
 
-            <div className='my-12 flex flex-col gap-5 md:flex-row md:gap-10'>
+            <div className='my-6 flex flex-col gap-4 md:flex-row md:gap-10'>
                 <div className='flex flex-row gap-3 md:flex-col'>
                     <FaEnvelope className='m-1 scale-150 self-center' />
                     <Link
