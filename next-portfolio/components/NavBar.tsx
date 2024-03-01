@@ -29,25 +29,25 @@ const NavBar = ({
     }
 
     return (
-        <nav className='flex flex-col items-center px-4 py-3 md:flex-row md:justify-between gap-2'>
+        <nav className='flex flex-col items-center p-2 md:px-4 md:py-3 md:flex-row md:justify-between md:gap-2'>
             <div
                 className={twMerge(
-                    'z-50 flex justify-between w-full md:w-fit flex-row divide-x-2 bg-white rounded-lg px-3 py-2 md:px-5 md:py-4 gap-5 shadow-sm items-center',
+                    'z-50 flex justify-between w-full md:w-fit flex-row divide-x-2 bg-white rounded-lg px-3 py-2 md:px-5 md:py-4 md:gap-5 shadow-sm items-center',
                     mood === 'ocean' ? 'divide-blue-400' : 'divide-green-400'
                 )}
             >
-                <Link className='grow md:grow-0' href='/'>
+                <Link className='' href='/'>
                     <h1 className='tracking-wide select-none text-2xl font-semibold uppercase text-gray-700 md:text-3xl lg:text-4xl'>
                         Veni Mitev
                     </h1>
                 </Link>
 
-                <div className='grow md:grow-0 flex items-center px-1 '>
+                <div className='flex items-center px-1 '>
                     <Switch
                         checked={enabled}
                         onChange={() => handleThemeChange()}
                         className={twMerge(
-                            'relative inline-flex h-8 w-14 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75 mx-3',
+                            'relative inline-flex h-8 w-14 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75 mx-1 md:mx-3',
                             mood === 'ocean' ? 'bg-blue-300' : 'bg-green-400'
                         )}
                     >
@@ -66,7 +66,7 @@ const NavBar = ({
                     </Switch>
                 </div>
 
-                <div className='md:hidden grow flex align-middle items-center'>
+                <div className='md:hidden flex align-middle items-center'>
                     <button
                         onClick={() => setToggleMenu(!toggleMenu)}
                         className={twMerge(
