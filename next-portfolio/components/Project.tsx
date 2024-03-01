@@ -26,15 +26,19 @@ const Project = ({
                     {subTitle}
                 </h2>
 
-                <Image
-                    src={image}
-                    alt={title}
-                    width={1000}
-                    height={600}
-                    className='my-5'
-                    placeholder='blur'
-                    blurDataURL={image}
-                />
+                {image ? (
+                    <Image
+                        src={image}
+                        alt={title}
+                        width={1000}
+                        height={600}
+                        className='my-5'
+                        placeholder='blur'
+                        blurDataURL={image}
+                    />
+                ) : (
+                    <div className='h-56' />
+                )}
 
                 <div
                     className={
@@ -87,7 +91,7 @@ const Project = ({
                         </Link>
                     )}
 
-                    {projectUrl !== 'no' && (
+                    {projectUrl && projectUrl !== 'no' && (
                         <Link
                             href={projectUrl}
                             className='mx-6 my-4 block rounded-sm bg-slate-900 px-8 py-2 text-center text-slate-200 hover:bg-slate-200 hover:text-slate-900'
