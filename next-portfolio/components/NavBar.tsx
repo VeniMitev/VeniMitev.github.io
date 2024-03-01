@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 import { Switch } from '@headlessui/react';
 import { twMerge } from 'tailwind-merge';
 
@@ -41,7 +41,7 @@ const NavBar = ({
                         Veni Mitev
                     </h1>
                 </Link>
-                
+
                 <div className='grow md:grow-0 flex items-center px-1 '>
                     <Switch
                         checked={enabled}
@@ -99,7 +99,9 @@ const NavBar = ({
                     'z-0 absolute top-0 md:top-0 md:relative md:opacity-100 flex flex-row justify-between md:justify-around w-11/12 md:w-fit items-center content-center divide-x-2 bg-white rounded-md px-3 py-2 md:px-5 md:py-4 gap-3 shadow-sm',
                     mood === 'ocean' ? 'divide-blue-400' : 'divide-green-400',
                     'transition-all duration-500 ease-in-out',
-                    !toggleMenu ? 'opacity-0 translate-y-0' : 'opacity-100 translate-y-20 mx-2'
+                    !toggleMenu
+                        ? 'opacity-0 translate-y-0'
+                        : 'opacity-100 translate-y-20 mx-2'
                 )}
             >
                 {menuItems.map((item) => (
@@ -108,6 +110,7 @@ const NavBar = ({
                             href={item.href}
                             text={item.text}
                             mood={mood}
+                            setToggleMenu={setToggleMenu}
                         />
                     </div>
                 ))}
@@ -120,9 +123,10 @@ type NavButtonProps = {
     href: string;
     text: string;
     mood: string;
+    setToggleMenu: React.Dispatch<SetStateAction<boolean>>;
 };
 
-const NavButton = ({ href, text, mood }: NavButtonProps) => {
+const NavButton = ({ href, text, mood, setToggleMenu }: NavButtonProps) => {
     const pathname = usePathname();
 
     const cleanPathname = pathname.split('/')[1];
@@ -153,6 +157,7 @@ const NavButton = ({ href, text, mood }: NavButtonProps) => {
                 active,
                 'md:text-2xl lg:m-6'
             )}
+            onClick={() => setToggleMenu(false)}
         >
             {text}
         </Link>

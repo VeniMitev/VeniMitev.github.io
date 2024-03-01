@@ -48,11 +48,11 @@ const Contact = () => {
     };
 
     return (
-        <div className='flex flex-col items-center justify-center'>
-            <h1 className='text-3xl font-semibold'>Contact Me</h1>
+        <div className='flex flex-col items-center justify-center px-2'>
+            <h1 className='text-3xl font-semibold text-center'>Contact Me</h1>
 
             <div className='my-12 flex flex-col gap-5 md:flex-row md:gap-10'>
-                <div className='flex flex-col '>
+                <div className='flex flex-row gap-3 md:flex-col'>
                     <FaEnvelope className='m-1 scale-150 self-center' />
                     <Link
                         href='mailto:business@venimitev.com'
@@ -62,7 +62,7 @@ const Contact = () => {
                         business@venimitev.com
                     </Link>
                 </div>
-                <div className='flex flex-col '>
+                <div className='flex flex-row gap-3 md:flex-col'>
                     <FaGithub className='m-1 scale-150 self-center' />
                     <Link
                         href='https://github.com/VeniMitev'
@@ -72,7 +72,7 @@ const Contact = () => {
                         /VeniMitev
                     </Link>
                 </div>
-                <div className='flex flex-col '>
+                <div className='flex flex-row gap-3 md:flex-col'>
                     <FaLinkedin className='m-1 scale-150 self-center' />
                     <Link
                         href='https://www.linkedin.com/in/venelin-mitev/'
@@ -82,7 +82,7 @@ const Contact = () => {
                         /in/venelin-mitev/
                     </Link>
                 </div>
-                <div className='flex flex-col '>
+                <div className='flex flex-row gap-3 md:flex-col'>
                     <FaInstagram className='m-1 scale-150 self-center' />
                     <Link
                         href='https://www.instagram.com/venelin_m'
@@ -94,105 +94,112 @@ const Contact = () => {
                 </div>
             </div>
 
-            <h2 className='text-xl font-medium'>Or fill out the form below!</h2>
-            <form
-                className='flex max-w-lg flex-col items-center justify-center'
-                onSubmit={handleSubmit(onSubmit)}
-            >
-                <div className='my-3 flex flex-col'>
-                    <label className='text-medium px-3' htmlFor='name'>
-                        Name
-                    </label>
-                    <input
-                        id='name'
-                        placeholder='Enter your name here'
-                        className='h-10 w-80 max-w-prose rounded-b-sm rounded-t-md border-2 border-slate-200 px-3 md:min-w-[30rem]'
-                        {...register('name', { required: true, maxLength: 20 })}
-                        disabled={isSubmitting}
-                    />
-                    {errors.name && (
-                        <span className='text-red-500'>
-                            This field is required
-                        </span>
-                    )}
-                </div>
-
-                <div className='my-3 flex flex-col'>
-                    <label className='text-medium px-3' htmlFor='email'>
-                        Email
-                    </label>
-                    <input
-                        id='email'
-                        placeholder='Enter your email here'
-                        className='h-10 w-80 max-w-prose rounded-md rounded-b-sm border-2 border-slate-200 px-3 md:min-w-[30rem]'
-                        {...register('email', {
-                            required: true,
-                            pattern: {
-                                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                                message: 'invalid email address format',
-                            },
-                        })}
-                        disabled={isSubmitting}
-                    />
-                    {errors.email && (
-                        <span className='text-red-500'>
-                            This field is required
-                        </span>
-                    )}
-                </div>
-
-                <div className='my-3 flex flex-col'>
-                    <label className='text-medium px-3' htmlFor='subject'>
-                        Subject
-                    </label>
-                    <input
-                        id='subject'
-                        placeholder='Enter your subject here'
-                        className='h-10 w-80 max-w-prose rounded-md rounded-b-sm border-2 border-slate-200 px-3 md:min-w-[30rem]'
-                        {...register('subject', {
-                            required: true,
-                            maxLength: 40,
-                        })}
-                        disabled={isSubmitting}
-                    />
-                    {errors.subject && (
-                        <span className='text-red-500'>
-                            This field is required
-                        </span>
-                    )}
-                </div>
-
-                <div className='my-3 flex flex-col'>
-                    <label className='text-medium px-3' htmlFor='message'>
-                        Message
-                    </label>
-                    <textarea
-                        id='message'
-                        placeholder='Enter your message here'
-                        className='h-32 w-80 max-w-prose rounded-md rounded-b-sm border-2 border-slate-200 px-3 py-2 md:min-w-[30rem]'
-                        {...register('message', { required: true })}
-                        disabled={isSubmitting}
-                    />
-                    {errors.message && (
-                        <span className='text-red-500'>
-                            This field is required
-                        </span>
-                    )}
-                </div>
-
-                <button
-                    className='rounded-md bg-black px-4 py-2 text-white hover:bg-white hover:text-black '
-                    type='submit'
+            <section className='bg-white rounded-md px-3 py-2 md:px-5 md:py-4 w-full md:w-fit' >
+                <h2 className='text-xl font-medium text-center'>
+                    Or fill out the form below!
+                </h2>
+                <form
+                    className='flex max-w-lg flex-col items-center justify-center'
+                    onSubmit={handleSubmit(onSubmit)}
                 >
-                    Send
-                </button>
+                    <div className='my-3 flex flex-col'>
+                        <label className='text-medium px-3' htmlFor='name'>
+                            Name
+                        </label>
+                        <input
+                            id='name'
+                            placeholder='Enter your name here'
+                            className='h-10 w-80 max-w-prose rounded-b-sm rounded-t-md border-2 border-slate-200 px-3 md:min-w-[30rem]'
+                            {...register('name', {
+                                required: true,
+                                maxLength: 20,
+                            })}
+                            disabled={isSubmitting}
+                        />
+                        {errors.name && (
+                            <span className='text-red-500'>
+                                This field is required
+                            </span>
+                        )}
+                    </div>
 
-                {isSubmitSuccessful && (
-                    <span className='text-green-500'>
-                        Your message has been sent!
-                    </span>
-                )}
-            </form>
+                    <div className='my-3 flex flex-col'>
+                        <label className='text-medium px-3' htmlFor='email'>
+                            Email
+                        </label>
+                        <input
+                            id='email'
+                            placeholder='Enter your email here'
+                            className='h-10 w-80 max-w-prose rounded-md rounded-b-sm border-2 border-slate-200 px-3 md:min-w-[30rem]'
+                            {...register('email', {
+                                required: true,
+                                pattern: {
+                                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                    message: 'invalid email address format',
+                                },
+                            })}
+                            disabled={isSubmitting}
+                        />
+                        {errors.email && (
+                            <span className='text-red-500'>
+                                This field is required
+                            </span>
+                        )}
+                    </div>
+
+                    <div className='my-3 flex flex-col'>
+                        <label className='text-medium px-3' htmlFor='subject'>
+                            Subject
+                        </label>
+                        <input
+                            id='subject'
+                            placeholder='Enter your subject here'
+                            className='h-10 w-80 max-w-prose rounded-md rounded-b-sm border-2 border-slate-200 px-3 md:min-w-[30rem]'
+                            {...register('subject', {
+                                required: true,
+                                maxLength: 40,
+                            })}
+                            disabled={isSubmitting}
+                        />
+                        {errors.subject && (
+                            <span className='text-red-500'>
+                                This field is required
+                            </span>
+                        )}
+                    </div>
+
+                    <div className='my-3 flex flex-col'>
+                        <label className='text-medium px-3' htmlFor='message'>
+                            Message
+                        </label>
+                        <textarea
+                            id='message'
+                            placeholder='Enter your message here'
+                            className='h-32 w-80 max-w-prose rounded-md rounded-b-sm border-2 border-slate-200 px-3 py-2 md:min-w-[30rem]'
+                            {...register('message', { required: true })}
+                            disabled={isSubmitting}
+                        />
+                        {errors.message && (
+                            <span className='text-red-500'>
+                                This field is required
+                            </span>
+                        )}
+                    </div>
+
+                    <button
+                        className='rounded-md bg-black px-4 py-2 text-white hover:bg-white hover:text-black '
+                        type='submit'
+                    >
+                        Send
+                    </button>
+
+                    {isSubmitSuccessful && (
+                        <span className='text-green-500'>
+                            Your message has been sent!
+                        </span>
+                    )}
+                </form>
+            </section>
         </div>
     );
 };
