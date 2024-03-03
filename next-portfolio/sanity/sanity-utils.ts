@@ -26,7 +26,7 @@ export type Experience = {
     description: string[];
     sort: number;
     volunteer: boolean;
-}
+};
 
 export type Technology = {
     title: string;
@@ -37,7 +37,18 @@ export type Technology = {
     sort: number;
     comingSoon: boolean;
     active: boolean;
-}
+};
+
+export type Socials = {
+    title: string;
+    icon: {
+        image: string;
+        alt: string;
+    };
+    url: string;
+    sort: number;
+    active: boolean;
+};
 
 export type HomePage = {
     title: string;
@@ -50,14 +61,14 @@ export type HomePage = {
     certification: {
         image: string;
         alt: string;
-    }
-}
+    };
+};
 
 const client = createClient({
     projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '1x7x7x7x',
     dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
     apiVersion: '2023-04-23',
-    useCdn: true
+    useCdn: true,
 });
 
 export async function getProjects(): Promise<Project[]> {
@@ -96,7 +107,7 @@ export async function getSingleProject(slug: string): Promise<Project> {
         }`
     );
 
-    return data[0]
+    return data[0];
 }
 
 export async function getExperiences(): Promise<Experience[]> {
@@ -127,6 +138,22 @@ export async function getTechnologies(): Promise<Technology[]> {
     );
 }
 
+export async function getSocials(): Promise<Socials[]> {
+    return client.fetch(
+        groq`[_type == "socials"]{
+            title,
+            "icon": image {
+                "image": asset -> url,
+                alt
+            }, 
+            url,
+            sort, 
+            active
+        }`
+    )
+}
+
+
 export async function getHomePage(): Promise<HomePage> {
     return client.fetch(
         groq`*[_type == "homePage"][0]{
@@ -144,3 +171,4 @@ export async function getHomePage(): Promise<HomePage> {
         }`
     );
 }
+
