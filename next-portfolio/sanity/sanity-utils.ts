@@ -150,9 +150,8 @@ export async function getSocials(): Promise<Socials[]> {
             sort, 
             active
         }`
-    )
+    );
 }
-
 
 export async function getHomePage(): Promise<HomePage> {
     return client.fetch(
@@ -171,4 +170,3 @@ export async function getHomePage(): Promise<HomePage> {
         }`
     );
 }
-

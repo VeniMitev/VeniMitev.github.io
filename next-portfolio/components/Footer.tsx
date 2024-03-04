@@ -85,14 +85,14 @@ const sanity = (
     </Link>
 );
 
-const Footer = async () => {
-    const pathname = usePathname();
-
+export default async function Footer() {
     const socials = await getSocials();
 
-    if (pathname.includes('/studio')) {
+    if (!socials) {
         return null;
     }
+
+    console.log(socials);
 
     return (
         <footer className='bottom-0 mt-auto flex h-max justify-center overflow-hidden align-middle md:h-28'>
@@ -102,14 +102,14 @@ const Footer = async () => {
                 </code>
 
                 <div className='m-2 flex flex-col flex-wrap md:flex-row'>
-                    {socials.map((social) => (
+                    {/* {!!socials &&  socials.map((social) => (
                         <FooterButton
                             key={social.title}
                             title={social.title}
                             href={social.url}
                             icon={social.icon}
                         />
-                    ))}
+                    ))} */}
                 </div>
                 <div>
                     <p className='select-none text-xs mb-10'>
@@ -120,7 +120,7 @@ const Footer = async () => {
             </div>
         </footer>
     );
-};
+}
 
 type FooterButtonProps = {
     href: string;
@@ -150,5 +150,3 @@ const FooterButton = ({ href, icon, title }: FooterButtonProps) => {
         </Link>
     );
 };
-
-export default Footer;
