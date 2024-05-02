@@ -1,9 +1,9 @@
-'use client';
-
 import Image from 'next/image';
-import { Technology } from '../sanity/sanity-utils';
+import { Technology, getTechnologies } from '../sanity/sanity-utils';
 
-const Icons = ({ technologies }: { technologies: Technology[] }) => {
+const Icons = async () => {
+    const technologies = await getTechnologies();
+
     return (
         <>
             <div>

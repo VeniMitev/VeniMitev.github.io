@@ -2,9 +2,11 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { SetStateAction, useState } from 'react';
+import { SetStateAction, useEffect, useState } from 'react';
 import { Switch } from '@headlessui/react';
 import { twMerge } from 'tailwind-merge';
+
+type Mood = 'main' | 'ocean' | 'forrest';
 
 const menuItems = [
     // { href: '/', text: 'Home' },
@@ -13,23 +15,64 @@ const menuItems = [
     { href: '/contact', text: 'Contact' },
 ];
 
-const NavBar = ({
-    handleThemeChange,
-    mood,
-}: {
-    handleThemeChange: Function;
-    mood: string;
-}) => {
+const NavBar = () => {
     const [enabled, setEnabled] = useState(false);
     const [toggleMenu, setToggleMenu] = useState(false);
     const pathname = usePathname();
+
+    const [mood, setMood] = useState<Mood>('ocean');
+
+    useEffect(() => {
+        const storedMood =
+            typeof window !== 'undefined' &&
+            window.localStorage.getItem('mood');
+
+        document.body.style.backgroundImage = `url('/background_${
+            storedMood || 'ocean'
+        }.svg')`;
+
+        if (storedMood) {
+            setMood((storedMood as Mood) || 'ocean');
+        }
+    }, []);
+
+    const handleThemeChange = () => {
+        if (typeof window === 'undefined') return;
+
+        if (mood === 'main') {
+            setMood('ocean');
+
+            document.body.style.backgroundImage = `url('/background_ocean.svg')`;
+
+            localStorage.setItem('mood', 'ocean');
+        } else if (mood === 'ocean') {
+            setMood('forrest');
+
+            document.body.style.backgroundImage = `url('/background_forrest.svg')`;
+
+            localStorage.setItem('mood', 'forrest');
+        } else {
+            localStorage.setItem('mood', 'ocean');
+
+            document.body.style.backgroundImage = `url('/background_ocean.svg')`;
+
+            setMood('ocean');
+        }
+    };
+
+    const backgroundStyle = {
+        // backgroundImage: `url('/background_${mood}.svg')`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+    };
 
     if (pathname.includes('/studio')) {
         return null;
     }
 
     return (
-        <nav className='flex flex-col items-center p-2 md:px-4 md:py-3 md:flex-row md:justify-between md:gap-2'>
+        <nav className='flex flex-col items-start lg:p-2 md:px-4 md:py-3 md:flex-row md:justify-between md:gap-2'>
             <div
                 className={twMerge(
                     'z-50 flex justify-between w-full md:w-fit flex-row divide-x-2 bg-white rounded-lg px-3 py-2 md:px-5 md:py-4 md:gap-5 shadow-sm items-center',
@@ -118,7 +161,6 @@ const NavBar = ({
         </nav>
     );
 };
-
 type NavButtonProps = {
     href: string;
     text: string;

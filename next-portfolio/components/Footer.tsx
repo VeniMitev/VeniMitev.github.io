@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 import {
@@ -9,39 +10,40 @@ import {
     FaYoutube,
 } from 'react-icons/fa';
 import { twMerge } from 'tailwind-merge';
+import { getSocials } from '../sanity/sanity-utils';
 
-const footerButtons = [
-    {
-        name: 'GitHub',
-        icon: <FaGithub className='m-1 self-center' />,
-        href: 'https://github.com/VeniMitev',
-        hover: 'hover:text-github',
-    },
-    {
-        name: 'LinkedIn',
-        icon: <FaLinkedin className='m-1 self-center ' />,
-        href: 'https://www.linkedin.com/in/venelin-mitev/',
-        hover: 'hover:text-linkedin',
-    },
-    {
-        name: 'Instagram',
-        icon: <FaInstagram className='m-1 self-center' />,
-        href: 'https://www.instagram.com/venelin_m',
-        hover: 'hover:text-instagram',
-    },
-    {
-        name: 'Email',
-        icon: <FaEnvelope className='m-1 self-center' />,
-        href: 'mailto:business@venimitev.com',
-        hover: 'hover:text-emerald-500',
-    },
-    {
-        name: 'YouTube',
-        icon: <FaYoutube className='m-1 self-center' />,
-        href: 'https://www.youtube.com/channel/UCoGzGTZdwwVaActFVhqygZg',
-        hover: 'hover:text-youtube',
-    },
-];
+// const footerButtons = [
+//     {
+//         name: 'GitHub',
+//         icon: <FaGithub className='m-1 self-center' />,
+//         href: 'https://github.com/VeniMitev',
+//         hover: 'hover:text-github',
+//     },
+//     {
+//         name: 'LinkedIn',
+//         icon: <FaLinkedin className='m-1 self-center ' />,
+//         href: 'https://www.linkedin.com/in/venelin-mitev/',
+//         hover: 'hover:text-linkedin',
+//     },
+//     {
+//         name: 'Instagram',
+//         icon: <FaInstagram className='m-1 self-center' />,
+//         href: 'https://www.instagram.com/venelin_m',
+//         hover: 'hover:text-instagram',
+//     },
+//     {
+//         name: 'Email',
+//         icon: <FaEnvelope className='m-1 self-center' />,
+//         href: 'mailto:business@venimitev.com',
+//         hover: 'hover:text-emerald-500',
+//     },
+//     {
+//         name: 'YouTube',
+//         icon: <FaYoutube className='m-1 self-center' />,
+//         href: 'https://www.youtube.com/channel/UCoGzGTZdwwVaActFVhqygZg',
+//         hover: 'hover:text-youtube',
+//     },
+// ];
 
 const next = (
     <Link
@@ -73,12 +75,24 @@ const vercel = (
     </Link>
 );
 
-const Footer = () => {
-    const pathname = usePathname();
+const sanity = (
+    <Link
+        className='text-blue-600 hover:text-blue-800'
+        href='https://sanity.io/'
+        target='_blank'
+    >
+        Sanity
+    </Link>
+);
 
-    if (pathname.includes('/studio')) {
+export default async function Footer() {
+    const socials = await getSocials();
+
+    if (!socials) {
         return null;
     }
+
+    console.log(socials);
 
     return (
         <footer className='bottom-0 mt-auto flex h-max justify-center overflow-hidden align-middle md:h-28'>
@@ -88,33 +102,38 @@ const Footer = () => {
                 </code>
 
                 <div className='m-2 flex flex-col flex-wrap md:flex-row'>
-                    {footerButtons.map((button) => (
-                        <FooterButton key={button.name} {...button} />
-                    ))}
+                    {/* {!!socials &&  socials.map((social) => (
+                        <FooterButton
+                            key={social.title}
+                            title={social.title}
+                            href={social.url}
+                            icon={social.icon}
+                        />
+                    ))} */}
                 </div>
                 <div>
                     <p className='select-none text-xs mb-10'>
-                        Built with {next} and {tailwind}. Deployed on {vercel}.
+                        Built with {next}, {sanity} and {tailwind}. Deployed on{' '}
+                        {vercel}.
                     </p>
                 </div>
             </div>
         </footer>
     );
-};
+}
 
 type FooterButtonProps = {
     href: string;
-    icon: React.ReactNode;
-    name: string;
-    hover: string;
+    icon: {
+        image: string;
+        alt: string;
+    };
+    title: string;
 };
 
-const FooterButton = ({
-    href,
-    icon,
-    name,
-    hover,
-}: FooterButtonProps) => {
+const FooterButton = ({ href, icon, title }: FooterButtonProps) => {
+    const hover = `hover:text-${title ? title.toLocaleLowerCase() : 'emerald-500'}`;
+
     return (
         <Link
             className={twMerge(
@@ -124,12 +143,10 @@ const FooterButton = ({
             href={href}
             target='_blank'
         >
-            {icon}
-            {name}
+            <Image src={icon.image} alt={icon.alt} width={100} height={100} />
+            {title}
 
             <span className='animate-pulse font-extrabold'>_</span>
         </Link>
     );
 };
-
-export default Footer;

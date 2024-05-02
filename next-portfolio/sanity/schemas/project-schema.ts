@@ -37,12 +37,12 @@ const project = defineType({
     {
       name: 'github',
       title: 'Github URL',
-      type: 'string',
+      type: 'url',
     },
     {
       name: 'projectUrl',
       title: 'Project URL',
-      type: 'string',
+      type: 'url',
     },
     {
       name: 'tech',
