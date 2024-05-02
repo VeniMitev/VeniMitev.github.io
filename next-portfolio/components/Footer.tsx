@@ -1,6 +1,6 @@
+'use client'
+
 import Link from 'next/link';
-import Image from 'next/image';
-import { usePathname } from 'next/navigation';
 import React from 'react';
 import {
     FaEnvelope,
@@ -10,40 +10,39 @@ import {
     FaYoutube,
 } from 'react-icons/fa';
 import { twMerge } from 'tailwind-merge';
-import { getSocials } from '../sanity/sanity-utils';
 
-// const footerButtons = [
-//     {
-//         name: 'GitHub',
-//         icon: <FaGithub className='m-1 self-center' />,
-//         href: 'https://github.com/VeniMitev',
-//         hover: 'hover:text-github',
-//     },
-//     {
-//         name: 'LinkedIn',
-//         icon: <FaLinkedin className='m-1 self-center ' />,
-//         href: 'https://www.linkedin.com/in/venelin-mitev/',
-//         hover: 'hover:text-linkedin',
-//     },
-//     {
-//         name: 'Instagram',
-//         icon: <FaInstagram className='m-1 self-center' />,
-//         href: 'https://www.instagram.com/venelin_m',
-//         hover: 'hover:text-instagram',
-//     },
-//     {
-//         name: 'Email',
-//         icon: <FaEnvelope className='m-1 self-center' />,
-//         href: 'mailto:business@venimitev.com',
-//         hover: 'hover:text-emerald-500',
-//     },
-//     {
-//         name: 'YouTube',
-//         icon: <FaYoutube className='m-1 self-center' />,
-//         href: 'https://www.youtube.com/channel/UCoGzGTZdwwVaActFVhqygZg',
-//         hover: 'hover:text-youtube',
-//     },
-// ];
+const footerButtons = [
+    {
+        name: 'GitHub',
+        icon: <FaGithub className='m-1 self-center' />,
+        href: 'https://github.com/VeniMitev',
+        hover: 'hover:text-github',
+    },
+    {
+        name: 'LinkedIn',
+        icon: <FaLinkedin className='m-1 self-center ' />,
+        href: 'https://www.linkedin.com/in/venelin-mitev/',
+        hover: 'hover:text-linkedin',
+    },
+    {
+        name: 'Instagram',
+        icon: <FaInstagram className='m-1 self-center' />,
+        href: 'https://www.instagram.com/venelin_m',
+        hover: 'hover:text-instagram',
+    },
+    {
+        name: 'Email',
+        icon: <FaEnvelope className='m-1 self-center' />,
+        href: 'mailto:business@venimitev.com',
+        hover: 'hover:text-emerald-500',
+    },
+    {
+        name: 'YouTube',
+        icon: <FaYoutube className='m-1 self-center' />,
+        href: 'https://www.youtube.com/channel/UCoGzGTZdwwVaActFVhqygZg',
+        hover: 'hover:text-youtube',
+    },
+];
 
 const next = (
     <Link
@@ -85,15 +84,7 @@ const sanity = (
     </Link>
 );
 
-export default async function Footer() {
-    const socials = await getSocials();
-
-    if (!socials) {
-        return null;
-    }
-
-    console.log(socials);
-
+export default function Footer() {
     return (
         <footer className='bottom-0 mt-auto flex h-max justify-center overflow-hidden align-middle md:h-28'>
             <div className='w-11/12 transform overflow-hidden rounded-lg border bg-gray-50 p-2 md:pb-8 text-center drop-shadow-sm transition duration-500 ease-in-out hover:drop-shadow-xl md:w-[60em] md:translate-y-14 md:hover:translate-y-2 md:hover:bg-white'>
@@ -102,14 +93,14 @@ export default async function Footer() {
                 </code>
 
                 <div className='m-2 flex flex-col flex-wrap md:flex-row'>
-                    {/* {!!socials &&  socials.map((social) => (
+                    {!!footerButtons &&  footerButtons.map((social) => (
                         <FooterButton
-                            key={social.title}
-                            title={social.title}
-                            href={social.url}
+                            key={social.name}
+                            title={social.name}
+                            href={social.href}
                             icon={social.icon}
                         />
-                    ))} */}
+                    ))}
                 </div>
                 <div>
                     <p className='select-none text-xs mb-10'>
@@ -124,10 +115,7 @@ export default async function Footer() {
 
 type FooterButtonProps = {
     href: string;
-    icon: {
-        image: string;
-        alt: string;
-    };
+    icon: React.ReactElement;
     title: string;
 };
 
@@ -143,7 +131,7 @@ const FooterButton = ({ href, icon, title }: FooterButtonProps) => {
             href={href}
             target='_blank'
         >
-            <Image src={icon.image} alt={icon.alt} width={100} height={100} />
+            {icon}
             {title}
 
             <span className='animate-pulse font-extrabold'>_</span>
