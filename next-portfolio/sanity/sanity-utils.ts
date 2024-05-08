@@ -64,11 +64,20 @@ export type HomePage = {
     };
 };
 
+const today = new Date();
+const year = today.getFullYear();
+const month = today.getMonth() + 1;
+const formattedMonth = month < 10 ? `0${month}` : month;
+const day = today.getDate();
+const formattedDay = day < 10 ? `0${day}` : day;
+
+const todayString = `${year}-${formattedMonth}-${formattedDay}`;
+
 const client = createClient({
     projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '1x7x7x7x',
     dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-    apiVersion: '2023-04-23',
-    useCdn: true,
+    apiVersion: todayString,
+    useCdn: false,
 });
 
 export async function getProjects(): Promise<Project[]> {

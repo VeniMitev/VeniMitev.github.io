@@ -1,5 +1,4 @@
 import { defineConfig } from 'sanity';
-import { deskTool } from 'sanity/desk';
 import { schemaTypes } from './sanity/schemas';
 
 export default defineConfig({
@@ -9,8 +8,6 @@ export default defineConfig({
     title: 'Veni Mitev Dev Portfolio',
     apiVersion: '2023-04-23',
     basePath: process.env.NEXT_PUBLIC_SANITY_BASE_PATH || '/studio',
-
-    plugins: [deskTool()],
 
     schema: { types: schemaTypes },
 });
