@@ -7,6 +7,8 @@ import { getHomePage, getTechnologies } from '../sanity/sanity-utils';
 export default async function Home() {
     const data = await getHomePage();
 
+    const technologies = await getTechnologies();
+
     return (
         <div className='flex flex-col items-center justify-center'>
             <Image
@@ -33,7 +35,7 @@ export default async function Home() {
             </section>
 
             <section className='my-10'>
-                <Icons />
+                <Icons technologies={technologies} />
             </section>
 
             <section className='m-4 mx-2 my-12 transform rounded-md bg-gray-50 p-4 shadow-lg transition duration-500 ease-in-out hover:bg-white lg:mx-5 lg:p-6'>

@@ -18,18 +18,6 @@ export default function RootLayout({
     return (
         <html lang='en'>
             <head />
-            <div className='container'>
-                <Script src='https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID' />
-                <Script id='google-analytics'>
-                    {`
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                
-                        gtag('config', 'G-M92XJM9NT6');
-                    `}
-                </Script>
-            </div>
             <body
                 style={{
                     backgroundImage: `url('/background_ocean.svg')`,
@@ -45,6 +33,19 @@ export default function RootLayout({
                 {children}
 
                 <Footer />
+
+                <div className='container'>
+                    <Script src='https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID' />
+                    <Script id='google-analytics'>
+                        {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                
+                        gtag('config', 'G-M92XJM9NT6');
+                    `}
+                    </Script>
+                </div>
             </body>
         </html>
     );
