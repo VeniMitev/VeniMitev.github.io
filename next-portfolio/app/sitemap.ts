@@ -5,8 +5,6 @@ async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const projects = await getProjects();
 
     const projectUrls = projects.map((project) => {
-        console.log(project._updatedAt);
-
         return {
             url: `https://www.venimitev.dev/projects${project.slug.current}`,
             lastModified: project._updatedAt,
