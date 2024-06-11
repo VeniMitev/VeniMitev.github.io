@@ -18,6 +18,7 @@ const ProjectPage = async ({ params }: { params: { slug: string } }) => {
                 <span className='text-3xl font-semibold'>Case Study:</span>
                 <br /> {project?.title}
             </h1>
+
             {project?.image && (
                 <Image
                     src={project.image}
@@ -61,12 +62,13 @@ const ProjectPage = async ({ params }: { params: { slug: string } }) => {
 
 const BackToProjects = () => {
     return (
-        <Link href='/projects'>
-            <a className='ml-4 self-start text-xs font-bold uppercase text-blue-400 hover:text-blue-600 lg:ml-10 lg:text-base'>
-                {'<- Back to Projects'}
-            </a>
+        <Link
+            className='bg-white self-start py-3 px-4 m-2 rounded-md shadow-sm font-semibold text-gray-800 hover:text-blue-400 lg:text-base'
+            href='/projects'
+        >
+            {'< Back to Projects'}
         </Link>
     );
-}
+};
 
 export default ProjectPage;
