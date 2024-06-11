@@ -26,27 +26,27 @@ export default function RootLayout({
                     backgroundSize: 'cover',
                     transition: 'background-image 1s ease-in-out',
                 }}
-                className='flex min-h-screen transform flex-col overflow-y-scroll transition duration-700'
+                className='min-h-screen transform overflow-y-scroll transition duration-700 w-full'
             >
-                <NavBar />
+                <main className='flex flex-col mx-auto justify-center align-middle max-w-screen-4xl'>
+                    <NavBar />
 
-                {children}
+                    {children}
 
-                <Footer />
-
-                <div className='container'>
-                    <Script src='https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID' />
-                    <Script id='google-analytics'>
-                        {`
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                
-                        gtag('config', 'G-M92XJM9NT6');
-                    `}
-                    </Script>
-                </div>
+                    <Footer />
+                </main>
             </body>
+
+            <Script src='https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID' />
+            <Script id='google-analytics'>
+                {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+            
+                    gtag('config', 'G-M92XJM9NT6');
+                `}
+            </Script>
         </html>
     );
 }
