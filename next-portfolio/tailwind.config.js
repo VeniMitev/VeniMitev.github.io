@@ -14,6 +14,12 @@ module.exports = {
         youtube: "#ff0000",
       }
     },
+    screens: {
+      xs: "475px",
+      '3xl': "1600px",
+      '4xl': "1920px",
+      ...require("tailwindcss/defaultConfig").theme.screens
+    }
   },
   plugins: [],
   darkMode: "class",
