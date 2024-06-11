@@ -101,7 +101,7 @@ const Project = ({
                         </Link>
                     )}
 
-                    {github !== 'no' && (
+                    {github && github !== 'no' && (
                         <Link
                             href={github}
                             className='mx-6 my-4 block rounded-sm bg-slate-900 px-8 py-2 text-center text-slate-200 hover:bg-slate-200 hover:text-slate-900'
