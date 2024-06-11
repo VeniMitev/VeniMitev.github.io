@@ -8,6 +8,20 @@ import { PortableText } from '@portabletext/react';
 const ProjectPage = async ({ params }: { params: { slug: string } }) => {
     const project = await getSingleProject(params.slug);
 
+    if (!project) {
+        return (
+            <>
+                <Link
+                    className='ml-4 self-start text-xs font-bold uppercase text-blue-400 hover:text-blue-600 lg:ml-10 lg:text-base'
+                    href='/projects'
+                >
+                    {'<- Back to Projects'}
+                </Link>
+                <h1>Project not found</h1>
+            </>
+        );
+    }
+
     return (
         <section className='flex flex-col items-center justify-center'>
             <Link
@@ -21,15 +35,17 @@ const ProjectPage = async ({ params }: { params: { slug: string } }) => {
                 <br /> {project?.title}
             </h1>
 
-            <Image
-                src={project.image}
-                alt={project.title}
-                width={1000}
-                height={600}
-                className='mb-5 w-fit rounded-sm p-1 shadow-lg lg:max-w-screen-md'
-                placeholder='blur'
-                blurDataURL={project.image}
-            />
+            {project?.image && (
+                <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={1000}
+                    height={600}
+                    className='mb-5 w-fit rounded-sm p-1 shadow-lg lg:max-w-screen-md'
+                    placeholder='blur'
+                    blurDataURL={project.image}
+                />
+            )}
 
             <section className='m-4 mx-2 my-10 transform rounded-md bg-gray-50 px-4 shadow-lg transition duration-500 ease-in-out hover:bg-white lg:mx-5 lg:px-6'>
                 <div className={'rich-text-container my-6 max-w-screen-md'}>
