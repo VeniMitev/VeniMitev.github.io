@@ -103,7 +103,7 @@ export async function getProjects(): Promise<Project[]> {
 
 export async function getSingleProject(slug: string): Promise<Project> {
     const data = await client.fetch(
-        groq`*[_type == "project" && slug.current == "/${slug}"]{
+        groq`*[_type == "project" && (slug.current == "/${slug}" || slug.current == "${slug}")]{
             title,
             subTitle,
             description,
