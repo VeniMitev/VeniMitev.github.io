@@ -17,6 +17,7 @@ export type Project = {
     slug: {
         current: string;
     };
+    _updatedAt: string;
 };
 
 export type Experience = {
@@ -94,7 +95,8 @@ export async function getProjects(): Promise<Project[]> {
                 "icon": asset->url
             },
             sort,
-            slug
+            slug,
+            _updatedAt
         }`
     );
 }
