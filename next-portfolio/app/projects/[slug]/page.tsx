@@ -9,27 +9,13 @@ const ProjectPage = async ({ params }: { params: { slug: string } }) => {
     const project = await getSingleProject(params.slug);
 
     if (!project) {
-        return (
-            <>
-                <Link
-                    className='ml-4 self-start text-xs font-bold uppercase text-blue-400 hover:text-blue-600 lg:ml-10 lg:text-base'
-                    href='/projects'
-                >
-                    {'<- Back to Projects'}
-                </Link>
-                <h1>Project not found</h1>
-            </>
-        );
+        return <BackToProjects />;
     }
 
     return (
         <section className='flex flex-col items-center justify-center'>
-            <Link
-                className='ml-4 self-start text-xs font-bold uppercase text-blue-400 hover:text-blue-600 lg:ml-10 lg:text-base'
-                href='/projects'
-            >
-                {'<- Back to Projects'}
-            </Link>
+            <BackToProjects />
+        
             <h1 className='my-6 text-center text-xl font-semibold'>
                 <span className='text-3xl font-semibold'>Case Study:</span>
                 <br /> {project?.title}
@@ -77,5 +63,15 @@ const ProjectPage = async ({ params }: { params: { slug: string } }) => {
         </section>
     );
 };
+
+const BackToProjects = () => {
+    return (
+        <Link href='/projects'>
+            <a className='ml-4 self-start text-xs font-bold uppercase text-blue-400 hover:text-blue-600 lg:ml-10 lg:text-base'>
+                {'<- Back to Projects'}
+            </a>
+        </Link>
+    );
+}
 
 export default ProjectPage;
