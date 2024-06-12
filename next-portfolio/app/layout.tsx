@@ -28,7 +28,7 @@ export default function RootLayout({
                 }}
                 className='min-h-screen transform overflow-y-scroll transition duration-700 w-full'
             >
-                <main className='flex flex-col mx-auto justify-center align-middle max-w-screen-2xl'>
+                <main className='flex flex-col mx-auto justify-center align-middle max-w-screen-2xl min-h-screen'>
                     <NavBar />
 
                     {children}
