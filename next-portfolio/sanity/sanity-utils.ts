@@ -97,7 +97,9 @@ export async function getProjects(): Promise<Project[]> {
             sort,
             slug,
             _updatedAt
-        }`
+        }`,
+        {},
+        { cache: 'no-cache' }
     );
 }
 
@@ -115,7 +117,9 @@ export async function getSingleProject(slug: string): Promise<Project> {
                 "icon": asset->url
             },
             caseStudy,
-        }`
+        }`,
+        {},
+        { cache: 'no-cache' }
     );
 
     return data[0];
@@ -130,7 +134,9 @@ export async function getExperiences(): Promise<Experience[]> {
             description,
             sort,
             volunteer
-        }`
+        }`,
+        {},
+        { cache: 'no-cache' }
     );
 }
 
@@ -145,7 +151,9 @@ export async function getTechnologies(): Promise<Technology[]> {
             sort,
             comingSoon,
             active
-        }`
+        }`,
+        {},
+        { cache: 'no-cache' }
     );
 }
 
@@ -160,7 +168,9 @@ export async function getSocials(): Promise<Socials[]> {
             url,
             sort, 
             active
-        }`
+        }`,
+        {},
+        { cache: 'no-cache' }
     );
 }
 
@@ -178,6 +188,8 @@ export async function getHomePage(): Promise<HomePage> {
                 "image": asset->url,
                 alt
             }
-        }`
+        }`,
+        {},
+        { cache: 'no-cache' }
     );
 }
