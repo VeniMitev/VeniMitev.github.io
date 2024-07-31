@@ -8,6 +8,10 @@ import {
 const Experience = async () => {
     const data = await getExperiences();
 
+    const volunteerData = data.filter((item) => item.volunteer);
+
+    const workData = data.filter((item) => !item.volunteer);
+
     return (
         <>
             <section className='flex flex-col items-center justify-center'>
@@ -18,22 +22,19 @@ const Experience = async () => {
                 </h1>
                 <DownloadCV />
 
-                {data
+                {workData
                     .sort((a, b) => a.sort - b.sort)
                     .map((item, index) => (
-                        <>
-                            {!item.volunteer && (
-                                <div
-                                    className={
-                                        index % 2 !== 0
-                                            ? 'md:-translate-x-6'
-                                            : 'md:translate-x-6'
-                                    }
-                                >
-                                    <Section key={item.title} data={item} />
-                                </div>
-                            )}
-                        </>
+                        <div
+                            key={index}
+                            className={
+                                index % 2 !== 0
+                                    ? 'md:-translate-x-6'
+                                    : 'md:translate-x-6'
+                            }
+                        >
+                            <Section data={item} />
+                        </div>
                     ))}
             </section>
             <section className='my-24 flex flex-col items-center justify-center'>
@@ -43,22 +44,19 @@ const Experience = async () => {
                     </span>
                 </h1>
 
-                {data
+                {volunteerData
                     .sort((a, b) => a.sort - b.sort)
                     .map((item, index) => (
-                        <>
-                            {item.volunteer && (
-                                <div
-                                    className={
-                                        index % 2 === 0
-                                            ? 'md:translate-x-6'
-                                            : 'md:-translate-x-6'
-                                    }
-                                >
-                                    <Section key={item.title} data={item} />
-                                </div>
-                            )}
-                        </>
+                        <div
+                            key={index}
+                            className={
+                                index % 2 === 0
+                                    ? 'md:translate-x-6'
+                                    : 'md:-translate-x-6'
+                            }
+                        >
+                            <Section data={item} />
+                        </div>
                     ))}
             </section>
         </>
