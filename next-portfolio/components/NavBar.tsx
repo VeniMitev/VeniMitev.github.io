@@ -103,18 +103,18 @@ const NavBar = () => {
                     mood === 'ocean' ? 'divide-blue-400' : 'divide-green-400'
                 )}
             >
-                <Link className='grow px-3' href='/'>
+                <Link className='grow px-4 sm:px-5' href='/'>
                     <h1 className='tracking-wide select-none text-2xl font-semibold uppercase text-gray-700 md:text-3xl lg:text-4xl'>
                         Veni Mitev
                     </h1>
                 </Link>
 
-                <div className='flex items-center px-4 sm:px-2'>
+                <div className='flex items-center px-4 sm:px-5'>
                     <Switch
                         checked={enabled}
                         onChange={() => handleThemeChange()}
                         className={twMerge(
-                            'relative inline-flex h-8 w-14 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75 mx-1 md:mx-3',
+                            'relative inline-flex h-8 w-14 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75',
                             mood === 'ocean' ? 'bg-blue-300' : 'bg-green-400'
                         )}
                     >
@@ -133,7 +133,7 @@ const NavBar = () => {
                     </Switch>
                 </div>
 
-                <div className='md:hidden flex align-middle items-center px-3'>
+                <div className='md:hidden flex align-middle items-center px-2'>
                     <button
                         onClick={() => setToggleMenu(!toggleMenu)}
                         className={twMerge(
