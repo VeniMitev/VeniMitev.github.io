@@ -25,7 +25,7 @@ const NavBar = () => {
     const [isScroll, setIsScroll] = useState(false);
 
     const toggleVisibility = () => {
-        if (window.scrollY > 200) {
+        if (window.scrollY > 185.5) {
             setIsScroll(true);
         } else {
             setIsScroll(false);
@@ -92,7 +92,7 @@ const NavBar = () => {
         <nav
             className={twMerge(
                 'sticky top-0 z-50 flex flex-col items-start lg:p-2 md:px-4 md:py-3 md:flex-row md:justify-between md:gap-2',
-                (isScroll && 'scale-90 bg-transparent backdrop-blur-lg shadow-md rounded-lg') || '',
+                (isScroll && 'scale-90 bg-transparent backdrop-blur-lg shadow-md rounded-lg p-0 lg:p-0 md:p-0') || '',
                 'transition-all duration-300 ease-in-out'
             )}
         >
