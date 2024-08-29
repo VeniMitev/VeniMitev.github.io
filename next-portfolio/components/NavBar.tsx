@@ -91,25 +91,25 @@ const NavBar = () => {
     return (
         <nav
             className={twMerge(
-                'sticky top-0 z-50 flex flex-col items-start lg:p-2 md:px-4 md:py-3 md:flex-row md:justify-between md:gap-2',
+                'sticky top-0 z-50 flex flex-col items-center sm:items-start lg:p-2 md:px-4 md:py-3 md:flex-row md:justify-between',
                 (isScroll && 'scale-90 bg-transparent backdrop-blur-lg shadow-md rounded-lg p-0 lg:p-0 md:p-0') || '',
                 'transition-all duration-300 ease-in-out'
             )}
         >
             <div
                 className={twMerge(
-                    'z-50 flex justify-between w-full md:w-fit flex-row divide-x-2 bg-white rounded-lg px-3 py-2 md:px-5 md:py-4 md:gap-5 shadow-sm items-center',
+                    'z-50 flex justify-center w-full md:w-fit flex-row divide-x-2 bg-white rounded-lg py-2 md:py-4 shadow-sm items-center',
                     (isScroll && 'bg-transparent shadow-none') || '',
                     mood === 'ocean' ? 'divide-blue-400' : 'divide-green-400'
                 )}
             >
-                <Link className='' href='/'>
+                <Link className='grow px-3' href='/'>
                     <h1 className='tracking-wide select-none text-2xl font-semibold uppercase text-gray-700 md:text-3xl lg:text-4xl'>
                         Veni Mitev
                     </h1>
                 </Link>
 
-                <div className='flex items-center px-1 '>
+                <div className='flex items-center px-4 sm:px-2'>
                     <Switch
                         checked={enabled}
                         onChange={() => handleThemeChange()}
@@ -133,7 +133,7 @@ const NavBar = () => {
                     </Switch>
                 </div>
 
-                <div className='md:hidden flex align-middle items-center'>
+                <div className='md:hidden flex align-middle items-center px-3'>
                     <button
                         onClick={() => setToggleMenu(!toggleMenu)}
                         className={twMerge(
@@ -163,18 +163,18 @@ const NavBar = () => {
 
             <div
                 className={twMerge(
-                    'z-0 absolute top-0 md:top-0 md:relative md:opacity-100 flex flex-row justify-between md:justify-around w-11/12 md:w-fit items-center content-center divide-x-2 bg-white rounded-md px-3 py-2 md:px-5 md:py-4 gap-3 shadow-sm',
+                    'z-0 absolute top-0 md:top-0 md:relative md:opacity-100 flex mx-auto sm:mx-0 flex-row justify-between md:justify-around w-11/12 md:w-fit items-center content-center divide-x-2 bg-white rounded-md py-2 md:py-4 shadow-sm',
                     (isScroll && 'bg-transparent shadow-none') || '',
                     'transition-all duration-300 ease-in-out',
                     mood === 'ocean' ? 'divide-blue-400' : 'divide-green-400',
                     'transition-all duration-500 ease-in-out',
                     !toggleMenu
                         ? 'opacity-0 translate-y-0'
-                        : 'opacity-100 translate-y-20 mx-2 bg-white'
+                        : 'opacity-100 translate-y-16 mx-2 bg-white'
                 )}
             >
                 {menuItems.map((item) => (
-                    <div className='grow w-full text-center' key={item.href}>
+                    <div className='grow w-full text-center px-3' key={item.href}>
                         <NavButton
                             href={item.href}
                             text={item.text}
