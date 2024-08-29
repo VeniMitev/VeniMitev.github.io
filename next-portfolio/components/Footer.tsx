@@ -24,12 +24,12 @@ const footerButtons = [
         href: 'https://www.linkedin.com/in/venelin-mitev/',
         hover: 'hover:text-linkedin',
     },
-    {
-        name: 'Instagram',
-        icon: <FaInstagram className='m-1 self-center' />,
-        href: 'https://www.instagram.com/venelin_m',
-        hover: 'hover:text-instagram',
-    },
+    // {
+    //     name: 'Instagram',
+    //     icon: <FaInstagram className='m-1 self-center' />,
+    //     href: 'https://www.instagram.com/venelin_m',
+    //     hover: 'hover:text-instagram',
+    // },
     {
         name: 'Email',
         icon: <FaEnvelope className='m-1 self-center' />,

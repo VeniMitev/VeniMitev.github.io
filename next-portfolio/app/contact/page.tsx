@@ -82,7 +82,7 @@ const Contact = () => {
                         /in/venelin-mitev/
                     </Link>
                 </div>
-                <div className='flex flex-row gap-3 md:flex-col'>
+                {/* <div className='flex flex-row gap-3 md:flex-col'>
                     <FaInstagram className='m-1 scale-150 self-center' />
                     <Link
                         href='https://www.instagram.com/venelin_m'
@@ -91,7 +91,7 @@ const Contact = () => {
                     >
                         @venelin_m
                     </Link>
-                </div>
+                </div> */}
             </div>
 
             <section className='bg-white rounded-md px-3 py-2 md:px-5 md:py-4 w-full md:w-fit' >
