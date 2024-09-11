@@ -1,6 +1,6 @@
 // import Project from '../../components/Project';
-import Project from '../../components/Project';
-import { getProjects } from '../../sanity/sanity-utils';
+import Project from '../../../components/Project';
+import { getProjects } from '../../../sanity/sanity-utils';
 
 const Projects = async () => {
     const projects = await getProjects();

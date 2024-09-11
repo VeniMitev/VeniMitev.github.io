@@ -7,7 +7,11 @@ export const metadata = {
 };
 
 const StudioLayout = ({ children }: { children: React.ReactNode }) => {
-    return <article>{children}</article>;
+    return (
+        <html lang='en'>
+            <body>{children}</body>
+        </html>
+    );
 };
 
 export default StudioLayout;

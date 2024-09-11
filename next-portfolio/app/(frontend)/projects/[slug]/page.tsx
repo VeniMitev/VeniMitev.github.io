@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { getSingleProject } from '../../../sanity/sanity-utils';
+import { getSingleProject } from '../../../../sanity/sanity-utils';
 import { PortableText } from '@portabletext/react';
 // TODO: Implement page for every project for case studies, info, etc.
 const ProjectPage = async ({ params }: { params: { slug: string } }) => {

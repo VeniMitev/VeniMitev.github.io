@@ -1,9 +1,9 @@
 import React from 'react';
-import DownloadCV from '../../components/DownloadCV';
+import DownloadCV from '../../../components/DownloadCV';
 import {
     getExperiences,
     Experience as ExperienceType,
-} from '../../sanity/sanity-utils';
+} from '../../../sanity/sanity-utils';
 
 const Experience = async () => {
     const data = await getExperiences();

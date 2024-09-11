@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import Icons from '../components/Icons';
+import Icons from '../../components/Icons';
 import { PortableText } from '@portabletext/react';
-import DownloadCV from '../components/DownloadCV';
-import { getHomePage, getTechnologies } from '../sanity/sanity-utils';
+import DownloadCV from '../../components/DownloadCV';
+import { getHomePage, getTechnologies } from '../../sanity/sanity-utils';
 
 export default async function Home() {
     const data = await getHomePage();

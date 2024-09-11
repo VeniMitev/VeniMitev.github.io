@@ -1,8 +1,8 @@
 import Script from 'next/script';
-import './globals.css';
+import '../globals.css';
 import { Analytics } from '@vercel/analytics/react';
-import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
+import NavBar from '../../components/NavBar';
+import Footer from '../../components/Footer';
 
 export const metadata = {
     title: 'Veni Mitev | Web Developer',
