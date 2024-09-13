@@ -9,7 +9,9 @@ export const metadata = {
 const StudioLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <html lang='en'>
-            <body>{children}</body>
+            <body className='max-h-screen overscroll-none antialiased overflow-auto'>
+                {children}
+            </body>
         </html>
     );
 };
