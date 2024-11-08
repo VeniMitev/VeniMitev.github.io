@@ -3,7 +3,8 @@ import Image from 'next/image';
 import { getSingleProject } from '../../../../sanity/sanity-utils';
 import { PortableText } from '@portabletext/react';
 // TODO: Implement page for every project for case studies, info, etc.
-const ProjectPage = async ({ params }: { params: { slug: string } }) => {
+const ProjectPage = async (props: { params: Promise<{ slug: string }> }) => {
+    const params = await props.params;
     const project = await getSingleProject(params.slug);
 
     if (!project) {
@@ -65,6 +66,7 @@ const BackToProjects = () => {
         <Link
             className='bg-white self-start py-3 px-4 m-2 rounded-md shadow-sm font-semibold text-gray-800 hover:text-blue-400 lg:text-base'
             href='/projects'
+            prefetch
         >
             {'< Back to Projects'}
         </Link>

@@ -92,7 +92,9 @@ const NavBar = () => {
         <nav
             className={twMerge(
                 'sticky top-0 z-50 flex flex-col items-center sm:items-start lg:p-2 md:px-4 md:py-3 md:flex-row md:justify-between',
-                (isScroll && 'scale-90 bg-transparent backdrop-blur-lg shadow-md rounded-lg p-0 lg:p-0 md:p-0') || '',
+                (isScroll &&
+                    'scale-90 bg-transparent backdrop-blur-lg shadow-md rounded-lg p-0 lg:p-0 md:p-0') ||
+                    '',
                 'transition-all duration-300 ease-in-out'
             )}
         >
@@ -103,7 +105,7 @@ const NavBar = () => {
                     mood === 'ocean' ? 'divide-blue-400' : 'divide-green-400'
                 )}
             >
-                <Link className='grow px-4 sm:px-5' href='/'>
+                <Link className='grow px-4 sm:px-5' href='/' prefetch>
                     <h1 className='tracking-wide select-none text-2xl font-semibold uppercase text-gray-700 md:text-3xl lg:text-4xl'>
                         Veni Mitev
                     </h1>
@@ -174,7 +176,10 @@ const NavBar = () => {
                 )}
             >
                 {menuItems.map((item) => (
-                    <div className='grow w-full text-center px-3' key={item.href}>
+                    <div
+                        className='grow w-full text-center px-3'
+                        key={item.href}
+                    >
                         <NavButton
                             href={item.href}
                             text={item.text}
@@ -226,6 +231,7 @@ const NavButton = ({ href, text, mood, setToggleMenu }: NavButtonProps) => {
                 'md:text-2xl lg:m-6'
             )}
             onClick={() => setToggleMenu(false)}
+            prefetch
         >
             {text}
         </Link>

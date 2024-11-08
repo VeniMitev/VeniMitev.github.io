@@ -9,6 +9,7 @@ const DownloadCV = () => {
                 download={'Veni_Mitev_Resume.pdf'}
                 target='_blank'
                 className='lg:text-md text-sm font-medium tracking-tight text-gray-700 hover:text-white'
+                prefetch
             >
                 Download CV
             </Link>

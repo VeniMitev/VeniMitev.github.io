@@ -49,6 +49,7 @@ const next = (
         className='text-blue-600 hover:text-blue-800'
         href='https://nextjs.org/'
         target='_blank'
+        prefetch
     >
         Next.js
     </Link>
@@ -59,6 +60,7 @@ const tailwind = (
         className='text-blue-600 hover:text-blue-800'
         href='https://tailwindcss.com/'
         target='_blank'
+        prefetch
     >
         Tailwind CSS
     </Link>
@@ -69,6 +71,7 @@ const vercel = (
         className='text-blue-600 hover:text-blue-800'
         href='https://vercel.com/'
         target='_blank'
+        prefetch
     >
         Vercel
     </Link>
@@ -79,6 +82,7 @@ const sanity = (
         className='text-blue-600 hover:text-blue-800'
         href='https://sanity.io/'
         target='_blank'
+        prefetch
     >
         Sanity
     </Link>
@@ -130,6 +134,7 @@ const FooterButton = ({ href, icon, title }: FooterButtonProps) => {
             )}
             href={href}
             target='_blank'
+            prefetch
         >
             {icon}
             {title}

@@ -58,6 +58,7 @@ const Contact = () => {
                         href='mailto:business@venimitev.com'
                         target='_blank'
                         className='text-center'
+                        prefetch
                     >
                         business@venimitev.com
                     </Link>
@@ -68,6 +69,7 @@ const Contact = () => {
                         href='https://github.com/VeniMitev'
                         target='_blank'
                         className='text-center'
+                        prefetch
                     >
                         /VeniMitev
                     </Link>
@@ -78,6 +80,7 @@ const Contact = () => {
                         href='https://www.linkedin.com/in/venelin-mitev/'
                         target='_blank'
                         className='text-center'
+                        prefetch
                     >
                         /in/venelin-mitev/
                     </Link>
