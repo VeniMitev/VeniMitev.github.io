@@ -24,7 +24,25 @@ const experience = defineType({
             name: 'description',
             title: 'Description',
             type: 'array',
-            of: [{ type: 'text' }],
+            of: [
+                { type: 'text' },
+                {
+                    name: 'image',
+                    title: 'Image',
+                    type: 'image',
+                    fields: [
+                        {
+                            name: 'alt',
+                            title: 'Alt Text',
+                            type: 'string',
+                            validation: (Rule) =>
+                                Rule.required().error(
+                                    'Alt Text is required for SEO purposes'
+                                ),
+                        },
+                    ],
+                },
+            ],
         },
         {
             name: 'sort',
@@ -35,7 +53,7 @@ const experience = defineType({
             name: 'volunteer',
             title: 'Volunteer',
             type: 'boolean',
-        }
+        },
     ],
 });
 
