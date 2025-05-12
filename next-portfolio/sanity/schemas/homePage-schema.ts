@@ -35,6 +35,41 @@ const homePage = defineType({
             ],
         },
         {
+            name: 'resume',
+            title: 'Resume',
+            type: 'object',
+            fields: [
+                {
+                    name: 'title',
+                    title: 'Title',
+                    type: 'string',
+                    description: 'The title of your resume',
+                    validation: (Rule) => Rule.required(),
+                },
+                {
+                    name: 'fileNameOnDownload',
+                    title: 'File Name on Download',
+                    description: 'The name of the file when downloaded',
+                    type: 'string',
+                    // validation with no spaces
+                    validation: (Rule) =>
+                        Rule.required().custom((value: string) => {
+                            if (value.includes(' ')) {
+                                return 'File name cannot contain spaces';
+                            }
+                            return true;
+                        }),
+                },
+                {
+                    name: 'file',
+                    title: 'File',
+                    type: 'file',
+                    description: 'Upload your resume',
+                    validation: (Rule) => Rule.required(),
+                },
+            ],
+        },
+        {
             name: 'certification',
             title: 'Certification',
             type: 'image',
@@ -46,7 +81,7 @@ const homePage = defineType({
                     type: 'string',
                 },
             ],
-        }
+        },
     ],
 });
 

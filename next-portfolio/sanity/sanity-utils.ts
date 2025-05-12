@@ -63,6 +63,11 @@ export type HomePage = {
         image: string;
         alt: string;
     };
+    resume: {
+        title: string;
+        fileNameOnDownload: string;
+        file: string;
+    };
 };
 
 const today = new Date();
@@ -187,7 +192,12 @@ export async function getHomePage(): Promise<HomePage> {
             "certification": certification {
                 "image": asset->url,
                 alt
-            }
+            },
+            resume {
+                title,
+                fileNameOnDownload,
+                'file': file.asset->url
+            },
         }`,
         {},
         { cache: 'no-cache' }

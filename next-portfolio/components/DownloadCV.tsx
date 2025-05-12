@@ -1,17 +1,27 @@
 import Link from 'next/link';
 import React from 'react';
+import { getHomePage } from '../sanity/sanity-utils';
 
-const DownloadCV = () => {
+const DownloadCV = async () => {
+    const data = await getHomePage();
+    const resume = data.resume;
+
+    const { file, fileNameOnDownload } = resume;
+
+    if (!file) {
+        return null; // or some fallback UI
+    }
+
     return (
         <button className='bg-blue-300 flex items-center rounded p-2 hover:border-blue-500 hover:text-blue-500'>
             <Link
-                href='/Veni_Mitev_Resume.pdf'
-                download={'Veni_Mitev_Resume.pdf'}
+                href={`${file}?dl=${fileNameOnDownload}.pdf`}
                 target='_blank'
-                className='lg:text-md text-sm font-medium tracking-tight text-gray-700 hover:text-white'
+                rel='noreferrer'
+                download
                 prefetch
             >
-                Download CV
+                Download Resume
             </Link>
         </button>
     );
