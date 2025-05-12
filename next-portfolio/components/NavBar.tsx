@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { SetStateAction, useEffect, useState } from 'react';
 import { Switch } from '@headlessui/react';
 import { twMerge } from 'tailwind-merge';
+import useIsScroll from '../app/_hooks/useIsScroll';
 
 type Mood = 'main' | 'ocean' | 'forrest';
 
@@ -19,25 +20,9 @@ const NavBar = () => {
     const [enabled, setEnabled] = useState(false);
     const [toggleMenu, setToggleMenu] = useState(false);
     const pathname = usePathname();
+    const isScroll = useIsScroll();
 
     const [mood, setMood] = useState<Mood>('ocean');
-
-    const [isScroll, setIsScroll] = useState(false);
-
-    const toggleVisibility = () => {
-        if (window.scrollY > 185.5) {
-            setIsScroll(true);
-        } else {
-            setIsScroll(false);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', toggleVisibility);
-        return () => {
-            window.removeEventListener('scroll', toggleVisibility);
-        };
-    }, []);
 
     useEffect(() => {
         const storedMood =
