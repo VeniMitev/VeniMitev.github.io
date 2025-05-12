@@ -26,22 +26,7 @@ const experience = defineType({
             type: 'array',
             of: [
                 { type: 'text' },
-                {
-                    name: 'image',
-                    title: 'Image',
-                    type: 'image',
-                    fields: [
-                        {
-                            name: 'alt',
-                            title: 'Alt Text',
-                            type: 'string',
-                            validation: (Rule) =>
-                                Rule.required().error(
-                                    'Alt Text is required for SEO purposes'
-                                ),
-                        },
-                    ],
-                },
+              
             ],
         },
         {
