@@ -28,9 +28,8 @@ const ProjectPage = async (props: { params: Promise<{ slug: string }> }) => {
                         alt={project.title}
                         width={1920}
                         height={720}
-                        className='rounded-md  shadow-lg  w-full'
-                        placeholder='blur'
-                        blurDataURL={project.image}
+                        className='rounded-md shadow-lg w-full'
+                        loading='eager'
                     />
                 )}
             </div>
