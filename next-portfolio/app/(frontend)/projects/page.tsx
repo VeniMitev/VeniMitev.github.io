@@ -5,7 +5,6 @@ import { getProjects } from '../../../sanity/sanity-utils';
 const Projects = async () => {
     const projects = await getProjects();
 
-    console.log('Projects', projects);
     if (!projects) {
         return (
             <div className='mx-auto max-w-6xl px-2'>

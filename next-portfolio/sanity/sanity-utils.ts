@@ -6,10 +6,6 @@ export type Project = {
     subTitle: string;
     description: PortableTextBlock[];
     image: string;
-    tech: {
-        name: string;
-        icon: string;
-    }[];
     technologies: Technology[];
     caseStudy: PortableTextBlock[];
     github: string;
@@ -96,10 +92,6 @@ export async function getProjects(): Promise<Project[]> {
             "image": image.asset->url,
             github,
             projectUrl,
-            "tech": tech[] {
-                name,
-                "icon": asset->url
-            },
             sort,
             slug,
             _updatedAt,
@@ -128,11 +120,17 @@ export async function getSingleProject(slug: string): Promise<Project> {
             "image": image.asset->url,
             github,
             projectUrl,
-            "tech": tech[] {
-                name,
-                "icon": asset->url
-            },
             caseStudy,
+            technologies[] -> {
+                title,
+                "icon": image {
+                    "image": asset->url,
+                    alt
+                },
+                sort,
+                comingSoon,
+                active
+            },
         }`,
         {},
         { cache: 'no-cache' }
