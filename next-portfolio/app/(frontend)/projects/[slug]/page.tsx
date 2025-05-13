@@ -21,17 +21,20 @@ const ProjectPage = async (props: { params: Promise<{ slug: string }> }) => {
                 <br /> {project?.title}
             </h1>
 
-            {project?.image && (
-                <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={1000}
-                    height={600}
-                    className='mb-5 w-fit rounded-sm p-1 shadow-lg lg:max-w-screen-md'
-                    placeholder='blur'
-                    blurDataURL={project.image}
-                />
-            )}
+            <div className='flex flex-col items-center justify-center p-2 xl:p-4 max-w-full'>
+                {project?.image && (
+                    <Image
+                        src={project.image}
+                        alt={project.title}
+                        width={1920}
+                        height={720}
+                        className='rounded-md  shadow-lg  w-full'
+                        placeholder='blur'
+                        blurDataURL={project.image}
+                    />
+                )}
+            </div>
+
             <section className='m-4 mx-2 my-10 transform rounded-md bg-gray-50 px-4 shadow-lg transition duration-500 ease-in-out hover:bg-white lg:mx-5 lg:px-6'>
                 <div className={'rich-text-container my-6 max-w-screen-md'}>
                     <PortableText value={project.caseStudy} />
