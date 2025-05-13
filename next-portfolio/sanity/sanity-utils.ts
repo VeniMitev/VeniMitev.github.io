@@ -10,6 +10,7 @@ export type Project = {
         name: string;
         icon: string;
     }[];
+    technologies: Technology[];
     caseStudy: PortableTextBlock[];
     github: string;
     projectUrl: string;
@@ -101,7 +102,17 @@ export async function getProjects(): Promise<Project[]> {
             },
             sort,
             slug,
-            _updatedAt
+            _updatedAt,
+            technologies[] -> {
+                title,
+                "icon": image {
+                    "image": asset->url,
+                    alt
+                },
+                sort,
+                comingSoon,
+                active
+            },
         }`,
         {},
         { cache: 'no-cache' }

@@ -45,21 +45,15 @@ const project = defineType({
             type: 'url',
         },
         {
-            name: 'tech',
+            name: 'technologies',
             title: 'Technologies',
             type: 'array',
             of: [
                 {
-                    name: 'image',
-                    title: 'Technology Image',
-                    type: 'image',
-                    fields: [
-                        {
-                            name: 'name',
-                            title: 'Technology Name',
-                            type: 'string',
-                        },
-                    ],
+                    name: 'technology',
+                    title: 'Technology',
+                    type: 'reference',
+                    to: [{ type: 'technologies' }],
                 },
             ],
         },

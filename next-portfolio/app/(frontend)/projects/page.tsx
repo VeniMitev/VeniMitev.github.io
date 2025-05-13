@@ -5,6 +5,18 @@ import { getProjects } from '../../../sanity/sanity-utils';
 const Projects = async () => {
     const projects = await getProjects();
 
+    console.log('Projects', projects);
+    if (!projects) {
+        return (
+            <div className='mx-auto max-w-6xl px-2'>
+                <h1 className='py-6 text-center text-3xl font-semibold'>
+                    Projects
+                </h1>
+                <p className='text-center'>No projects found</p>
+            </div>
+        );
+    }
+
     return (
         <>
             <h1 className='py-6 text-center'>
