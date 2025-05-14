@@ -4,17 +4,22 @@ import { PortableText } from '@portabletext/react';
 import DownloadCV from '../../components/DownloadCV';
 import { getHomePage, getTechnologies } from '../../sanity/sanity-utils';
 
-export function generateMetadata() {
+export async function generateMetadata() {
+    const data = await getHomePage();
+
     return {
-        title: 'Home',
-        description: 'Welcome to my portfolio website!',
+        title: `Veni Mitev | ${data.subTitle}`,
+        description:
+            'Full-Stack developer | Magento 2 Admin | Photographer | Traveler',
+
         openGraph: {
-            title: 'Home',
-            description: 'Welcome to my portfolio website!',
+            title: `Veni Mitev | ${data.subTitle}`,
+            description:
+                'Full-Stack developer | Magento 2 Admin | Photographer | Traveler',
             url: 'https://venimitev.dev',
             images: [
                 {
-                    url: '/images/og-image.png',
+                    url: data.image.image,
                     width: 1200,
                     height: 630,
                 },

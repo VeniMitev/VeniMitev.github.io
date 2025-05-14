@@ -5,35 +5,9 @@ import Footer from '../../components/Footer';
 import {
     getExperiences,
     getHomePage,
-    getProjects,
-    getSocials,
     getTechnologies,
 } from '../../sanity/sanity-utils';
 import generateRichDataExperiences from '../_utils/generateRichDataExperiences.ts';
-
-export async function generateMetadata() {
-    const data = await getHomePage();
-
-    return {
-        title: `Veni Mitev | ${data.subTitle}`,
-        description:
-            'Full-Stack developer | Magento 2 Admin | Photographer | Traveler',
-
-        openGraph: {
-            title: `Veni Mitev | ${data.subTitle}`,
-            description:
-                'Full-Stack developer | Magento 2 Admin | Photographer | Traveler',
-            url: 'https://venimitev.dev',
-            images: [
-                {
-                    url: data.image.image,
-                    width: 1200,
-                    height: 630,
-                },
-            ],
-        },
-    };
-}
 
 export default async function RootLayout({
     children,
@@ -50,8 +24,6 @@ export default async function RootLayout({
         homePage,
         technologies,
     });
-
-    // console.log('schema', schema);
 
     return (
         <html lang='en'>
