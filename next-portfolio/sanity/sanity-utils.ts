@@ -107,7 +107,7 @@ export async function getProjects(): Promise<Project[]> {
             },
         }`,
         {},
-        { cache: 'no-cache' }
+        { next: { revalidate: 60 } }
     );
 }
 
@@ -133,7 +133,7 @@ export async function getSingleProject(slug: string): Promise<Project> {
             },
         }`,
         {},
-        { cache: 'no-cache' }
+        { next: { revalidate: 60 } }
     );
 
     return data[0];
@@ -150,7 +150,7 @@ export async function getExperiences(): Promise<Experience[]> {
             volunteer
         }`,
         {},
-        { cache: 'no-cache' }
+        { next: { revalidate: 60 } }
     );
 }
 
@@ -167,7 +167,7 @@ export async function getTechnologies(): Promise<Technology[]> {
             active
         }`,
         {},
-        { cache: 'no-cache' }
+        { next: { revalidate: 60 } }
     );
 }
 
@@ -184,7 +184,7 @@ export async function getSocials(): Promise<Socials[]> {
             active
         }`,
         {},
-        { cache: 'no-cache' }
+        { next: { revalidate: 60 } }
     );
 }
 
@@ -209,6 +209,6 @@ export async function getHomePage(): Promise<HomePage> {
             },
         }`,
         {},
-        { cache: 'no-cache' }
+        { next: { revalidate: 60 } }
     );
 }
