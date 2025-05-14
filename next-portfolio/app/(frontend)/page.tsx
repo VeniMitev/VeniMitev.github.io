@@ -4,6 +4,25 @@ import { PortableText } from '@portabletext/react';
 import DownloadCV from '../../components/DownloadCV';
 import { getHomePage, getTechnologies } from '../../sanity/sanity-utils';
 
+export function generateMetadata() {
+    return {
+        title: 'Home',
+        description: 'Welcome to my portfolio website!',
+        openGraph: {
+            title: 'Home',
+            description: 'Welcome to my portfolio website!',
+            url: 'https://venimitev.dev',
+            images: [
+                {
+                    url: '/images/og-image.png',
+                    width: 1200,
+                    height: 630,
+                },
+            ],
+        },
+    };
+}
+
 export default async function Home() {
     const data = await getHomePage();
 

@@ -1,20 +1,58 @@
 import Script from 'next/script';
 import '../globals.css';
-import { Analytics } from '@vercel/analytics/react';
 import NavBar from '../../components/NavBar';
 import Footer from '../../components/Footer';
+import {
+    getExperiences,
+    getHomePage,
+    getProjects,
+    getSocials,
+    getTechnologies,
+} from '../../sanity/sanity-utils';
+import generateRichDataExperiences from '../_utils/generateRichDataExperiences.ts';
 
-export const metadata = {
-    title: 'Veni Mitev | Web Developer',
-    description:
-        'Full-Stack developer | Product Manager | Photographer | Traveler',
-};
+export async function generateMetadata() {
+    const data = await getHomePage();
 
-export default function RootLayout({
+    return {
+        title: `Veni Mitev | ${data.subTitle}`,
+        description:
+            'Full-Stack developer | Magento 2 Admin | Photographer | Traveler',
+
+        openGraph: {
+            title: `Veni Mitev | ${data.subTitle}`,
+            description:
+                'Full-Stack developer | Magento 2 Admin | Photographer | Traveler',
+            url: 'https://venimitev.dev',
+            images: [
+                {
+                    url: data.image.image,
+                    width: 1200,
+                    height: 630,
+                },
+            ],
+        },
+    };
+}
+
+export default async function RootLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
+    const homePage = await getHomePage();
+
+    const experiences = await getExperiences();
+    const technologies = await getTechnologies();
+
+    const schema = generateRichDataExperiences({
+        experiences,
+        homePage,
+        technologies,
+    });
+
+    // console.log('schema', schema);
+
     return (
         <html lang='en'>
             <head />
@@ -47,6 +85,12 @@ export default function RootLayout({
                     gtag('config', 'G-M92XJM9NT6');
                 `}
             </Script>
+
+            <Script
+                id='person-schema'
+                type='application/ld+json'
+                dangerouslySetInnerHTML={{ __html: schema }}
+            />
         </html>
     );
 }
