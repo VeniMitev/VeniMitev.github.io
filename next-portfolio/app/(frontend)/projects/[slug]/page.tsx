@@ -2,6 +2,46 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getSingleProject } from '../../../../sanity/sanity-utils';
 import { PortableText } from '@portabletext/react';
+import { Metadata } from 'next';
+
+export const generateMetadata = async ({
+    params,
+}: {
+    params: { slug: string };
+}): Promise<Metadata> => {
+    const project = await getSingleProject(params.slug);
+    return {
+        title: `Project: ${project?.title} | Veni Mitev | Web Developer`,
+        description:
+            project?.subTitle ||
+            'Explore the details of this project, including its technologies and case study.',
+        alternates: {
+            canonical: `/projects/${params.slug}`,
+        },
+        authors: [
+            {
+                name: 'Veni Mitev',
+                url: 'https://venimitev.dev',
+            },
+        ],
+        creator: 'Veni Mitev',
+        robots: {
+            index: true,
+            follow: true,
+        },
+        openGraph: {
+            title: `Project: ${project?.title} | Veni Mitev | Web Developer`,
+            description:
+                project?.subTitle || 'Explore the details of this project.',
+            images: [
+                {
+                    url: project?.image,
+                    alt: project?.title,
+                },
+            ],
+        },
+    };
+};
 
 // TODO: Implement page for every project for case studies, info, etc.
 const ProjectPage = async (props: { params: Promise<{ slug: string }> }) => {
