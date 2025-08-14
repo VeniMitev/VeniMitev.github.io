@@ -65,27 +65,32 @@ const Project = ({
             </div>
 
             <div>
-                {technologies && <div className='mt-4 grid grid-cols-6 gap-2 lg:gap-8 px-8 py-2'>
-                    {technologies?.map((technology) => (
-                        <div key={technology.title} className='group relative'>
-                            <span className='absolute bottom-10 min-w-fit scale-0 rounded bg-slate-800 p-2 text-xs text-white transition-all group-hover:scale-100'>
-                                {technology.title}
-                            </span>
-                            <Image
-                                src={technology.icon.image}
-                                alt={technology.icon.alt}
-                                width={30}
-                                height={30}
-                            />
-                        </div>
-                    ))}
-                </div>}
+                {technologies && (
+                    <div className='mt-4 grid grid-cols-6 gap-2 lg:gap-8 px-8 py-2'>
+                        {technologies?.map((technology) => (
+                            <div
+                                key={technology.title}
+                                className='group relative'
+                            >
+                                <span className='absolute bottom-10 min-w-fit scale-0 rounded bg-slate-800 p-2 text-xs text-white transition-all group-hover:scale-100'>
+                                    {technology.title}
+                                </span>
+                                <Image
+                                    src={technology.icon.image}
+                                    alt={technology.icon.alt}
+                                    width={30}
+                                    height={30}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                )}
 
                 <div>
                     {slug && (
                         <Link
                             href={'/projects/' + slug.current}
-                            className='mx-6 my-4 block rounded-sm bg-slate-900 px-8 py-2 text-center text-slate-200 hover:bg-slate-200 hover:text-slate-900'
+                            className='mx-6 my-4 block rounded-sm bg-slate-900 px-8 py-2 text-center text-slate-200! hover:bg-slate-200 hover:text-slate-900!'
                             prefetch
                         >
                             Case Study
@@ -95,7 +100,7 @@ const Project = ({
                     {projectUrl && projectUrl !== 'no' && (
                         <Link
                             href={projectUrl}
-                            className='mx-6 my-4 block rounded-sm bg-slate-900 px-8 py-2 text-center text-slate-200 hover:bg-slate-200 hover:text-slate-900'
+                            className='mx-6 my-4 block rounded-sm bg-slate-900 px-8 py-2 text-center text-slate-200! hover:bg-slate-200 hover:text-slate-900!'
                             target='_blank'
                             prefetch
                         >
@@ -106,7 +111,7 @@ const Project = ({
                     {github && github !== 'no' && (
                         <Link
                             href={github}
-                            className='mx-6 my-4 block rounded-sm bg-slate-900 px-8 py-2 text-center text-slate-200 hover:bg-slate-200 hover:text-slate-900'
+                            className='mx-6 my-4 block rounded-sm bg-slate-900 px-8 py-2 text-center text-slate-200! hover:bg-slate-200 hover:text-slate-900!'
                             target='_blank'
                             prefetch
                         >
