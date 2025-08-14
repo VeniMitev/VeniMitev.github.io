@@ -7,16 +7,19 @@ import { Metadata } from 'next';
 export const generateMetadata = async ({
     params,
 }: {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 }): Promise<Metadata> => {
-    const project = await getSingleProject(params.slug);
+    const resolvedSlug = (await params).slug;
+
+    const project = await getSingleProject(resolvedSlug);
+
     return {
         title: `Project: ${project?.title} | Veni Mitev | Web Developer`,
         description:
             project?.subTitle ||
             'Explore the details of this project, including its technologies and case study.',
         alternates: {
-            canonical: `/projects/${params.slug}`,
+            canonical: `/projects/${resolvedSlug}`,
         },
         authors: [
             {
