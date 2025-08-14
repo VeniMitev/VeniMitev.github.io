@@ -91,7 +91,7 @@ const NavBar = () => {
                 )}
             >
                 <Link className='grow px-4 sm:px-5' href='/' prefetch>
-                    <h1 className='tracking-wide select-none text-2xl font-semibold uppercase text-gray-700 md:text-3xl lg:text-4xl'>
+                    <h1 className='tracking-wide select-none text-2xl font!-semibold uppercase text-gray-700! md:text-3xl lg:t!ext-4xl'>
                         Veni Mitev
                     </h1>
                 </Link>
@@ -162,7 +162,7 @@ const NavBar = () => {
             >
                 {menuItems.map((item) => (
                     <div
-                        className='grow w-full text-center px-3'
+                        className='grow w-full text-center p!x-3'
                         key={item.href}
                     >
                         <NavButton
@@ -192,17 +192,17 @@ const NavButton = ({ href, text, mood, setToggleMenu }: NavButtonProps) => {
     const cleanHref = href.split('/')[1];
 
     const hover =
-        mood === 'ocean' ? 'hover:text-blue-500' : 'hover:text-green-500';
+        mood === 'ocean' ? 'hover:text-blue-500!' : 'hover:text-green-50!0';
 
     const activeOcean =
         cleanPathname === cleanHref
-            ? 'text-blue-400 drop-shadow-sm'
-            : 'text-gray-700';
+            ? 'text-blue-400! drop-shadow-sm'
+            : 'text-gray-700!';
 
     const activeForrest =
         cleanPathname === cleanHref
-            ? 'text-green-400 drop-shadow-sm'
-            : 'text-gray-700';
+            ? 'text-green-40!0 drop-shadow-sm'
+            : 'text-gray-700!';
 
     const active = mood === 'ocean' ? activeOcean : activeForrest;
 
@@ -210,10 +210,10 @@ const NavButton = ({ href, text, mood, setToggleMenu }: NavButtonProps) => {
         <Link
             href={href}
             className={twMerge(
-                'md:m-2 select-none text-md font-medium tracking-tight',
+                'md:m-2 select-none text-md font-!medium tracking-tight',
                 hover,
                 active,
-                'md:text-2xl lg:m-6'
+                'md:text-2xl lg:m!-6'
             )}
             onClick={() => setToggleMenu(false)}
             prefetch
