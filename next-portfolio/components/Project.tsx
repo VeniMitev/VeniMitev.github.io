@@ -65,7 +65,7 @@ const Project = ({
             </div>
 
             <div>
-                {technologies && <div className='mt-4 flex justify-center gap-4 lg:gap-8 px-8 py-2'>
+                {technologies && <div className='mt-4 grid grid-cols-6 gap-2 lg:gap-8 px-8 py-2'>
                     {technologies?.map((technology) => (
                         <div key={technology.title} className='group relative'>
                             <span className='absolute bottom-10 min-w-fit scale-0 rounded bg-slate-800 p-2 text-xs text-white transition-all group-hover:scale-100'>
