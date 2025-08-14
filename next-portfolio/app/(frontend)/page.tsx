@@ -3,19 +3,36 @@ import Icons from '../../components/Icons';
 import { PortableText } from '@portabletext/react';
 import DownloadCV from '../../components/DownloadCV';
 import { getHomePage, getTechnologies } from '../../sanity/sanity-utils';
+import { Metadata } from 'next';
 
-export async function generateMetadata() {
+export async function generateMetadata(): Promise<Metadata> {
     const data = await getHomePage();
 
     return {
         title: `Veni Mitev | ${data.subTitle}`,
-        description:
-            'Full-Stack developer | Magento 2 Admin | Photographer | Traveler',
+        description: `${data.title} - ${data.subTitle}`,
+
+        alternates: {
+            canonical: '/',
+        },
+
+        authors: [
+            {
+                name: 'Veni Mitev',
+                url: 'https://venimitev.dev',
+            },
+        ],
+
+        creator: 'Veni Mitev',
+
+        robots: {
+            index: true,
+            follow: true,
+        },
 
         openGraph: {
             title: `Veni Mitev | ${data.subTitle}`,
-            description:
-                'Full-Stack developer | Magento 2 Admin | Photographer | Traveler',
+            description: `${data.title} - ${data.subTitle}`,
             url: 'https://venimitev.dev',
             images: [
                 {
