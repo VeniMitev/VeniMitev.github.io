@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { PortableText } from '@portabletext/react';
 import { Project as ProjectType } from '../sanity/sanity-utils';
+import { Button } from './ui/button';
+import { cn } from '@/lib/utils';
 
 const Project = ({
     title,
@@ -19,9 +21,10 @@ const Project = ({
     const [lineClamp, setLineClamp] = useState(' line-clamp-6');
 
     return (
-        <div className='mx-2 grid h-full max-w-xl content-between justify-self-center rounded-md bg-white py-2 shadow-lg md:rounded-lg lg:w-11/12 lg:rounded-lg'>
-            <div>
+        <div className='flex flex-col h-full max-w-xl justify-between rounded-md bg-white py-2 shadow-lg md:rounded-lg lg:w-11/12 lg:rounded-lg'>
+            <div className='flex flex-col px-2'>
                 <h1 className='px-4 text-xl font-semibold lg:px-8'>{title}</h1>
+                
                 <h2 className='text-md px-4 font-medium opacity-75 lg:px-8'>
                     {subTitle}
                 </h2>
@@ -40,16 +43,13 @@ const Project = ({
                     <div className='h-56' />
                 )}
 
-                <div
-                    className={
-                        'px-4 lg:px-8' + lineClamp + ' rich-text-container'
-                    }
-                >
+                <div className={cn('px-4', lineClamp, 'rich-text-container')}>
                     <PortableText value={description} />
                 </div>
 
-                <button
-                    className='px-4 py-2 text-blue-400 hover:text-blue-700 lg:px-8'
+                <Button
+                    variant='link'
+                    className='w-fit'
                     onClick={() => {
                         setLineClamp(
                             lineClamp === ' line-clamp-6'
@@ -61,7 +61,7 @@ const Project = ({
                     {lineClamp === ' line-clamp-6'
                         ? 'Read More...'
                         : 'Read Less...'}
-                </button>
+                </Button>
             </div>
 
             <div>
@@ -86,37 +86,43 @@ const Project = ({
                     </div>
                 )}
 
-                <div>
+                <div className='flex flex-col gap-4 px-4 py-2'>
                     {slug && (
-                        <Link
-                            href={'/projects/' + slug.current}
-                            className='mx-6 my-4 block rounded-sm bg-slate-900 px-8 py-2 text-center text-slate-200! hover:bg-slate-200 hover:text-slate-900!'
-                            prefetch
-                        >
-                            Case Study
-                        </Link>
+                        <Button asChild>
+                            <Link
+                                href={'/projects/' + slug.current}
+                                prefetch
+                                className='text-white!'
+                            >
+                                Case Study
+                            </Link>
+                        </Button>
                     )}
 
                     {projectUrl && projectUrl !== 'no' && (
-                        <Link
-                            href={projectUrl}
-                            className='mx-6 my-4 block rounded-sm bg-slate-900 px-8 py-2 text-center text-slate-200! hover:bg-slate-200 hover:text-slate-900!'
-                            target='_blank'
-                            prefetch
-                        >
-                            View Project
-                        </Link>
+                        <Button asChild>
+                            <Link
+                                href={projectUrl}
+                                target='_blank'
+                                prefetch
+                                className='text-white!'
+                            >
+                                View Project
+                            </Link>
+                        </Button>
                     )}
 
                     {github && github !== 'no' && (
-                        <Link
-                            href={github}
-                            className='mx-6 my-4 block rounded-sm bg-slate-900 px-8 py-2 text-center text-slate-200! hover:bg-slate-200 hover:text-slate-900!'
-                            target='_blank'
-                            prefetch
-                        >
-                            View Code
-                        </Link>
+                        <Button asChild>
+                            <Link
+                                href={github}
+                                target='_blank'
+                                prefetch
+                                className='text-white!'
+                            >
+                                View Code
+                            </Link>
+                        </Button>
                     )}
                 </div>
             </div>
