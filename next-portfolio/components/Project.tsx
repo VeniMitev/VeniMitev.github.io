@@ -7,6 +7,7 @@ import { PortableText } from '@portabletext/react';
 import { Project as ProjectType } from '../sanity/sanity-utils';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
+import TechWithTooltip from './TechWithTooltip';
 
 const Project = ({
     title,
@@ -24,7 +25,7 @@ const Project = ({
         <div className='flex flex-col h-full max-w-xl justify-between rounded-md bg-white py-2 shadow-lg md:rounded-lg lg:w-11/12 lg:rounded-lg'>
             <div className='flex flex-col px-2'>
                 <h1 className='px-4 text-xl font-semibold lg:px-8'>{title}</h1>
-                
+
                 <h2 className='text-md px-4 font-medium opacity-75 lg:px-8'>
                     {subTitle}
                 </h2>
@@ -67,21 +68,11 @@ const Project = ({
             <div>
                 {technologies && (
                     <div className='mt-4 grid grid-cols-6 gap-2 lg:gap-8 px-8 py-2'>
-                        {technologies?.map((technology) => (
-                            <div
-                                key={technology.title}
-                                className='group relative'
-                            >
-                                <span className='absolute bottom-10 min-w-fit scale-0 rounded bg-slate-800 p-2 text-xs text-white transition-all group-hover:scale-100'>
-                                    {technology.title}
-                                </span>
-                                <Image
-                                    src={technology.icon.image}
-                                    alt={technology.icon.alt}
-                                    width={30}
-                                    height={30}
-                                />
-                            </div>
+                        {technologies?.map((technology, index) => (
+                            <TechWithTooltip
+                                key={index}
+                                technology={technology}
+                            />
                         ))}
                     </div>
                 )}
